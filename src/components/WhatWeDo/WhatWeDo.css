@@ -1,0 +1,11 @@
+.WhatWeDo {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: lightgrey;
+}
+
+.section-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

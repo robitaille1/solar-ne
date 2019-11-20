@@ -1,12 +1,22 @@
 import React from 'react';
 import './App.css'
+import Nav from './components/Nav/Nav'
+import MainHeader from './components/MainHeader/MainHeader'
+import WhatWeDo from './components/WhatWeDo/WhatWeDo'
+import ContactForm from './components/ContactForm/ContactForm'
+import BlogSection from './components/BlogSection/BlogSection'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <main className='App'>
       <div>
-        <h1 className='title'>Coming Soon!</h1>
-        <p>Thanks for the patience - Solar NE</p>
+        <Nav />
+        <MainHeader />
+        <WhatWeDo />
+        <ContactForm />
+        <BlogSection />
+        <Footer />
       </div>
     </main>
   );

@@ -1,0 +1,8 @@
+.BlogItem {
+    display: inline-block;
+    border: 1px solid black;
+    width: 25%;
+    margin: 5px 0px;
+    height: 200px;
+    border-radius: 5px;
+}

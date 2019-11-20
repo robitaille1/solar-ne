@@ -1,0 +1,9 @@
+.navbar {
+    text-align: left;
+    background-color: grey;
+    padding: 20px 0px;
+}
+
+.nav-link {
+    margin: 0;
+}

@@ -1,0 +1,14 @@
+.ContactForm {
+    padding: 50px 0px;
+    background-color: darkgrey;
+}
+
+.form-container {
+    padding: 20px 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.contact-form-item {
+    margin: 5px 0px;
+}
