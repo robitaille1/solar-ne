@@ -7,7 +7,7 @@ function App() {
     <main className='App'>
       <div className='container'>
         <div className='logo'>
-          <img src={logo} alt='logo'/>
+          <img className='image' src={logo} alt='logo'/>
         </div>
         <h3 className='title'>Coming 2020</h3>
         <p>Thank you for the patience</p>
