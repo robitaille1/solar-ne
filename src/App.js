@@ -1,12 +1,16 @@
 import React from 'react';
+import logo from './spne.png'
 import './App.css'
 
 function App() {
   return (
     <main className='App'>
-      <div>
-        <h1 className='title'>Coming Soon!</h1>
-        <p>Thanks for the patience - Solar NE</p>
+      <div className='container'>
+        <div className='logo'>
+          <img src={logo} alt='logo'/>
+        </div>
+        <h3 className='title'>Coming 2020</h3>
+        <p>Thank you for the patience</p>
       </div>
     </main>
   );
