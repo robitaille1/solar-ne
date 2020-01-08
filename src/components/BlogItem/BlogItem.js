@@ -1,14 +1,14 @@
 import React from 'react'
 import './BlogItem.css'
 
-function BlogItem() {
+function BlogItem(props) {
     return (
       <main className='BlogItem'>
-        <h1>Blog</h1>
         <div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo ut nulla sit amet sodales. Donec scelerisque tortor vestibulum, laoreet felis vitae, cursus magna.
-            </p>
+            <h3>
+                {props.title}
+            </h3>
+            
         </div>
       </main>
     );
