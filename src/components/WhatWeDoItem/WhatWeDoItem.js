@@ -1,12 +1,13 @@
 import React from 'react'
 import './WhatWeDoItem.css'
 
-function WhatWeDoItem() {
+function WhatWeDoItem(props) {
     return (
       <main className='WhatWeDoItem'>
-        <h1>Item</h1>
+      <h2>{props.title}</h2>
         <div>
-            <p>Description</p>
+            <p>{props.description}</p>
+    {props.description2 === '' ? null : <p>{props.description2}</p>}
         </div>
       </main>
     );
