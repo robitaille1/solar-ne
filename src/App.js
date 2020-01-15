@@ -9,7 +9,7 @@ function App() {
         <div className='logo'>
           <img className='image' src={logo} alt='logo'/>
         </div>
-        <p className='title'>Coming 2020</p>
+        <p className='title'>Coming soon!</p>
         <p>Thank you for the patience</p>
       </div>
     </main>
