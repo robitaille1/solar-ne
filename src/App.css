@@ -38,6 +38,12 @@
 .title {
   color: red;
   text-align: center;
+  font-weight: bold;
+}
+
+.thanks {
+  color: black;
+  font-weight: normal;
 }
 
 @media only screen and (max-width: 600px) {
