@@ -24,7 +24,7 @@ function Footer() {
               </div>
               <div className='links'>
                 <p>Interested in helping your neighbors become more sustainable, and energy independent? Click here for more info, or contact us today!</p>
-                <p>contact@solarpowerne.com</p>
+                <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
               </div>
             </div>
         </nav>
