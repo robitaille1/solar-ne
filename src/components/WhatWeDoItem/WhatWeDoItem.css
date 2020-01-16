@@ -2,7 +2,18 @@
     display: inline-block;
     border: 1px solid black;
     width: 25%;
-    margin: 5px 0px;
-    height: 200px;
+    margin: 5px 5px;
     border-radius: 5px;
+}
+
+.itemImg {
+    width: 100%;
+}
+
+.itemTitle {
+    font-size: 20px;
+}
+
+.itemDesc {
+    padding: 0px 10px;
 }
