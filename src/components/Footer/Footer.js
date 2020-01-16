@@ -27,6 +27,10 @@ function Footer() {
                 <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
               </div>
             </div>
+            <div className='flag-div'>
+              <img className='flags' src='https://www.crwflags.com/art/hist/maine1901.gif' alt='old flag of Maine'/>
+              <img className='flags' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Maine.svg/500px-Flag_of_Maine.svg.png' alt='current flag of Maine'/>
+            </div>
         </nav>
       </main>
     );
