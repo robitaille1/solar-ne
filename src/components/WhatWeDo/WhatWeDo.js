@@ -10,26 +10,22 @@ class WhatWeDo extends Component {
         {
           id: 1,
           title: 'Energy Management & Analysis',
-          description: 'Energy consumption meters',
-          description2: 'Lighting (LEDs) + smart home devices'
+          description: 'Smart Home Devices, Energy Consumption Meters & LED Lighting'
         },
         {
           id: 2,
-          title: 'Home, business and municipal solar (+ Storage)',
-          description: 'Solar batteries (iv) and battery storage',
-          description2: ''
+          title: 'Home, Business, and Municipal Solar (+Storage)',
+          description: 'Roof or Ground Mounted Solar Photovoltaics, Solar-Plus-Storage Solutions, Installation & System Maintentance'
         },
         {
           id: 3,
-          title: 'Electric vehicle supply equipment (EVSE)',
-          description: 'Chargers and wall connectors',
-          description2: ''
+          title: 'Electric Vehicle Supply Equipment (EVSE)',
+          description: 'Residential and Commercial EV Charging devices '
         },
         {
           id: 4,
-          title: 'RFP, Request for proposal consulting',
+          title: 'RFP, Request For Proposal Consultation',
           description: '',
-          description2: ''
         }
       ]
     };
@@ -42,7 +38,7 @@ class WhatWeDo extends Component {
                 <h2 className='main-header'>What We Do</h2>
                 <section className='section-display' role='main'>
                    {this.state.wwd.map(wwd => 
-                    <WhatWeDoItem key={wwd.id} title={wwd.title} description={wwd.description} description2={wwd.description2} />
+                    <WhatWeDoItem key={wwd.id} title={wwd.title} description={wwd.description} />
                     )}
                 </section>
             </div>

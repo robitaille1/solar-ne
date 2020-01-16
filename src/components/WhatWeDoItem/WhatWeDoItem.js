@@ -6,8 +6,7 @@ function WhatWeDoItem(props) {
       <main className='WhatWeDoItem'>
       <h2>{props.title}</h2>
         <div>
-            <p>{props.description}</p>
-    {props.description2 === '' ? null : <p>{props.description2}</p>}
+          {props.description === '' ? null : <p>{props.description}</p>}
         </div>
       </main>
     );
