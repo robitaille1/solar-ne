@@ -1,10 +1,10 @@
 .BlogItem {
     border: 1px solid black;
-    width: 30%;
+    width: 100%;
     margin: 5px 0px;
     height: 200px;
     border-radius: 5px;
-    padding: 2px;
+    padding: 5px;
 }
 
 .BlogItem h3 {
@@ -14,3 +14,9 @@
 .blog-item {
     align-self: center;
 }
+
+@media only screen and (min-width: 550px) {
+    .BlogItem {
+        width: 30%;
+    }
+}   

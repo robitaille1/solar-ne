@@ -5,6 +5,14 @@
 
 .blog-display {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
+
+@media only screen and (min-width: 550px) {
+    .blog-display {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}   
