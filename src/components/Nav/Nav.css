@@ -7,3 +7,16 @@
 .nav-link {
     margin: 0;
 }
+
+.nav-logo {
+    width: 20%;
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar {
+        text-align: center;
+    }
+    .nav-logo {
+        width: 50%;
+    }
+  }
