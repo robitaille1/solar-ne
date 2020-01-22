@@ -1,15 +1,17 @@
 .navbar {
     text-align: center;
     background-color: rgb(255, 255, 255);
-    padding: 20px 0px;
-}
-
-.nav-link {
-    margin: 0;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-logo {
     width: 50%;
+}
+
+.nav-links {
+    display: none;
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {
@@ -24,5 +26,23 @@
     }
     .nav-logo {
         width: 20%;
+    }
+    .nav-links {
+        display: flex;
+        align-items: flex-end;
+    }
+    .button {
+        background: linear-gradient(135deg, #2584bb, rgb(19, 21, 168));
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid grey;
+        margin: 5px;
+    }
+    
+    .button:hover {
+        background: linear-gradient(135deg, #2584bb81, rgba(19, 21, 168, 0.514));
+        border: 1px solid rgba(128, 128, 128, 0.445);
     }
 }
