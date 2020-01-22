@@ -1,13 +1,13 @@
 .WhatWeDoItem {
-    display: inline-block;
+    display: flex;
     border: 1px solid black;
-    width: 25%;
+    width: 100%;
     margin: 5px 5px;
     border-radius: 5px;
 }
 
 .itemImg {
-    width: 100%;
+    width: 50%;
 }
 
 .itemTitle {
@@ -15,5 +15,14 @@
 }
 
 .itemDesc {
+    align-self: center;
     padding: 0px 10px;
+    margin: auto;
 }
+
+/* @media only screen and (min-width: 1000px) {
+    .WhatWeDoItem {
+        width: 25%;
+        display: inline-block;
+    }
+} */

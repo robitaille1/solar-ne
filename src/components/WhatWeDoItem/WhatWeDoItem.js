@@ -5,8 +5,8 @@ function WhatWeDoItem(props) {
     return (
       <main className='WhatWeDoItem'>
       <img className='itemImg' src={props.item.img} alt={props.item.credit} />
-      <h2 className='itemTitle'>{props.item.title}</h2>
         <div className='itemDesc'>
+          <h2 className='itemTitle'>{props.item.title}</h2>
           {props.item.description === '' ? null : <p>{props.item.description}</p>}
         </div>
       </main>
