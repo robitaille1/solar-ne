@@ -1,5 +1,7 @@
 import React from 'react'
 import './Footer.css'
+import oldFlag from '../../assets/oldflag.gif'
+import newFlag from '../../assets/newflag.png'
 
 function Footer() {
   const date = new Date()
@@ -10,7 +12,7 @@ function Footer() {
                 <h5>Copyright Solar Power New England © {date.getFullYear()} </h5>
             </div>
             <div className='links-div'>
-                <div className='links'>
+                <div className='links first'>
                   <p>Info</p>
                   <p>Investors</p>
                   <p>Contact</p>
@@ -28,8 +30,8 @@ function Footer() {
                 </div>
               </div>
             <div className='flag-div'>
-              <img className='flags' src='https://www.crwflags.com/art/hist/maine1901.gif' alt='old flag of Maine'/>
-              <img className='flags' src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Maine.svg/500px-Flag_of_Maine.svg.png' alt='current flag of Maine'/>
+              <img className='flags' src={oldFlag} alt='old flag of Maine'/>
+              <img className='flags' src={newFlag} alt='current flag of Maine'/>
             </div>
         </nav>
       </main>

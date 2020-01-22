@@ -8,6 +8,10 @@
     margin: 10px 10px;
 }
 
+.first {
+    margin-left: 0px;
+}
+
 .links-div {
     display: flex;
     flex-direction: column;
@@ -36,11 +40,14 @@
         text-align: left;
         margin: 10px 20px;
     }
+    .first {
+        margin-left: 0px;
+    }
     
     .links-div {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     
     .flags {
