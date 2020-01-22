@@ -27,7 +27,7 @@ class BlogSection extends Component{
       <main className='BlogSection'>
             <div className='container'>
                 <h2 className='main-header'>Recent Blog Posts</h2>
-                <section className='section-display' role='main'>
+                <section className='blog-display' role='main'>
                    {this.state.blogs.map(blog =>
                     <BlogItem key={blog.id} title={blog.title} />
                     )}

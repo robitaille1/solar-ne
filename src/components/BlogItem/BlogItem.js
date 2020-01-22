@@ -4,11 +4,10 @@ import './BlogItem.css'
 function BlogItem(props) {
     return (
       <main className='BlogItem'>
-        <div>
+        <div className='blog-item'>
             <h3>
                 {props.title}
             </h3>
-            
         </div>
       </main>
     );
