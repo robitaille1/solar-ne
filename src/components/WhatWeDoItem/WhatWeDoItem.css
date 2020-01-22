@@ -1,13 +1,16 @@
 .WhatWeDoItem {
-    display: flex;
-    border: 1px solid black;
     width: 100%;
-    margin: 5px 5px;
+    margin: 50px 5px;
     border-radius: 5px;
 }
 
+.item {
+    display: block;
+    justify-content: space-between;
+}
+
 .itemImg {
-    width: 50%;
+    width: 40%;
 }
 
 .itemTitle {
@@ -16,13 +19,21 @@
 
 .itemDesc {
     align-self: center;
-    padding: 0px 10px;
+    padding: 0px 20px;
+    width: 60%;
     margin: auto;
 }
 
-/* @media only screen and (min-width: 1000px) {
-    .WhatWeDoItem {
-        width: 25%;
-        display: inline-block;
+@media only screen and (min-width: 800px) {
+    .item {
+        display: flex;
+        justify-content: space-between;
     }
-} */
+    .itemImg {
+        width: 20%;
+    }
+    .itemDesc {
+        width: 40%;
+    }
+}
+
