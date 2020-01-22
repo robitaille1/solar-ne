@@ -8,7 +8,90 @@ export default class ContactForm extends React.Component  {
       <main className='ContactForm'>
         <section className="contact container">
             <h3 className='section-title'>Contact Us</h3>
-                <form className='form-container'>
+            <form>
+              <ul class="form-style-1">
+                <li>
+                  <label>Full Name <span class="required">*</span></label>
+                  <input type="text" name="field1" className="field-divided first-name" placeholder="First" /> 
+                  <input type="text" name="field2" className="field-divided" placeholder="Last" /></li>
+                  <li>
+                      <label>Email <span className="required">*</span></label>
+                      <input type="email" name="field3" class="field-long" />
+                  </li>
+                  <li>
+                      <label>Address</label>
+                      <input type="text" name="field3" class="field-long" />
+                  </li>
+                  <li>
+                      <label>Your Message <span className="required">*</span></label>
+                      <textarea name="field5" id="field5" className="field-long field-textarea"></textarea>
+                  </li>
+                  <p>Average daily KWHs</p>
+                  <li>
+                    <div className='month-form'>
+                      <div className='month-item'>
+                        <label htmlFor='jan'>Jan</label>
+                        <input name='jan' type='number' className='field-divided field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='feb'>Feb</label>
+                        <input name='feb' type='number' className='field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='mar'>Mar</label>
+                        <input name='mar' type='number' className='field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='apr'>April</label>
+                        <input name='apr' type='number' className='field-short'></input>
+                      </div>
+                    </div>
+                    <div className='month-form'>
+                      <div className='month-item'>
+                        <label htmlFor='may'>May</label>
+                        <input name='may' type='number' className='field-divided field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='june'>June</label>
+                        <input name='june' type='number' className='field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='july'>July</label>
+                        <input name='july' type='number' className='field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='aug'>Aug</label>
+                        <input name='aug' type='number' className='field-short'></input>
+                      </div>
+                    </div>
+                    <div className='month-form'>
+                      <div className='month-item'>
+                        <label htmlFor='sept'>Sept</label>
+                        <input name='may' type='number' className='field-divided field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='oct'>Oct</label>
+                        <input name='oct' type='number' className='field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='nov'>Nov</label>
+                        <input name='nov' type='number' className='field-short'></input>
+                      </div>
+                      <div className='month-item'>
+                        <label htmlFor='dec'>Dec</label>
+                        <input name='dec' type='number' className='field-short'></input>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                      <input type="submit" value="Submit" />
+                  </li>
+            </ul>
+          </form>
+
+
+
+                {/* <form className='form-container'>
                   <div className='contact-form-item'>
                     <label htmlFor="name">Name: </label>
                     <input
@@ -72,7 +155,7 @@ export default class ContactForm extends React.Component  {
                     <input name='dec' type='number' className='month-input'></input>
                   </div>
                     <button className='btn-class'>Submit</button>
-                </form>
+                </form> */}
         </section>
       </main>
     );
