@@ -1,5 +1,5 @@
 .navbar {
-    text-align: left;
+    text-align: center;
     background-color: rgb(255, 255, 255);
     padding: 20px 0px;
 }
@@ -9,14 +9,20 @@
 }
 
 .nav-logo {
-    width: 20%;
+    width: 50%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 500px) {
     .navbar {
-        text-align: center;
+        text-align: left;
     }
     .nav-logo {
-        width: 50%;
+        width: 20%;
     }
-  }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    .nav-logo {
+        width: 35%;
+    }
+}
