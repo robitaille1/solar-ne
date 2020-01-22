@@ -9,18 +9,18 @@ export default class ContactForm extends React.Component  {
         <section className="contact container">
             <h3 className='section-title'>Contact Us</h3>
             <form>
-              <ul class="form-style-1">
+              <ul className="form-style-1">
                 <li>
-                  <label>Full Name <span class="required">*</span></label>
+                  <label>Full Name <span className="required">*</span></label>
                   <input type="text" name="field1" className="field-divided first-name" placeholder="First" /> 
                   <input type="text" name="field2" className="field-divided" placeholder="Last" /></li>
                   <li>
                       <label>Email <span className="required">*</span></label>
-                      <input type="email" name="field3" class="field-long" />
+                      <input type="email" name="field3" className="field-long" />
                   </li>
                   <li>
                       <label>Address</label>
-                      <input type="text" name="field3" class="field-long" />
+                      <input type="text" name="field3" className="field-long" />
                   </li>
                   <li>
                       <label>Your Message <span className="required">*</span></label>
