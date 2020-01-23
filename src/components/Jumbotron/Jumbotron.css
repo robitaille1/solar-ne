@@ -1,0 +1,57 @@
+.Jumbotron {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://i.imgur.com/4xR69RT.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Jumbotron h1 {
+    font-size: 5em;
+
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.Jumbotron .btn {
+    display: block;
+    width: 200px;
+
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 15px;
+}
+
+.jumbo-container {
+    position: relative;
+    text-align: center;
+}
+
+.headerImg {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
