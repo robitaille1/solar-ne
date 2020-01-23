@@ -1,7 +1,6 @@
 .navbar {
     text-align: center;
-    background-color: rgb(255, 255, 255);
-    padding: 20px 10%;
+    padding: 5px 10%;
     display: flex;
     justify-content: space-between;
 }
@@ -12,6 +11,10 @@
 
 .nav-links {
     display: none;
+}
+
+.button {
+    text-decoration: none;
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {
