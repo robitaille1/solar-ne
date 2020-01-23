@@ -1,9 +1,21 @@
 .MainHeader {
-    background-color: darkgray;
     padding: 30px 0px;
 }
 
+.main-info {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: rgb(226, 225, 225);
+}
+
 .main-header {
-    text-align: left;
-    margin-top: 0px;
+    text-align: center;
+    margin: 0px;
+    font-size: 50px;
+}
+
+.company {
+    font-weight: bold;
 }
