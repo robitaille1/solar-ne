@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css'
 import Nav from './components/Nav/Nav'
+import Jumbotron from './components/Jumbotron/Jumbotron'
 import MainHeader from './components/MainHeader/MainHeader'
 import WhatWeDo from './components/WhatWeDo/WhatWeDo'
 import ContactForm from './components/ContactForm/ContactForm'
@@ -12,6 +13,7 @@ function App() {
     <main className='App'>
       <div>
         <Nav />
+        <Jumbotron />
         <MainHeader />
         <WhatWeDo />
         <ContactForm />
