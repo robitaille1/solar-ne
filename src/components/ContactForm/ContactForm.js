@@ -27,6 +27,7 @@ export default class ContactForm extends React.Component  {
                       <textarea name="field5" id="field5" className="field-long field-textarea"></textarea>
                   </li>
                   <p>Average daily KWHs</p>
+                  <p>Provide us with the values from your energy bill to allow us to understand your current energy consumption</p>
                   <li>
                     <div className='month-form'>
                       <div className='month-item'>
