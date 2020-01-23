@@ -8,9 +8,6 @@ function Footer() {
     return (
       <main className='Footer'>
         <nav className='footer'>
-            <div className='container'>
-                <h5>Copyright Solar Power New England © {date.getFullYear()} </h5>
-            </div>
             <div className='links-div'>
                 <div className='links first'>
                   <p>Info</p>
@@ -32,6 +29,10 @@ function Footer() {
             <div className='flag-div'>
               <img className='flags' src={oldFlag} alt='old flag of Maine'/>
               <img className='flags' src={newFlag} alt='current flag of Maine'/>
+            </div>
+            <div className='container'>
+                <h5>Copyright Solar Power New England © {date.getFullYear()} </h5>
+                <p>Made with <span role='img' aria-label="lobster">🦞</span> from Maine</p>
             </div>
         </nav>
       </main>
