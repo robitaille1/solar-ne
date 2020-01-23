@@ -1,7 +1,11 @@
 .WhatWeDoItem {
     width: 100%;
     margin: 50px 5px;
-    border-radius: 5px;
+    padding: 30px 10%;
+    /* background-color: rgb(226, 225, 225); */
+    /* border: 1px solid gray; */
+    /* border-radius: 10px; */
+    border-bottom: 1px solid lightgray;
 }
 
 .item {
@@ -14,26 +18,25 @@
 }
 
 .itemTitle {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .itemDesc {
+    font-size: 20px;
     align-self: center;
     padding: 0px 20px;
     width: 60%;
     margin: auto;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1050px) {
     .item {
         display: flex;
-        justify-content: space-between;
-    }
-    .itemImg {
-        width: 20%;
+        justify-content: space-around;
     }
     .itemDesc {
         width: 40%;
+        margin: 0px;
     }
 }
 
