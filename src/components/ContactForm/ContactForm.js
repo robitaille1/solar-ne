@@ -8,24 +8,43 @@ export default class ContactForm extends React.Component  {
       <main className='ContactForm'>
         <section className="contact container">
             <h3 className='section-title'>Contact Us</h3>
-            <form>
+            <form action="https://formsubmit.co/contact@solarne.com" method="POST">
               <ul className="form-style-1">
                 <li>
                   <label>Full Name <span className="required">*</span></label>
-                  <input type="text" name="field1" className="field-divided first-name" placeholder="First" /> 
-                  <input type="text" name="field2" className="field-divided" placeholder="Last" /></li>
-                  <li>
-                      <label>Email <span className="required">*</span></label>
-                      <input type="email" name="field3" className="field-long" />
-                  </li>
-                  <li>
-                      <label>Address</label>
-                      <input type="text" name="field3" className="field-long" />
-                  </li>
-                  <li>
-                      <label>Your Message <span className="required">*</span></label>
-                      <textarea name="field5" id="field5" className="field-long field-textarea"></textarea>
-                  </li>
+                  <input 
+                    type="text" 
+                    name="first name" 
+                    className="field-divided first-name" 
+                    placeholder="First" 
+                    required 
+                  /> 
+                  <input 
+                    type="text" 
+                    name="last name" 
+                    className="field-divided" 
+                    placeholder="Last" 
+                    required 
+                    />
+                </li>
+                <li>
+                    <label>Email <span className="required">*</span></label>
+                    <input type="email" name="email" className="field-long" required />
+                </li>
+                <li>
+                    <label>Address</label>
+                    <input type="text" name="address" className="field-long"/>
+                </li>
+                <li>
+                    <label>Your Message <span className="required">*</span></label>
+                    <textarea 
+                      name="message" 
+                      id="message" 
+                      className="field-long field-textarea" 
+                      required
+                    />
+                </li>
+                <p className='required required-text'>* Required</p>
                   <p>Average daily KWHs</p>
                   <p>Provide us with the values from your energy bill to allow us to understand your current energy consumption</p>
                   <li>
