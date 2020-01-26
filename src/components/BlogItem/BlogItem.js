@@ -5,9 +5,11 @@ function BlogItem(props) {
     return (
       <main className='BlogItem'>
         <div className='blog-item'>
-            <h3>
-                {props.title}
-            </h3>
+          <img className='blog-img' alt={props.blog.alt} src={props.blog.img} samesite='None' secure='true'/>
+          <h3>
+              {props.blog.title}
+          </h3>
+          <p className='blog-link'>Coming Soon</p>
         </div>
       </main>
     );
