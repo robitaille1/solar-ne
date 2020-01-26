@@ -16,8 +16,8 @@
     background-attachment: fixed;
 }
 
-.Jumbotron h1 {
-    font-size: 5em;
+.Jumbotron h2 {
+    font-size: 4em;
 
     margin-top: 0;
     margin-bottom: 0.5em;
@@ -34,7 +34,17 @@
 
     text-decoration: none;
     font-size: 1.5em;
-    border-radius: 15px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+  	color: #fff;
+}
+
+.Jumbotron .btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    background: #4691A4;
 }
 
 .jumbo-container {
@@ -50,7 +60,7 @@
     position: relative;
 }
 
-.button {
+/* .button {
     background: linear-gradient(135deg, #2584bb, rgb(19, 21, 168));
     color: #fff;
     cursor: pointer;
@@ -63,10 +73,16 @@
 .button:hover {
     background: linear-gradient(135deg, #2584bb81, rgba(19, 21, 168, 0.514));
     border: 1px solid rgba(128, 128, 128, 0.445);
-}
+} */
 
 .top-right {
     position: absolute;
     top: 8px;
     right: 16px;
+}
+
+@media only screen and (min-width: 700px) {
+    .Jumbotron h2 {
+        font-size: 5em;
+    }
 }

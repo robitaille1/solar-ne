@@ -5,8 +5,8 @@ function Jumbotron() {
     return (
       <main className='Jumbotron container'>
         <div className='jumbo-container'>
-            <h1>Now is the time...</h1>
-            <a href="https://example.com/" className="btn button">Get Started</a>
+            <h2>Now is the time...</h2>
+            {/* <a href="https://example.com/" className="btn button">Get Started</a> */}
         </div>
       </main>
     );
