@@ -22,7 +22,7 @@ class BlogSection extends Component{
         {
           id: 3,
           title: 'Solar Power New England Makes Solar More Affordable',
-          img: 'https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/EKNBCFBDA4I6RFDMSQQAMDFXXU.jpg&w=767',
+          img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSeFVmiCmMT--fJ2KA-ewIE7kboA6bkWOzKS_RTrRb6WAcNFUWNg&s',
           alt: 'solar panels'
         }
       ]
