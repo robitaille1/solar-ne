@@ -6,7 +6,7 @@
     text-align: center;
     /* padding: 5px 10%; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     /* background-color: rgb(235, 223, 114); */
     background-color: white;
     box-shadow: 0 15px 20px -10px rgba(17, 17, 17, 0.562);
@@ -34,6 +34,9 @@
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {
+    .navbar {
+        text-align: center;
+    }
     .nav-logo {
         width: 35%;
     }
@@ -43,6 +46,7 @@
     .navbar {
         text-align: left;
         padding: 10px 10%;
+        justify-content: space-between;
     }
     .nav-logo {
         width: 20%;
