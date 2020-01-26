@@ -31,7 +31,7 @@ class WhatWeDo extends Component {
         },
         {
           id: 4,
-          title: 'RFP, Request For Proposal Consultation',
+          title: 'Request For Proposal Consultation',
           description: '',
           img: gear
         }
@@ -43,7 +43,7 @@ class WhatWeDo extends Component {
     return (
       <main className='WhatWeDo'>
             <div className='container'>
-                <h2 className='main-header'>What We Do</h2>
+                <h2 className='main-header wwd'>What We Do</h2>
                 <section className='section-display' role='main'>
                    {this.state.wwd.map(wwd => 
                     <WhatWeDoItem key={wwd.id} item={wwd} />
