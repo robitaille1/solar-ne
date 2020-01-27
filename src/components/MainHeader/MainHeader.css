@@ -4,17 +4,14 @@
 }
 
 .main-info {
-    /* border: 1px solid gray; */
-    /* border-radius: 10px; */
     padding: 25px;
     font-size: 20px;
-    /* background-color: rgb(226, 225, 225); */
 }
 
 .main-header {
     text-align: center;
     margin: 0px;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .main-text {
@@ -28,7 +25,8 @@
 }
 
 
-@media only screen and (min-width: 500px) {
-    
-    
+@media only screen and (min-width: 600px) {
+    .main-header {
+        font-size: 50px;
+    }
 }
