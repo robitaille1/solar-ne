@@ -8,7 +8,7 @@ export default class ContactForm extends React.Component  {
       <main className='ContactForm'>
         <section className="contact container">
             <h3 className='section-title'>Contact Us</h3>
-            <form action="https://formsubmit.co/contact@solarne.com" method="POST">
+            <form action="https://formsubmit.co/contact@solarpowerne.com" method="POST">
               <ul className="form-style-1">
                 <li>
                   <label>Full Name <span className="required">*</span></label>
