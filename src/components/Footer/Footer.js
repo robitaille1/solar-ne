@@ -2,6 +2,7 @@ import React from 'react'
 import './Footer.css'
 import oldFlag from '../../assets/oldflag.gif'
 import newFlag from '../../assets/newflag.png'
+import logo from '../../assets/logo.png'
 
 function Footer() {
   const date = new Date()
@@ -28,6 +29,7 @@ function Footer() {
               </div>
             <div className='flag-div'>
               <img className='flags' src={oldFlag} alt='old flag of Maine'/>
+              <img className='logo-flag' src={logo} alt='Solar Power New England Logo'/>
               <img className='flags' src={newFlag} alt='current flag of Maine'/>
             </div>
             <div className='container copyright'>
