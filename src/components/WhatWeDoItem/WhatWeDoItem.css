@@ -1,6 +1,5 @@
 .WhatWeDoItem {
     width: 100%;
-    margin-top: 50px;
     padding: 50px 15%;
     text-align: center;
     border-bottom: 1px solid lightgray;
@@ -40,6 +39,7 @@
 @media only screen and (min-width: 1250px) {
     .WhatWeDoItem {
         padding: 50px 10%;
+        margin-top: 50px;
     }
     .item {
         display: flex;
