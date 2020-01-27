@@ -35,7 +35,7 @@ function Footer() {
               <img className='flags' src={newFlag} alt='current flag of Maine'/>
             </div>
             <div className='container copyright'>
-                <h5>Copyright Solar Power New England © {date.getFullYear()} </h5>
+                <h5>Solar Power New England © {date.getFullYear()} </h5>
                 <p>Made with <span role='img' aria-label="lobster">🦞</span> from Maine</p>
             </div>
         </nav>
