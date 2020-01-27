@@ -7,7 +7,6 @@ function MainHeader() {
             <div className='container'>
                 <section className='main-header' role='main'>
                   <div className='main-info'>
-                    {/* <h2 className='main-header'>Who We Are</h2> */}
                     <p className='main-text'>
                       Our mission at <span className='company'>Solar Power New England</span>, is to help homeowners increase their ability to produce their own power, and improve their ability to manage their energy consumption.
                     </p>

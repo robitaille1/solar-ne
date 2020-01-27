@@ -1,7 +1,6 @@
 .BlogSection {
     padding: 50px 0px;
     color: white;
-    /* background-color: rgb(55, 112, 126); */
     background-color: rgb(62, 128, 145);
 }
 
@@ -9,7 +8,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    /* justify-content: space-between; */
 }
 
 @media only screen and (min-width: 550px) {
