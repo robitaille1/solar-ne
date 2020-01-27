@@ -5,7 +5,7 @@ import './Nav.css'
 function Nav() {
     return (
       <main className='Nav'>
-        <nav className='navbar container'>
+        <nav className='navbar'>
             {/* <div>
                 <img className='nav-logo' src={logo} alt='Solar Power New England' />
             </div> */}
