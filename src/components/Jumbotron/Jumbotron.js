@@ -8,6 +8,7 @@ function Jumbotron() {
             <h2 className='jumbo-text'>
               The future <span className='text-2'> is now..</span>
             </h2>
+            {/* Photo by Scott Webb - @ScottWebb */}
         </div>
       </main>
     );

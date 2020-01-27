@@ -49,6 +49,7 @@ class WhatWeDo extends Component {
                     <WhatWeDoItem key={wwd.id} item={wwd} />
                     )}
                 </section>
+                {/* Icons made by Freepik on Flaticon.com  */}
             </div>
       </main>
     );
