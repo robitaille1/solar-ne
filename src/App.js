@@ -1,19 +1,23 @@
 import React from 'react';
-import logo from './assets/logo.png'
 import './App.css'
+import Nav from './components/Nav/Nav'
+import Jumbotron from './components/Jumbotron/Jumbotron'
+import MainHeader from './components/MainHeader/MainHeader'
+import WhatWeDo from './components/WhatWeDo/WhatWeDo'
+import ContactForm from './components/ContactForm/ContactForm'
+import BlogSection from './components/BlogSection/BlogSection'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <main className='App'>
-      <div className='container'>
-        <div className='logo'>
-          <img className='image' src={logo} alt='logo'/>
-        </div>
-        <p className='title'>Coming soon! <span className='thanks'>- Thank you for the patience.</span></p>
-        <form action='mailto:contact@solarpowerne.com'>
-            <button className='submit-btn' type='submit'>Contact us!</button>
-        </form>
-      </div>
+      <Nav />
+      <Jumbotron />
+      <MainHeader />
+      <WhatWeDo />
+      <ContactForm />
+      <BlogSection />
+      <Footer />
     </main>
   );
 }

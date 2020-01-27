@@ -1,0 +1,96 @@
+.Jumbotron {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(https://i.imgur.com/4xR69RT.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.Jumbotron h2 {
+    /* font-size: 4em; */
+    font-size: 3em;
+    margin-top: 0;
+    /* margin-bottom: 0.5em; */
+}
+
+.Jumbotron .btn {
+    display: block;
+    width: 200px;
+
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-decoration: none;
+    font-size: 1.5em;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+  	color: #fff;
+}
+
+.Jumbotron .btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    background: #4691A4;
+}
+
+.jumbo-container {
+    position: relative;
+    text-align: center;
+}
+
+.jumbo-text {
+    margin-bottom: 150px;
+}
+
+.headerImg {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* .button {
+    background: linear-gradient(135deg, #2584bb, rgb(19, 21, 168));
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid grey;
+    margin: 5px;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #2584bb81, rgba(19, 21, 168, 0.514));
+    border: 1px solid rgba(128, 128, 128, 0.445);
+} */
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+@media only screen and (min-width: 700px) {
+    .Jumbotron h2 {
+        font-size: 5em;
+        margin-bottom: 0.5em; 
+    }
+    .jumbo-text {
+        margin-bottom: 0px;
+    }
+}

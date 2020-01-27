@@ -1,0 +1,9 @@
+.WhatWeDo {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.section-display {
+    display: flex;
+    flex-direction: column;
+}
