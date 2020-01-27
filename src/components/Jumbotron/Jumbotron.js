@@ -6,7 +6,6 @@ function Jumbotron() {
       <main className='Jumbotron container'>
         <div className='jumbo-container'>
             <h2 className='jumbo-text'>The future is now..</h2>
-            {/* <a href="https://example.com/" className="btn button">Get Started</a> */}
         </div>
       </main>
     );
