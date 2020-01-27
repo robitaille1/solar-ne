@@ -23,7 +23,7 @@ function Footer() {
                   <p>Linkedin</p>
                 </div>
                 <div className='links footer-statement'>
-                  <p>Interested in helping your neighbors become more sustainable, and energy independent? Click here for more info, or contact us today!</p>
+                  <p>Interested in solar for your home, or helping your neighbors become more sustainable and energy independent? Contact us today for more information!</p>
                   <a href="mailto:contact@solarpowerne.com" className='contact-link'>contact@solarpowerne.com</a>
                 </div>
               </div>
