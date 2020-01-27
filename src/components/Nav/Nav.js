@@ -6,9 +6,6 @@ function Nav() {
     return (
       <main className='Nav'>
         <nav className='navbar'>
-            {/* <div>
-                <img className='nav-logo' src={logo} alt='Solar Power New England' />
-            </div> */}
             <div>
               <h1 className='brand'>SOLAR POWER NEW ENGLAND</h1>
             </div>
