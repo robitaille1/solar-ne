@@ -19,23 +19,34 @@ function Footer() {
                 </div>
                 <div className='links'>
                   <p className='link-header'>Social</p>
-                  <i 
-                    href='https://www.facebook.com/mainesolarcompany/' 
-                    className="fab fa-facebook-square social"
-                    target="_blank"
-                    rel="noopener noreferrer" />
-                    <i
+                  <a 
+                      href='https://www.facebook.com/mainesolarcompany/'
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='social'>
+                      <i 
+                        className="fab fa-facebook" 
+                      />
+                    </a>
+                    <a 
                       href='https://www.instagram.com/solarpowerne/'
                       target="_blank"
-                      rel="noopener noreferrer" 
-                      className="fab fa-instagram social" 
-                    />
-                    <i
+                      rel="noopener noreferrer"
+                      className='social'>
+                      <i 
+                        className="fab fa-instagram" 
+                      />
+                    </a>
+                    <a 
                       href='https://www.pinterest.com/solarpowerne/'
                       target="_blank"
-                      rel="noopener noreferrer" 
-                      className="fab fa-pinterest social" 
-                    />
+                      rel="noopener noreferrer"
+                      className='social'>
+                      <i 
+                        className="fab fa-pinterest" 
+                      />
+                    </a>
+                    
                 </div>
                 <div className='links footer-statement'>
                   <p>
