@@ -3,7 +3,7 @@ import './MainHeader.css'
 
 function MainHeader() {
     return (
-      <main className='MainHeader'>
+      <main className='MainHeader' id='mainheader'>
             <div className='container'>
                 <section className='main-header' role='main'>
                   <div className='main-info'>

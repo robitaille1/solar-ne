@@ -48,7 +48,7 @@
 .jumbo-container {
     position: relative;
     text-align: center;
-    display: flex;
+    display: block;
 }
 
 .jumbo-text {
@@ -71,6 +71,19 @@
     position: absolute;
     top: 8px;
     right: 16px;
+}
+
+.learn {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.down-arrow {
+    font-size: 50px;
+}
+
+.down-arrow:hover {
+    color: rgb(202, 202, 202);
 }
 
 @media only screen and (min-width: 700px) {

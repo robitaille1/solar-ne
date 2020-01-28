@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import './Nav.css'
 
 function Nav() {
@@ -9,7 +10,15 @@ function Nav() {
               <h1 className='brand'>SOLAR POWER <span className='new-england'>NEW ENGLAND</span></h1>
             </div>
             <div className='nav-links'>
-              <a href="mailto:contact@solarpowerne.com" className='button'>Contact Us</a>
+            <Link
+              to='contact'
+              spy={true}
+              smooth={true}
+              offset={-20}
+              duration={1500}
+              className='button'>
+                Contact Us
+              </Link>
             </div>
         </nav>
       </main>

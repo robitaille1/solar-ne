@@ -6,7 +6,7 @@ export default class ContactForm extends React.Component  {
   render() {
     return (
       <main className='ContactForm'>
-        <section className="contact container">
+        <section className="contact container" id='contact'>
             <h3 className='section-title'>Contact Us</h3>
             <form action="https://formsubmit.co/contact@solarpowerne.com" method="POST">
               <ul className="form-style-1">
