@@ -11,22 +11,40 @@ function Footer() {
         <nav className='footer'>
             <div className='links-div'>
                 <div className='links first'>
-                  <p>Info</p>
+                  <p className='link-header'>Info</p>
                   <p>Investors</p>
                   <p>Contact</p>
                   <p>Careers</p>
                   <p>Links</p>
                 </div>
                 <div className='links'>
-                  <p>Facebook</p>
-                  <p>Instagram</p>
-                  <p>Linkedin</p>
+                  <p className='link-header'>Social</p>
+                  <i 
+                    href='https://www.facebook.com/mainesolarcompany/' 
+                    className="fab fa-facebook-square social"
+                    target="_blank"
+                    rel="noopener noreferrer" />
+                    <i
+                      href='https://www.instagram.com/solarpowerne/'
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="fab fa-instagram social" 
+                    />
+                    <i
+                      href='https://www.pinterest.com/solarpowerne/'
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="fab fa-pinterest social" 
+                    />
                 </div>
                 <div className='links footer-statement'>
                   <p>
                     Interested in solar for your home or helping your neighbors become more sustainable and energy independent? Contact us today for more information!
                   </p>
-                  <a href="mailto:contact@solarpowerne.com" className='contact-link'>contact@solarpowerne.com</a>
+                  <a 
+                    href="mailto:contact@solarpowerne.com" className='contact-link'>
+                      contact@solarpowerne.com
+                  </a>
                 </div>
               </div>
             <div className='flag-div'>
