@@ -84,6 +84,7 @@
 
 .down-arrow:hover {
     color: rgb(202, 202, 202);
+    cursor: pointer;
 }
 
 .learn-more {
