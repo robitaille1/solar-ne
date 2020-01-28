@@ -10,7 +10,7 @@ function Jumbotron() {
               The future <span className='text-2'> is now..</span>
             </h2>
             {/* Photo by Scott Webb - @ScottWebb */}
-            <div>
+            <div className='learn-more'>
               <p className='learn'>Learn more</p>
             <Link
               to='mainheader'
@@ -22,7 +22,6 @@ function Jumbotron() {
               <i className="fas fa-chevron-circle-down down-arrow"></i>
               </Link>
             </div>
-            
         </div>
       </main>
     );

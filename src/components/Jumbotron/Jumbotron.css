@@ -52,7 +52,7 @@
 }
 
 .jumbo-text {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .text-2 {
@@ -86,12 +86,19 @@
     color: rgb(202, 202, 202);
 }
 
+.learn-more {
+    margin-bottom: 50px;
+}
+
 @media only screen and (min-width: 700px) {
     .Jumbotron h2 {
         font-size: 5em;
-        margin-bottom: 0.5em; 
+        margin-bottom: 90px; 
     }
     .jumbo-text {
+        margin-bottom: 0px;
+    }
+    .learn-more {
         margin-bottom: 0px;
     }
 }
