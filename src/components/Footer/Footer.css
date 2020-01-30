@@ -1,6 +1,8 @@
 .footer {
     background-color: rgb(231, 225, 225);
     padding: 10px 0px 0px 0px;
+    color:rgb(29, 60, 68);
+    font-size: 18px;
 }
 
 .links {
@@ -55,7 +57,7 @@ h5 {
 
 .social {
     display: block;
-    margin: 10px 0px;
+    margin: 16px 0px;
     color: rgb(29, 60, 68);
     font-size: 30px;
     text-align: center;
@@ -68,6 +70,7 @@ h5 {
 .link-header {
     color: rgb(62, 128, 145);
     font-weight: bold;
+    margin: 0px;
 }
 
 @media only screen and (min-width: 550px) {
@@ -92,6 +95,9 @@ h5 {
 
     .footer-statement {
         width: 50%;
+    }
+    .social {
+        margin: 10px 0px
     }
 } 
 

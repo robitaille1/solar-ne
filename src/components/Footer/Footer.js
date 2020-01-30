@@ -23,7 +23,8 @@ function Footer() {
                       href='https://www.facebook.com/mainesolarcompany/'
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='social'>
+                      className='social'
+                      alt='facebook'>
                       <i 
                         className="fab fa-facebook" 
                       />
@@ -32,7 +33,8 @@ function Footer() {
                       href='https://www.instagram.com/solarpowerne/'
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='social'>
+                      className='social'
+                      alt='instagram'>
                       <i 
                         className="fab fa-instagram" 
                       />
@@ -41,12 +43,22 @@ function Footer() {
                       href='https://www.pinterest.com/solarpowerne/'
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='social'>
+                      className='social'
+                      alt='pinterest'>
                       <i 
                         className="fab fa-pinterest" 
                       />
                     </a>
-                    
+                    <a 
+                      href='https://www.yelp.com/biz/solar-power-new-england-gorham-2'
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className='social'
+                      alt='yelp'>
+                      <i 
+                        className="fab fa-yelp" 
+                      />
+                    </a>
                 </div>
                 <div className='links footer-statement'>
                   <p>
