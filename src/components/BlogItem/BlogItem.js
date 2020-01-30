@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './BlogItem.css'
 
 function BlogItem(props) {
@@ -9,7 +10,12 @@ function BlogItem(props) {
           <h3>
               {props.blog.title}
           </h3>
-          <p className='blog-link'>Coming Soon</p>
+          <Link 
+            className='blog-link'
+            to={`/blogs/${props.blog.id}`}
+          >
+              Read More
+          </Link>
         </div>
       </main>
     );
