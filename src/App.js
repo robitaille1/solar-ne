@@ -1,25 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
+import SolarContext from './context/SolarContext'
+import HomePage from './routes/HomePage'
+// import AboutPage from './routes/AboutPage'
+import BlogPage from './routes/BlogPage'
 import './App.css'
-import Nav from './components/Nav/Nav'
-import Jumbotron from './components/Jumbotron/Jumbotron'
-import MainHeader from './components/MainHeader/MainHeader'
-import WhatWeDo from './components/WhatWeDo/WhatWeDo'
-import ContactForm from './components/ContactForm/ContactForm'
-import BlogSection from './components/BlogSection/BlogSection'
-import Footer from './components/Footer/Footer'
 
-function App() {
-  return (
-    <main className='App'>
-      <Nav />
-      <Jumbotron />
-      <MainHeader />
-      <WhatWeDo />
-      <ContactForm />
-      <BlogSection />
-      <Footer />
-    </main>
-  );
+
+class App extends Component {
+  state = {
+    blogs: this.context.blogs
+  }
+
+  renderBlogRoutes() {
+    return (
+        <>
+            {['/blogs/:blogId'].map(path => (
+                    <Route
+                        exact
+                        key={path}
+                        path={path}
+                        component={BlogPage}
+                    />
+                ))}
+        </>
+        );
+    }
+    static contextType = SolarContext
+
+    render(){
+      const value = {
+        blogs: this.state.blogs
+      }
+      return (
+       <SolarContext.Provider value={value}>
+         <main className='App'>
+            <Route exact path='/' component={HomePage} />
+            {/* <Route path='/about' component={AboutPage} /> */}
+            {this.renderBlogRoutes()}
+         </main>
+       </SolarContext.Provider> 
+      )
+    }
 }
 
 export default App;
