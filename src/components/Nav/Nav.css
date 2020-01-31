@@ -1,13 +1,9 @@
-.Nav {
-    box-shadow: 0 8px 6px -6px black;
-}
 
 .navbar {
     text-align: center;
     display: flex;
     justify-content: center;
     background-color: white;
-    box-shadow: 0 15px 20px -10px rgba(17, 17, 17, 0.562);
 }
 
 .nav-logo {
@@ -27,6 +23,10 @@
     color: rgb(55, 112, 126);
     padding: 5px;
     margin: 5px;
+}
+
+.brand:hover  {
+    color: rgba(55, 112, 126, 0.699);
 }
 
 .brand-div {
