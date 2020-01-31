@@ -1,9 +1,9 @@
 import React from 'react'
 import { getBlog } from '../blogs-helpers'
 import SolarContext from '../context/SolarContext'
-
 import Nav from '../components/Nav/Nav'
 import BlogPost from '../components/BlogPost/BlogPost'
+import Footer from '../components/Footer/Footer'
 
 
 
@@ -26,6 +26,7 @@ export default class BlogPage extends React.Component {
         <div>
           <BlogPost blog={blogInfo[0]} />
         </div>
+        <Footer />
       </main>
     )
   }
