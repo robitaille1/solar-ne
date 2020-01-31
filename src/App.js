@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import SolarContext from './context/SolarContext'
 import HomePage from './routes/HomePage'
-// import AboutPage from './routes/AboutPage'
+import AboutPage from './routes/AboutPage'
 import BlogPage from './routes/BlogPage'
 import './App.css'
 
@@ -36,7 +36,7 @@ class App extends Component {
        <SolarContext.Provider value={value}>
          <main className='App'>
             <Route exact path='/' component={HomePage} />
-            {/* <Route path='/about' component={AboutPage} /> */}
+            <Route path='/about' component={AboutPage} />
             {this.renderBlogRoutes()}
          </main>
        </SolarContext.Provider> 

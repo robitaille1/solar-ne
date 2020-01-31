@@ -61,6 +61,10 @@
   cursor: pointer;
 }
 
+Link {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 600px) {
   .image {
     width: 200px;
