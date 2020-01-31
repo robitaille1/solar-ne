@@ -1,10 +1,14 @@
-.AboutSection {
+.AboutPage {
     background-color: rgb(62, 128, 145);
 }
 
-.about-section {
-    /* margin: 50px 50px; */
-    padding: 30px 10%;
+.AboutSection {
+    white-space: pre-line;
+    padding: 30px 7%;
+    margin: 50px 10%;
+    background-color: rgb(231, 225, 225);
+    border-radius: 10px;
+    box-shadow:  0 0 15px rgba(0, 0, 0, 0.411);
 }
 
 .about-logo {
