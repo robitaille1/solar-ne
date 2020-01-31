@@ -16,7 +16,7 @@ class BlogPost extends Component {
                 <div className='blog-content'>
                     <p>{this.props.blog.content}</p>
                 </div>
-                {this.props.blog.asset === null ? null : <img className='asset' src={this.props.blog.asset.table} alt='blog asset' />}
+                {this.props.blog.asset === '' ? null : <img className='asset' src={this.props.blog.asset.table} alt='blog asset' />}
             </main>
         )
     } 
