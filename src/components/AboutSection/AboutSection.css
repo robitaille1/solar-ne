@@ -1,0 +1,12 @@
+.AboutSection {
+    background-color: rgb(62, 128, 145);
+}
+
+.about-section {
+    /* margin: 50px 50px; */
+    padding: 30px 10%;
+}
+
+.about-logo {
+    width: 30%
+}
