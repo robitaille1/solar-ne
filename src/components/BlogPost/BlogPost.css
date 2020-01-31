@@ -15,6 +15,10 @@
     text-align: left;
 }
 
-.BlogPost img {
+.blog-img{
     width: 70%;
+}
+
+.asset {
+    width: 90%;
 }

@@ -9,12 +9,14 @@ class BlogPost extends Component {
                 <p>By: {this.props.blog.author}</p>
                 <p>{this.props.blog.date}</p>
                 <img 
+                    className='blog-img'
                     src={this.props.blog.img} 
                     alt={this.props.blog.alt}
                 />
                 <div className='blog-content'>
                     <p>{this.props.blog.content}</p>
                 </div>
+                {this.props.blog.asset === null ? null : <img className='asset' src={this.props.blog.asset.table} alt='blog asset' />}
             </main>
         )
     } 
