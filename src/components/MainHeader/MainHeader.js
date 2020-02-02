@@ -1,10 +1,28 @@
 import React from 'react'
+import Media from 'react-media'
 import './MainHeader.css'
 
-function MainHeader() {
+class MainHeader extends React.Component {
+  render(){
     return (
       <main className='MainHeader' id='mainheader'>
-            <div className='container'>
+        <Media queries={{ mobile: { maxWidth: 1000 } }}>
+          {matches =>
+            matches.mobile ? (
+              <div className='container'>
+                <section className='main-header' role='main'>
+                  <div className='main-info'>
+                    <p className='main-text'>
+                      <span className='company'>Solar Power New England</span> aims to help homeowners increase their ability to produce their own power, and improve their ability to manage their energy consumption.
+                    </p>
+                    <p className='main-text'>
+                      Our focus is to help the people of Maine and their neighbors, in the transition to a renewable and sustainable energy future.
+                    </p>
+                  </div>
+                </section>
+            </div>
+            ) : (
+              <div className='container'>
                 <section className='main-header' role='main'>
                   <div className='main-info'>
                     <p className='main-text'>
@@ -19,8 +37,12 @@ function MainHeader() {
                   </div>
                 </section>
             </div>
+            )
+          }
+        </Media>   
       </main>
     );
   }
+}
   
 export default MainHeader;
