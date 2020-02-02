@@ -7,7 +7,8 @@ function Jumbotron() {
       <main className='Jumbotron'>
         <div className='jumbo-container'>
             <h2 className='jumbo-text'>
-              The future <span className='text-2'> is now..</span>
+              Invest in your home, community, local businesses and Maine - this is your first step toward energy independence!
+              {/* The future <span className='text-2'> is now..</span> */}
             </h2>
             {/* Photo by Scott Webb - @ScottWebb */}
             <div className='learn-more'>
