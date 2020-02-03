@@ -22,7 +22,7 @@ function Nav() {
               className='button'>
                 Contact Us
               </NewLink> */}
-              <Link to={`/about`} style={{ textDecoration: 'none' }}>
+              <Link className='nav-link' to={`/about`} style={{ textDecoration: 'none' }}>
                 About Us
               </Link>
             </div>
