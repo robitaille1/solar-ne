@@ -9,7 +9,7 @@ class MainHeader extends React.Component {
         <Media queries={{ mobile: { maxWidth: 1000 } }}>
           {matches =>
             matches.mobile ? (
-              <div className='container'>
+              <div className='container1'>
                 <section className='main-header' role='main'>
                   <div className='main-info'>
                     <p className='main-text'>
@@ -22,7 +22,7 @@ class MainHeader extends React.Component {
                 </section>
             </div>
             ) : (
-              <div className='container'>
+              <div className='container1'>
                 <section className='main-header' role='main'>
                   <div className='main-info'>
                     <p className='main-text'>
