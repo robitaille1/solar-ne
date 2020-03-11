@@ -43,6 +43,7 @@ input[type=number] {
 .form-style-1 input[type=time],
 .form-style-1 input[type=url],
 .form-style-1 input[type=email],
+.form-style-1 input[type=tel],
 textarea, 
 select{
 	box-sizing: border-box;
@@ -66,6 +67,7 @@ select{
 .form-style-1 input[type=time]:focus,
 .form-style-1 input[type=url]:focus,
 .form-style-1 input[type=email]:focus,
+.form-style-1 input[type=tel]:focus,
 .form-style-1 textarea:focus, 
 .form-style-1 select:focus{
 	-moz-box-shadow: 0 0 8px #88D5E9;
@@ -128,6 +130,7 @@ select{
 }
 
 .required-text {
+	margin-top: 5px;
 	margin: 0;
 	font-weight: bold;
 }
