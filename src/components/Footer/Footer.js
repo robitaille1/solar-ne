@@ -13,9 +13,9 @@ function Footer() {
                 <div className='links first'>
                   <p className='link-header'>Info</p>
                   <p>Investors</p>
-                  <p>Contact</p>
+                  <p>Partners</p>
                   <p>Careers</p>
-                  <p>Links</p>
+                  <p>Useful Links</p>
                 </div>
                 <div className='links'>
                   <p className='link-header'>Social</p>
