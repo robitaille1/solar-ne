@@ -51,6 +51,16 @@
     color: rgba(29, 60, 68, 0.459);
 }
 
+.page-link {
+    font-size: 100%;
+    color: rgb(29, 60, 68);
+    text-decoration: none;
+}
+
+.page-link:hover {
+    color: rgba(29, 60, 68, 0.459);
+}
+
 h5 {
     margin: 0;
 }

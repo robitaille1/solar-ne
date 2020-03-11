@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Footer.css'
 import oldFlag from '../../assets/oldflag.gif'
 import newFlag from '../../assets/newflag.png'
@@ -12,10 +13,34 @@ function Footer() {
             <div className='links-div'>
                 <div className='links first'>
                   <p className='link-header'>Info</p>
-                  <p>Investors</p>
-                  <p>Partners</p>
-                  <p>Careers</p>
-                  <p>Useful Links</p>
+                  <Link 
+                    // className='blog-link'
+                    to={`/investors`}
+                    className='page-link'
+                  >
+                      <p>Investors</p>
+                  </Link>
+                  <Link 
+                    // className='blog-link'
+                    to={`/partners`}
+                    className='page-link'
+                  >
+                      <p>Partners</p>
+                  </Link>
+                  <Link 
+                    // className='blog-link'
+                    to={`/careers`}
+                    className='page-link'
+                  >
+                      <p>Careers</p>
+                  </Link>
+                  <Link 
+                    // className='blog-link'
+                    to={`/resources`}
+                    className='page-link'
+                  >
+                      <p>Resources</p>
+                  </Link>
                 </div>
                 <div className='links'>
                   <p className='link-header'>Social</p>
