@@ -7,10 +7,10 @@ import ContactForm from '../components/ContactForm/ContactForm'
 import BlogSection from '../components/BlogSection/BlogSection'
 import Footer from '../components/Footer/Footer'
 
-function HomePage() {
+function HomePage(props) {
   return (
     <main className='App'>
-      <Nav />
+      <Nav path={props.match.path}/>
       <Jumbotron />
       <MainHeader />
       <WhatWeDo />

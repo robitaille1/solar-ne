@@ -10,7 +10,7 @@ export default class AboutPage extends React.Component {
   render() {
     return (
       <main className='AboutPage'>
-        <Nav />
+        <Nav/>
         <div>
           <AboutSection />
         </div>
