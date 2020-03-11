@@ -24,7 +24,8 @@
 .company {
     font-weight: bold;
     font-family: 'Orbitron', sans-serif;
-    color: rgb(34, 71, 80);
+    /* color: rgb(34, 71, 80); */
+    color:rgb(56, 124, 141);
 }
 
 
