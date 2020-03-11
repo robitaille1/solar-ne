@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import './BlogItem.css'
 
 function BlogItem(props) {
@@ -17,12 +17,13 @@ function BlogItem(props) {
           <h3>
               {props.blog.title}
           </h3>
-            <Link 
+            {/* <Link 
               className='blog-link'
               to={`/blogs/${props.blog.id}`}
             >
                 Read More
-            </Link>
+            </Link> */}
+            <p className='coming-soon'>Coming Soon</p>
         </div>
       </main>
     );

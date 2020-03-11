@@ -32,8 +32,17 @@
     margin:5px;
 }
 
+.coming-soon {
+    text-decoration: underline;
+    font-size: 12px;
+}
+
 @media only screen and (min-width: 550px) {
     .BlogItem {
         width: 30%;
+    }
+    .coming-soon {
+        text-decoration: underline;
+        font-size: 15px;
     }
 }   
