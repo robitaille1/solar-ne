@@ -13,15 +13,6 @@ function Nav() {
               
             </div>
             <div className='nav-links'>
-            {/* <NewLink
-              to='contact'
-              spy={true}
-              smooth={true}
-              offset={-20}
-              duration={1500}
-              className='button'>
-                Contact Us
-              </NewLink> */}
               <Link className='nav-link' to={`/about`} style={{ textDecoration: 'none' }}>
                 About Us
               </Link>
