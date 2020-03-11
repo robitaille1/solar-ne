@@ -22,13 +22,13 @@
 
 .brand  {
     font-family: 'Orbitron', sans-serif;
-    color: rgb(55, 112, 126);
+    color: rgb(62, 141, 161);
     padding: 10px;
     margin: 5px;
 }
 
 .brand:hover  {
-    color: rgba(55, 112, 126, 0.699);
+    color: rgb(62, 141, 161,0.699);
 }
 
 .brand-div {
