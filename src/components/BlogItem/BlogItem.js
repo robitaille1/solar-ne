@@ -13,7 +13,7 @@ function BlogItem(props) {
             samesite='None' 
             secure='true'
           />
-          <p className='blog-date'>{props.blog.date}</p>
+          {/* <p className='blog-date'>{props.blog.date}</p> */}
           <h3>
               {props.blog.title}
           </h3>
