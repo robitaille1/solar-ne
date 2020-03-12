@@ -7,8 +7,7 @@ function Jumbotron() {
       <main className='Jumbotron'>
         <div className='jumbo-container'>
             <h2 className='jumbo-text'>
-              Invest in your home, community, local businesses!
-              {/* The future <span className='text-2'> is now..</span> */}
+              Invest in your home, community, and local businesses!
             </h2>
             {/* Photo by American Public Power Association - @publicpowerorg */}
             <div className='learn-more'>

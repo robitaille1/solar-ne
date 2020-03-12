@@ -99,7 +99,6 @@
 
 @media only screen and (min-width: 700px) {
     .Jumbotron h2 {
-        /* font-size: 5em; */
         font-size: 3em;
         margin-bottom: 90px; 
     }
