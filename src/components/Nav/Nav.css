@@ -20,6 +20,10 @@
     text-decoration: none;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .brand  {
     font-family: 'Orbitron', sans-serif;
     color: rgb(62, 141, 161);
