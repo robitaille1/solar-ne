@@ -14,28 +14,30 @@ function Footer() {
                 <div className='links first'>
                   <p className='link-header'>Info</p>
                   <Link 
-                    // className='blog-link'
+                    to={`/about`}
+                    className='page-link about-footer'
+                  >
+                      <p>About Us</p>
+                  </Link>
+                  <Link 
                     to={`/investors`}
                     className='page-link'
                   >
                       <p>Investors</p>
                   </Link>
                   <Link 
-                    // className='blog-link'
                     to={`/partners`}
                     className='page-link'
                   >
                       <p>Partners</p>
                   </Link>
                   <Link 
-                    // className='blog-link'
                     to={`/careers`}
                     className='page-link'
                   >
                       <p>Careers</p>
                   </Link>
                   <Link 
-                    // className='blog-link'
                     to={`/resources`}
                     className='page-link'
                   >
