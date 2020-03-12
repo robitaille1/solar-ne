@@ -21,7 +21,7 @@ class Nav extends Component {
 
       if (this.props.path === '/') {
         button = 
-        <Link to='contact' spy={true} smooth={true} offset={-10} duration={2000}>
+        <Link to='contact' spy={true} smooth={true} offset={-70} duration={2000}>
         <button className='button'>
           CONTACT
         </button>

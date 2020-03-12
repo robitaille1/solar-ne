@@ -16,7 +16,7 @@ function Jumbotron() {
               to='mainheader'
               spy={true}
               smooth={true}
-              offset={30}
+              offset={-50}
               duration={1000}
             >
               <i className="fas fa-chevron-circle-down down-arrow"></i>
