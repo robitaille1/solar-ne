@@ -2,9 +2,8 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 import './BlogItem.css'
 
-function BlogItem(props) {
-    return (
-      <main className='BlogItem'>
+const blogItem = props => (
+  <main className='BlogItem'>
         <div className='blog-item'>
           <img 
             className='blog-item-img' 
@@ -26,7 +25,6 @@ function BlogItem(props) {
             <p className='coming-soon'>Coming Soon</p>
         </div>
       </main>
-    );
-  }
+)
   
-export default BlogItem;
+export default blogItem;
