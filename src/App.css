@@ -65,24 +65,6 @@ Link {
   text-decoration: none;
 }
 
-.CareersPage {
-  background-color: rgb(55, 112, 126);
-}
-
-.InvestorsPage {
-  background-color: rgb(55, 112, 126);
-  text-align: left;
-}
-.PartnersPage {
-  background-color: rgb(55, 112, 126);
-}
-
-.ResourcesPage {
-  background-color: rgb(55, 112, 126);
-  text-align: left;
-}
-
-
 @media only screen and (max-width: 600px) {
   .image {
     width: 200px;
