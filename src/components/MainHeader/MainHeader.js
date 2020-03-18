@@ -1,11 +1,9 @@
-import React from 'react'
-import Media from 'react-media'
-import './MainHeader.css'
+import React from 'react';
+import Media from 'react-media';
+import './MainHeader.css';
 
-class MainHeader extends React.Component {
-  render(){
-    return (
-      <main className='MainHeader' id='mainheader'>
+const mainHeader = () => (
+  <main className='MainHeader' id='mainheader'>
         <Media queries={{ mobile: { maxWidth: 1000 } }}>
           {matches =>
             matches.mobile ? (
@@ -41,8 +39,6 @@ class MainHeader extends React.Component {
           }
         </Media>   
       </main>
-    );
-  }
-}
+);
   
-export default MainHeader;
+export default mainHeader;

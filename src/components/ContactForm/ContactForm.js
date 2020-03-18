@@ -1,11 +1,8 @@
-import React from 'react'
-import './ContactForm.css'
+import React from 'react';
+import './ContactForm.css';
 
-
-export default class ContactForm extends React.Component  {
-  render() {
-    return (
-      <main className='ContactForm'>
+const contactForm = () => (
+  <main className='ContactForm'>
         <section className="contact container" id='contact'>
             <h3 className='section-title'>Contact Us</h3>
             <form action="https://formsubmit.co/contact@solarpowerne.com" method="POST">
@@ -110,7 +107,7 @@ export default class ContactForm extends React.Component  {
           </form>
         </section>
       </main>
-    );
-  }
-}
+);
+
+export default contactForm;
   

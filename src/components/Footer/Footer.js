@@ -1,14 +1,14 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import './Footer.css'
-import oldFlag from '../../assets/oldflag.gif'
-import newFlag from '../../assets/newflag.png'
-import logo from '../../assets/logo.png'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import './Footer.css';
+import oldFlag from '../../assets/oldflag.gif';
+import newFlag from '../../assets/newflag.png';
+import logo from '../../assets/logo.png';
 
-function Footer() {
-  const date = new Date()
-    return (
-      <main className='Footer'>
+const footer = () => {
+  const date = new Date();
+  return (
+    <main className='Footer'>
         <nav className='footer'>
             <div className='links-div'>
                 <div className='links first'>
@@ -108,7 +108,7 @@ function Footer() {
             </div>
         </nav>
       </main>
-    );
-  }
+  );
+};
   
-export default Footer;
+export default footer;

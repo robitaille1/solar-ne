@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 const partnersSection = () => {
@@ -9,6 +9,6 @@ const partnersSection = () => {
             </div>
         </main>
     )
-}
+};
 
 export default partnersSection;

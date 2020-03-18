@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 
-const careersSection = () => {
-    return(
-        <main className='AboutSection'>
+const investorsSection = () => (
+    <main className='AboutSection'>
             <div className='about-section'>
                 <h2>Investors</h2>
                 <p>
@@ -20,7 +19,8 @@ const careersSection = () => {
                 </p>
             </div>
         </main>
-    )
-}
+);
+    
 
-export default careersSection;
+
+export default investorsSection;
