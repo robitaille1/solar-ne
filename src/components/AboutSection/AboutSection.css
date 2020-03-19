@@ -1,3 +1,9 @@
 .AboutImg {
-    width: 30%
+    width: 80%
+}
+
+@media (min-width: 700px){
+    .AboutImg {
+        width: 30%
+    }
 }
