@@ -7,8 +7,7 @@ import ContactForm from '../components/ContactForm/ContactForm'
 import BlogSection from '../components/BlogSection/BlogSection'
 import Footer from '../components/Footer/Footer'
 
-function HomePage(props) {
-  return (
+const homePage = (props) => (
     <main className='App'>
       <Nav path={props.match.path}/>
       <Jumbotron />
@@ -18,7 +17,6 @@ function HomePage(props) {
       <BlogSection />
       <Footer />
     </main>
-  );
-}
+);
 
-export default HomePage
+export default homePage
