@@ -1,18 +1,12 @@
-import React from 'react'
-import Nav from '../components/Nav/Nav'
-import PartnersSection from '../components/PartnersSection/PartnersSection'
-import Footer from '../components/Footer/Footer'
+import React from 'react';
+import PageLayout from '../containers/PageLayout/PageLayout';
+import PartnersSection from '../components/PartnersSection/PartnersSection';
 
-const partnersPage = () => {
-    return (
-        <main className='PartnersPage'>
-            <Nav />
-            <div>
-                <PartnersSection />
-            </div>
-            <Footer />
-      </main>
-    )
-}
+const partnersPage = () => (
+    <PageLayout>
+        <PartnersSection />
+    </PageLayout>       
+);
 
-export default partnersPage
+
+export default partnersPage;

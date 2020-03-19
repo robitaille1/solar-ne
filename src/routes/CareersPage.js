@@ -1,18 +1,12 @@
-import React from 'react'
-import Nav from '../components/Nav/Nav'
-import CareersSection from '../components/CareersSection/CareersSection'
-import Footer from '../components/Footer/Footer'
+import React from 'react';
+import PageLayout from '../containers/PageLayout/PageLayout'
+import CareersSection from '../components/CareersSection/CareersSection';
 
-const careersPage = () => {
-    return (
-        <main className='CareersPage'>
-            <Nav />
-            <div>
-                <CareersSection />
-            </div>
-            <Footer />
-      </main>
-    )
-}
+const careersPage = () => (
+    <PageLayout>
+        <CareersSection />
+    </PageLayout>
+);
 
-export default careersPage
+
+export default careersPage;

@@ -1,18 +1,12 @@
-import React from 'react'
-import Nav from '../components/Nav/Nav'
-import InvestorsSection from '../components/InvestorsSection/InvestorsSection'
-import Footer from '../components/Footer/Footer'
+import React from 'react';
+import PageLayout from '../containers/PageLayout/PageLayout';
+import InvestorsSection from '../components/InvestorsSection/InvestorsSection';
 
-const investorsPage = () => {
-    return (
-        <main className='InvestorsPage'>
-            <Nav />
-            <div>
-                <InvestorsSection />
-            </div>
-            <Footer />
-      </main>
-    )
-}
+const investorsPage = () => (
+        <PageLayout>
+            <InvestorsSection />  
+        </PageLayout>
+);
 
-export default investorsPage
+
+export default investorsPage;

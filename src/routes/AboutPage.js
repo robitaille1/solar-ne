@@ -1,21 +1,11 @@
-import React from 'react'
-import Nav from '../components/Nav/Nav'
-import AboutSection from '../components/AboutSection/AboutSection'
-import Footer from '../components/Footer/Footer'
+import React from 'react';
+import PageLayout from '../containers/PageLayout/PageLayout'
+import AboutSection from '../components/AboutSection/AboutSection';
 
+const aboutPage = () => (
+  <PageLayout>
+    <AboutSection />
+  </PageLayout>
+);
 
-
-
-export default class AboutPage extends React.Component {
-  render() {
-    return (
-      <main className='AboutPage'>
-        <Nav/>
-        <div>
-          <AboutSection />
-        </div>
-        <Footer />
-      </main>
-    )
-  }
-}
+export default aboutPage;

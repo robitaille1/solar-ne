@@ -1,18 +1,12 @@
-import React from 'react'
-import Nav from '../components/Nav/Nav'
-import ResourcesSection from '../components/ResourcesSection/ResourcesSection'
-import Footer from '../components/Footer/Footer'
+import React from 'react';
+import PageLayout from '../containers/PageLayout/PageLayout';
+import ResourcesSection from '../components/ResourcesSection/ResourcesSection';
 
-const resourcesPage = () => {
-    return (
-        <main className='ResourcesPage'>
-            <Nav />
-            <div>
-                <ResourcesSection />
-            </div>
-            <Footer />
-      </main>
-    )
-}
 
-export default resourcesPage
+const resourcesPage = () => (
+    <PageLayout>
+        <ResourcesSection />
+    </PageLayout>        
+);
+
+export default resourcesPage;
