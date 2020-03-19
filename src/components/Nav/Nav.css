@@ -31,7 +31,6 @@
 .brand  {
     font-family: 'Orbitron', sans-serif;
     color: rgb(62, 141, 161);
-    /* padding: 10px; */
     margin: 5px;
 }
 
@@ -48,7 +47,6 @@
 }
 
 .nav-link {
-    /* color: rgb(55, 112, 126); */
     color: rgb(62, 141, 161);
     background-color: rgb(255, 255, 255);
     height: 100%;
@@ -59,9 +57,6 @@
 }
 
 .nav-link:hover {
-    /* background-color: rgb(62, 128, 145); */
-    /* background-color: #4B99AD;
-    color: white; */
     color: rgb(62, 141, 161,0.699);
 }
 

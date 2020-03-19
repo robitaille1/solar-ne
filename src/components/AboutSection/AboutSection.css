@@ -1,16 +1,3 @@
-.AboutPage {
-    background-color: rgb(62, 128, 145);
-}
-
-.AboutSection {
-    white-space: pre-line;
-    padding: 50px 7%;
-    margin: 50px 10%;
-    background-color: rgb(231, 225, 225);
-    border-radius: 10px;
-    box-shadow:  0 0 15px rgba(0, 0, 0, 0.411);
-}
-
-.about-logo {
+.AboutImg {
     width: 30%
 }
