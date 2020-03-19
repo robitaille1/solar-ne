@@ -5,8 +5,21 @@
 .PageContent {
     white-space: pre-line;
     padding: 50px 7%;
-    margin: 100px 10% 50px 10%;
-    background-color: rgb(231, 225, 225);
-    border-radius: 5px;
-    border: 2px solid lightgrey;
+    margin: 50px 5%;
+    color: white;
+    font-size: 18px;
+}
+
+.PageContent a {
+    color: #ede576;
+}
+
+.PageContent a:hover {
+    color: #ede57673;
+}
+
+@media (min-width: 700px) {
+    .PageContent {
+        margin: 60px 10%;
+    }
 }
