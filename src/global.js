@@ -1,0 +1,23 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    background: rgb(62, 128, 145);
+  }
+`;
+
+/* background: ${({ theme }) => theme.primaryDark}; */
+/* color: ${({ theme }) => theme.primaryLight}; */
+/* color: ${({ theme }) => theme.primaryHover}; */
