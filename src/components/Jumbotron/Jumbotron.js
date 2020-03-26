@@ -1,28 +1,75 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import './Jumbotron.css';
+import React from "react";
+import { Link } from "react-scroll";
+import styled from "styled-components";
 
 const jumbotron = () => (
-  <main className='Jumbotron'>
-    <div className='jumbo-container'>
-        <h2 className='jumbo-text'>
-          Invest in your home, community, and local businesses!
-        </h2>
-        {/* Photo by American Public Power Association - @publicpowerorg */}
-        <div className='learn-more'>
-          <p className='learn'>Learn more</p>
+  <Jumbotron>
+    <JumboContainer>
+      <h2>Invest in your home, community, and local businesses!</h2>
+      {/* Photo by American Public Power Association - @publicpowerorg */}
+      <div>
+        <p>Learn more</p>
         <Link
-          to='mainheader'
+          to="mainheader"
           spy={true}
           smooth={true}
           offset={-50}
           duration={1000}
         >
-          <i className="fas fa-chevron-circle-down down-arrow"></i>
-          </Link>
-        </div>
-    </div>
-  </main>
+          <i className="fas fa-chevron-circle-down"></i>
+        </Link>
+      </div>
+    </JumboContainer>
+  </Jumbotron>
 );
-  
+
 export default jumbotron;
+
+const Jumbotron = styled.section`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url(https://i.imgur.com/wnbE8O7.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+`;
+
+const JumboContainer = styled.div`
+  position: relative;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  h2 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 100px;
+    @media (min-width: 700px) {
+      font-size: 3em;
+      margin-bottom: 90px;
+    }
+  }
+  div {
+    margin-bottom: 50px;
+    @media (min-width: 700px) {
+      margin-bottom: 0px;
+    }
+  }
+  p {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  i {
+    font-size: 50px;
+    &:hover {
+      color: rgb(202, 202, 202);
+      cursor: pointer;
+    }
+  }
+`;
