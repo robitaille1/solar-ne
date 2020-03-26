@@ -1,42 +1,102 @@
-import React from 'react';
-import Media from 'react-media';
-import './WhatWeDoItem.css';
+import React from "react";
+import Media from "react-media";
+import styled from "styled-components";
+// import './WhatWeDoItem.css';
 
-const whatWeDoItem = (props) => (
+const whatWeDoItem = props => (
   <Media queries={{ mobile: { maxWidth: 1250 } }}>
-          {matches =>
-            matches.mobile ? (
-              <main className='WhatWeDoItem'>
-                <div className='item'>
-                  <img className='itemImg' src={props.item.img} alt={props.item.credit} />
-                  <div className='itemDesc'>
-                    <h2 className='itemTitle'>{props.item.title}</h2>
-                    {props.item.description === '' ? null : <p>{props.item.description}</p>}
-                  </div>
-                </div>
-              </main>
-            ) : (
-              <main className='WhatWeDoItem'>
-                {props.item.id % 2 === 0 ? 
-                  <div className='item'>
-                    <img className='itemImg' src={props.item.img} alt={props.item.credit} />
-                    <div className='itemDesc'>
-                      <h2 className='itemTitle'>{props.item.title}</h2>
-                      {props.item.description === '' ? null : <p>{props.item.description}</p>}
-                    </div>
-                  </div> :
-                  <div className='item'>
-                    <div className='itemDesc'>
-                      <h2 className='itemTitle'>{props.item.title}</h2>
-                      {props.item.description === '' ? null : <p>{props.item.description}</p>}
-                    </div>
-                    <img className='itemImg' src={props.item.img} alt={props.item.credit} />
-                </div>
-                }
-              </main>  
-            )
-          }
-      </Media>
+    {matches =>
+      matches.mobile ? (
+        <Wrapper>
+          <div>
+            <img src={props.item.img} alt={props.item.credit} />
+            <div>
+              <h3>{props.item.title}</h3>
+              {props.item.description === "" ? null : (
+                <p>{props.item.description}</p>
+              )}
+            </div>
+          </div>
+        </Wrapper>
+      ) : (
+        <Wrapper>
+          {props.item.id % 2 === 0 ? (
+            <div>
+              <img src={props.item.img} alt={props.item.credit} />
+              <div>
+                <h3>{props.item.title}</h3>
+                {props.item.description === "" ? null : (
+                  <p>{props.item.description}</p>
+                )}
+              </div>
+            </div>
+          ) : (
+            <div>
+              <div>
+                <h3>{props.item.title}</h3>
+                {props.item.description === "" ? null : (
+                  <p>{props.item.description}</p>
+                )}
+              </div>
+              <img src={props.item.img} alt={props.item.credit} />
+            </div>
+          )}
+        </Wrapper>
+      )
+    }
+  </Media>
 );
 
 export default whatWeDoItem;
+
+const Wrapper = styled.section`
+  width: 100%;
+  padding: 50px 15%;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  @media (min-width: 1250px) {
+    padding: 50px 10%;
+    margin-top: 50px;
+  }
+  div {
+    display: block;
+    justify-content: space-between;
+    @media (min-width: 1250px) {
+      display: flex;
+      justify-content: space-around;
+    }
+    div {
+      font-size: 16px;
+      align-self: center;
+      @media (min-width: 700px) {
+        font-size: 15px;
+      }
+      @media (min-width: 1250px) {
+        font-size: 20px;
+        width: 40%;
+        margin: 0px;
+        text-align: left;
+        display: block;
+      }
+    }
+  }
+
+  img {
+    width: 80%;
+    margin-bottom: 10px;
+    @media (min-width: 700px) {
+      width: 35%;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    align-self: center;
+
+    @media (min-width: 700px) {
+      font-size: 25px;
+    }
+    @media (min-width: 1250px) {
+      font-size: 30px;
+    }
+  }
+`;
