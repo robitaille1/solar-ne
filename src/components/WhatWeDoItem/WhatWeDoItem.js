@@ -12,7 +12,7 @@ const whatWeDoItem = props => (
             <Zoom duration={1500}>
               <img src={props.item.img} alt={props.item.credit} />
             </Zoom>
-            <Fade left duration={1500}>
+            <Fade up duration={1500}>
               <div>
                 <h3>{props.item.title}</h3>
                 {props.item.description === "" ? null : (
