@@ -25,6 +25,7 @@ const Content = styled.section`
   margin: 50px 5%;
   color: rgb(29, 60, 68);
   font-size: 18px;
+  text-align: left;
   @media (min-width: 700px) {
     .PageContent {
       margin: 60px 10%;
