@@ -8,18 +8,19 @@ const whatWeDoItem = props => (
     {matches =>
       matches.mobile ? (
         <Wrapper>
-          <Fade up duration={1500}>
-            <div>
+          <div>
+            <Zoom duration={1500}>
               <img src={props.item.img} alt={props.item.credit} />
-
+            </Zoom>
+            <Fade left duration={1500}>
               <div>
                 <h3>{props.item.title}</h3>
                 {props.item.description === "" ? null : (
                   <p>{props.item.description}</p>
                 )}
               </div>
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </Wrapper>
       ) : (
         <Wrapper>
