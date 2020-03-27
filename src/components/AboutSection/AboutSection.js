@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import logo from "../../assets/logo.png";
+import Img from "../utils/Img";
 
 const aboutSection = () => (
   <>
-    <Logo alt="SPNE Logo" src={logo} />
+    <Img alt="SPNE Logo" src={logo} />
     <h2>About Us</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed
@@ -26,10 +26,3 @@ const aboutSection = () => (
 );
 
 export default aboutSection;
-
-const Logo = styled.img`
-  width: 80%;
-  @media (min-width: 700px) {
-    width: 30%;
-  }
-`;
