@@ -111,7 +111,7 @@ const LinksDiv = styled.div`
   @media (min-width: 550px) {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: nowrap;
   }
   h3 {
