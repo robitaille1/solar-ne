@@ -10,7 +10,6 @@ const jumbotron = () => (
       {/* Photo by American Public Power Association - @publicpowerorg */}
       <div>
         <p>Learn more</p>
-
         <Link
           to="mainheader"
           spy={true}

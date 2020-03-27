@@ -3,7 +3,7 @@ import Media from "react-media";
 import styled from "styled-components";
 
 const mainHeader = () => (
-  <Main>
+  <Main name="mainheader">
     <Media queries={{ mobile: { maxWidth: 1000 } }}>
       {matches =>
         matches.mobile ? (
