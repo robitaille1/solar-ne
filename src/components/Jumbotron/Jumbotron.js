@@ -1,25 +1,28 @@
 import React from "react";
-import { Link } from "react-scroll";
 import styled from "styled-components";
+import { Link } from "react-scroll";
+import Zoom from "react-reveal/Zoom";
 
 const jumbotron = () => (
   <Jumbotron>
-    <JumboContainer>
-      <h2>Invest in your home, community, and local businesses!</h2>
-      {/* Photo by American Public Power Association - @publicpowerorg */}
-      <div>
-        <p>Learn more</p>
-        <Link
-          to="mainheader"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={1000}
-        >
-          <i className="fas fa-chevron-circle-down"></i>
-        </Link>
-      </div>
-    </JumboContainer>
+    <Zoom duration={1500}>
+      <JumboContainer>
+        <h2>Invest in your home, community, and local businesses!</h2>
+        {/* Photo by American Public Power Association - @publicpowerorg */}
+        <div>
+          <p>Learn more</p>
+          <Link
+            to="mainheader"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={1000}
+          >
+            <i className="fas fa-chevron-circle-down"></i>
+          </Link>
+        </div>
+      </JumboContainer>
+    </Zoom>
   </Jumbotron>
 );
 
