@@ -1,44 +1,55 @@
 import React from "react";
 import Media from "react-media";
 import styled from "styled-components";
-// import './WhatWeDoItem.css';
+import { Fade, Zoom } from "react-reveal";
 
 const whatWeDoItem = props => (
   <Media queries={{ mobile: { maxWidth: 1250 } }}>
     {matches =>
       matches.mobile ? (
         <Wrapper>
-          <div>
-            <img src={props.item.img} alt={props.item.credit} />
+          <Fade up duration={1500}>
             <div>
-              <h3>{props.item.title}</h3>
-              {props.item.description === "" ? null : (
-                <p>{props.item.description}</p>
-              )}
+              <img src={props.item.img} alt={props.item.credit} />
+
+              <div>
+                <h3>{props.item.title}</h3>
+                {props.item.description === "" ? null : (
+                  <p>{props.item.description}</p>
+                )}
+              </div>
             </div>
-          </div>
+          </Fade>
         </Wrapper>
       ) : (
         <Wrapper>
           {props.item.id % 2 === 0 ? (
             <div>
-              <img src={props.item.img} alt={props.item.credit} />
-              <div>
-                <h3>{props.item.title}</h3>
-                {props.item.description === "" ? null : (
-                  <p>{props.item.description}</p>
-                )}
-              </div>
+              <Zoom duration={1500}>
+                <img src={props.item.img} alt={props.item.credit} />
+              </Zoom>
+              <Fade right duration={1500}>
+                <div>
+                  <h3>{props.item.title}</h3>
+                  {props.item.description === "" ? null : (
+                    <p>{props.item.description}</p>
+                  )}
+                </div>
+              </Fade>
             </div>
           ) : (
             <div>
-              <div>
-                <h3>{props.item.title}</h3>
-                {props.item.description === "" ? null : (
-                  <p>{props.item.description}</p>
-                )}
-              </div>
-              <img src={props.item.img} alt={props.item.credit} />
+              <Fade left duration={1500}>
+                <div>
+                  <h3>{props.item.title}</h3>
+                  {props.item.description === "" ? null : (
+                    <p>{props.item.description}</p>
+                  )}
+                </div>
+              </Fade>
+              <Zoom duration={1500}>
+                <img src={props.item.img} alt={props.item.credit} />
+              </Zoom>
             </div>
           )}
         </Wrapper>
