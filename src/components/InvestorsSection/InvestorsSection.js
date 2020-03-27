@@ -2,6 +2,7 @@ import React from 'react';
 
 const investorsSection = () => (
     <>
+        
         <h2>Investors</h2>
         <p>
             Would you like to contribute to the future of Maine and New Englands energy sustainability? Are you interested in helping someone in need become 100% solar-powered? 
@@ -15,6 +16,7 @@ const investorsSection = () => (
                 contact us
             </a> today.
         </p>
+        <img src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'/>
     </>
 );
     
