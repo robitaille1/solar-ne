@@ -65,7 +65,7 @@ const careersSection = () => (
           <input type="file" id="resume" name="resume" accept=".pdf"></input>
         </li>
         <p className="required required-text">* Required</p>
-        <li>
+        <li style={{ textAlign: "center" }}>
           <input type="submit" value="Submit" />
         </li>
       </ul>
