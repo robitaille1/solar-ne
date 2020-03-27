@@ -1,8 +1,9 @@
 import React from "react";
+import Img from "../utils/Img";
 
 const careersSection = () => (
   <>
-    <img src="https://images.unsplash.com/photo-1574170623305-76d87a78cfcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+    <Img src="https://images.unsplash.com/photo-1574170623305-76d87a78cfcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
     <h2>Careers</h2>
     <p>Would you like to work in a fast-paced start up?</p>
     <p>
