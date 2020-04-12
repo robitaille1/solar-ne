@@ -83,7 +83,7 @@ const footer = () => {
         <p>
           Made with{" "}
           <span role="img" aria-label="lobster">
-            🦞
+            &#x1F99E;
           </span>{" "}
           from Maine
         </p>
