@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import Burger from "../UI/Burger/Burger";
 import NavFlag from "../../assets/logo-notext.png";
 
 class Nav extends Component {
@@ -44,12 +45,15 @@ class Nav extends Component {
               </h1>
             </NavLink>
           </Brand>
-          <NavLinks>
-            <NavLink to={`/about`} style={{ textDecoration: "none" }}>
-              <p>ABOUT US</p>
-            </NavLink>
-            {button}
-          </NavLinks>
+          <div style={{ display: "flex" }}>
+            <NavLinks>
+              {/* <NavLink to={`/about`} style={{ textDecoration: "none" }}>
+                <p>ABOUT US</p>
+              </NavLink> */}
+              {button}
+            </NavLinks>
+            <Burger />
+          </div>
         </Navigation>
       </main>
     );
@@ -63,7 +67,8 @@ const Navigation = styled.nav`
   z-index: 1;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0px 10px;
   background-color: white;
   position: fixed;
   top: 0;
@@ -87,10 +92,11 @@ const Navigation = styled.nav`
   h1 {
     font-family: "Orbitron", sans-serif;
     color: rgb(62, 141, 161);
-    margin: 10px 5px;
+    margin: 7px 10px;
 
     @media (min-width: 700px) {
       padding: 10px;
+      margin: 10px;
     }
   }
   button {
@@ -148,7 +154,7 @@ const Brand = styled.div`
     height: 80%;
     margin: 7px auto;
     display: none;
-    @media (min-width: 700px) {
+    @media (min-width: 455px) {
       display: inline;
     }
   }
