@@ -78,16 +78,6 @@ const Navigation = styled.nav`
     justify-content: space-between;
   }
 
-  h1 {
-    font-family: "Orbitron", sans-serif;
-    color: rgb(62, 141, 161);
-    margin: 7px 10px;
-
-    @media (min-width: 700px) {
-      padding: 10px;
-      margin: 10px;
-    }
-  }
   button {
     text-decoration: none;
     &:hover {
@@ -107,12 +97,7 @@ const Navigation = styled.nav`
       }
     }
   }
-  span {
-    display: block;
-    @media (min-width: 700px) {
-      display: inline;
-    }
-  }
+
   p {
     color: rgb(62, 141, 161);
     background-color: rgb(255, 255, 255);
@@ -129,6 +114,23 @@ const Navigation = styled.nav`
 
 const Brand = styled.div`
   display: flex;
+  h1 {
+    font-family: "Orbitron", sans-serif;
+    color: rgb(62, 141, 161);
+    margin: 7px 10px;
+
+    @media (min-width: 700px) {
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+
+  span {
+    display: block;
+    @media (min-width: 700px) {
+      display: inline;
+    }
+  }
 
   &:hover {
     h1 {
