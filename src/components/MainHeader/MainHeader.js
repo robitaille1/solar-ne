@@ -5,7 +5,7 @@ import styled from "styled-components";
 const mainHeader = () => (
   <Main name="mainheader">
     <Media queries={{ mobile: { maxWidth: 1000 } }}>
-      {matches =>
+      {(matches) =>
         matches.mobile ? (
           <Wrapper>
             <section>
@@ -74,9 +74,6 @@ const Wrapper = styled.div`
   }
   div {
     font-size: 20px;
-    @media (min-width: 600px) {
-      padding: 25px;
-    }
   }
   p {
     text-align: left;
