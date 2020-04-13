@@ -35,7 +35,9 @@ class Nav extends Component {
       <main className="Nav">
         <Navigation>
           <Brand>
-            <img src={NavFlag} alt="SPNE Flag Logo" />
+            <NavLink to={`/`} style={{ textDecoration: "none" }}>
+              <img src={NavFlag} alt="SPNE Flag Logo" />
+            </NavLink>
             <NavLink to={`/`} style={{ textDecoration: "none" }}>
               <h1>
                 SOLAR POWER <span>NEW ENGLAND</span>
@@ -145,7 +147,7 @@ const Brand = styled.div`
 
   img {
     height: 80%;
-    margin: auto;
+    margin: 7px auto;
     display: none;
     @media (min-width: 700px) {
       display: inline;
