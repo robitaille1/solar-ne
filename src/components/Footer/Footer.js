@@ -155,7 +155,6 @@ const SecondDiv = styled.div`
   }
   a {
     display: block;
-    /* margin: 16px auto; */
     margin: 12px auto;
     color: rgb(29, 60, 68);
     font-size: 30px;
