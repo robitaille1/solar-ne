@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Burger = () => {
+const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger>
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
       <div />
       <div />
@@ -39,10 +39,22 @@ const StyledBurger = styled.a`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: rgb(62, 141, 161);
+    background: ${({ open }) => (open ? "white" : "rgb(62, 141, 161)")};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    :first-child {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
 `;

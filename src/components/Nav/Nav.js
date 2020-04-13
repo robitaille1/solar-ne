@@ -1,64 +1,53 @@
-import React, { Component } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import Burger from "../UI/Burger/Burger";
 import NavFlag from "../../assets/logo-notext.png";
+import Menu from "../UI/Menu/Menu";
+import { useOnClickOutside } from "../utils/hooks";
 
-class Nav extends Component {
-  static defaultProps = {
-    match: {
-      params: {},
-    },
-  };
+const Nav = (props) => {
+  let button = (
+    <NavLink to={"/"} style={{ textDecoration: "none" }}>
+      <button className="button">HOME</button>
+    </NavLink>
+  );
 
-  render() {
-    let button = (
-      <NavLink to={"/"} style={{ textDecoration: "none" }}>
-        <button className="button">HOME</button>
-      </NavLink>
-    );
-
-    if (this.props.path === "/") {
-      button = (
-        <Link
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={2000}
-        >
-          <button className="button">CONTACT</button>
-        </Link>
-      );
-    }
-    return (
-      <main className="Nav">
-        <Navigation>
-          <Brand>
-            <NavLink to={`/`} style={{ textDecoration: "none" }}>
-              <img src={NavFlag} alt="SPNE Flag Logo" />
-            </NavLink>
-            <NavLink to={`/`} style={{ textDecoration: "none" }}>
-              <h1>
-                SOLAR POWER <span>NEW ENGLAND</span>
-              </h1>
-            </NavLink>
-          </Brand>
-          <div style={{ display: "flex" }}>
-            <NavLinks>
-              {/* <NavLink to={`/about`} style={{ textDecoration: "none" }}>
-                <p>ABOUT US</p>
-              </NavLink> */}
-              {button}
-            </NavLinks>
-            <Burger />
-          </div>
-        </Navigation>
-      </main>
+  if (props.path === "/") {
+    button = (
+      <Link to="contact" spy={true} smooth={true} offset={-70} duration={2000}>
+        <button className="button">CONTACT</button>
+      </Link>
     );
   }
-}
+
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
+  const [open, setOpen] = useState(false);
+
+  return (
+    <main className="Nav">
+      <Navigation>
+        <Brand>
+          <NavLink to={`/`} style={{ textDecoration: "none" }}>
+            <img src={NavFlag} alt="SPNE Flag Logo" />
+          </NavLink>
+          <NavLink to={`/`} style={{ textDecoration: "none" }}>
+            <h1>
+              SOLAR POWER <span>NEW ENGLAND</span>
+            </h1>
+          </NavLink>
+        </Brand>
+        <RefDiv ref={node}>
+          <NavLinks>{button}</NavLinks>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </RefDiv>
+      </Navigation>
+    </main>
+  );
+};
 
 export default Nav;
 
@@ -166,4 +155,8 @@ const NavLinks = styled.div`
     display: flex;
     align-items: center;
   }
+`;
+
+const RefDiv = styled.div`
+  display: flex;
 `;
