@@ -3,9 +3,9 @@ import Media from "react-media";
 import styled from "styled-components";
 import { Fade, Zoom } from "react-reveal";
 
-const whatWeDoItem = props => (
+const whatWeDoItem = (props) => (
   <Media queries={{ mobile: { maxWidth: 1250 } }}>
-    {matches =>
+    {(matches) =>
       matches.mobile ? (
         <Wrapper>
           <div>
@@ -26,9 +26,8 @@ const whatWeDoItem = props => (
         <Wrapper>
           {props.item.id % 2 === 0 ? (
             <div>
-              <Zoom duration={1500}>
-                <img src={props.item.img} alt={props.item.credit} />
-              </Zoom>
+              <img src={props.item.img} alt={props.item.credit} />
+
               <Fade right duration={1500}>
                 <div>
                   <h3>{props.item.title}</h3>
@@ -48,9 +47,8 @@ const whatWeDoItem = props => (
                   )}
                 </div>
               </Fade>
-              <Zoom duration={1500}>
-                <img src={props.item.img} alt={props.item.credit} />
-              </Zoom>
+
+              <img src={props.item.img} alt={props.item.credit} />
             </div>
           )}
         </Wrapper>
