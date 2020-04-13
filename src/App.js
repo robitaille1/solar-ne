@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import SolarContext from "./context/SolarContext";
 import {
@@ -10,7 +10,6 @@ import {
   InvestorsPage,
   PartnersPage,
   ResourcesPage,
-  ErrorPage,
 } from "./routes";
 import "./App.css";
 
@@ -38,15 +37,15 @@ class App extends Component {
       <SolarContext.Provider value={value}>
         <main className="App">
           <GlobalStyles />
-          <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/investors" component={InvestorsPage} />
-          <Route path="/partners" component={PartnersPage} />
-          <Route path="/careers" component={CareersPage} />
-          <Route path="/resources" component={ResourcesPage} />
-          <Route path="*">
-            <ErrorPage />
-          </Route>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/investors" component={InvestorsPage} />
+            <Route path="/partners" component={PartnersPage} />
+            <Route path="/careers" component={CareersPage} />
+            <Route path="/resources" component={ResourcesPage} />
+            <Route render={() => <Redirect to="/" />} />
+          </Switch>
           {this.renderBlogRoutes()}
         </main>
       </SolarContext.Provider>
