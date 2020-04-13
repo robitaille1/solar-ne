@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import NavFlag from "../../assets/logo-notext.png";
 
 class Nav extends Component {
   static defaultProps = {
     match: {
-      params: {}
-    }
+      params: {},
+    },
   };
 
   render() {
@@ -34,6 +35,7 @@ class Nav extends Component {
       <main className="Nav">
         <Navigation>
           <Brand>
+            <img src={NavFlag} alt="SPNE Flag Logo" />
             <NavLink to={`/`} style={{ textDecoration: "none" }}>
               <h1>
                 SOLAR POWER <span>NEW ENGLAND</span>
@@ -65,8 +67,13 @@ const Navigation = styled.nav`
   top: 0;
   width: 100%;
   border-bottom: 1px solid lightgrey;
+  height: 80px;
   @media (min-width: 500px) and (max-width: 1000px) {
     text-align: center;
+  }
+
+  @media (min-width: 700px) {
+    height: 70px;
   }
 
   @media (min-width: 1000px) {
@@ -78,11 +85,8 @@ const Navigation = styled.nav`
   h1 {
     font-family: "Orbitron", sans-serif;
     color: rgb(62, 141, 161);
-    margin: 5px;
+    margin: 10px 5px;
 
-    &:hover {
-      color: rgb(62, 141, 161, 0.699);
-    }
     @media (min-width: 700px) {
       padding: 10px;
     }
@@ -129,6 +133,24 @@ const Navigation = styled.nav`
 
 const Brand = styled.div`
   display: flex;
+
+  &:hover {
+    h1 {
+      color: rgb(62, 141, 161, 0.699);
+    }
+    img {
+      opacity: 0.699;
+    }
+  }
+
+  img {
+    height: 80%;
+    margin: auto;
+    display: none;
+    @media (min-width: 700px) {
+      display: inline;
+    }
+  }
 `;
 
 const NavLinks = styled.div`
