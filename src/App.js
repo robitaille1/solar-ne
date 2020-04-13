@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import SolarContext from "./context/SolarContext";
 import HomePage from "./routes/HomePage";
@@ -13,13 +13,13 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    blogs: this.context.blogs
+    blogs: this.context.blogs,
   };
 
   renderBlogRoutes() {
     return (
       <>
-        {["/blogs/:blogId"].map(path => (
+        {["/blogs/:blogId"].map((path) => (
           <Route exact key={path} path={path} component={BlogPage} />
         ))}
       </>
@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     const value = {
-      blogs: this.state.blogs
+      blogs: this.state.blogs,
     };
     return (
       <SolarContext.Provider value={value}>
@@ -41,6 +41,7 @@ class App extends Component {
           <Route path="/partners" component={PartnersPage} />
           <Route path="/careers" component={CareersPage} />
           <Route path="/resources" component={ResourcesPage} />
+          <Redirect to="/" />
           {this.renderBlogRoutes()}
         </main>
       </SolarContext.Provider>
