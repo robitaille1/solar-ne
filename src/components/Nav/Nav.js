@@ -125,7 +125,6 @@ const Navigation = styled.nav`
     display: flex;
     padding: 10px;
     align-items: center;
-    transition: all 0.6s ease;
     margin: 0px;
     &:hover {
       color: rgb(62, 141, 161, 0.699);
