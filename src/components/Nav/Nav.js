@@ -30,9 +30,8 @@ const Nav = (props) => {
     <main className="Nav">
       <Navigation>
         <Brand>
-          <NavLink to={`/`} style={{ textDecoration: "none" }}>
-            <img src={NavFlag} alt="SPNE Flag Logo" />
-          </NavLink>
+          <img src={NavFlag} alt="SPNE Flag Logo" />
+
           <NavLink to={`/`} style={{ textDecoration: "none" }}>
             <h1>
               SOLAR POWER <span>NEW ENGLAND</span>
@@ -114,6 +113,7 @@ const Navigation = styled.nav`
 
 const Brand = styled.div`
   display: flex;
+
   h1 {
     font-family: "Orbitron", sans-serif;
     color: rgb(62, 141, 161);
@@ -121,7 +121,11 @@ const Brand = styled.div`
 
     @media (min-width: 700px) {
       padding: 10px;
-      margin: 10px;
+      margin: 10px 10px 10px 0px;
+    }
+
+    &:hover {
+      color: rgb(62, 141, 161, 0.699);
     }
   }
 
@@ -132,21 +136,16 @@ const Brand = styled.div`
     }
   }
 
-  &:hover {
-    h1 {
-      color: rgb(62, 141, 161, 0.699);
-    }
-    img {
-      opacity: 0.699;
-    }
-  }
-
   img {
     height: 80%;
-    margin: 7px auto;
+    margin: 7px 5px;
     display: none;
     @media (min-width: 455px) {
       display: inline;
+    }
+
+    &:hover {
+      opacity: 0.699;
     }
   }
 `;
