@@ -4,7 +4,7 @@ import Nav from "../../components/Nav/Nav";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
 
-const pageLayout = props => (
+const pageLayout = (props) => (
   <Wrapper>
     <Nav />
     <Content>{props.children}</Content>
@@ -31,4 +31,10 @@ const Content = styled.section`
       margin: 60px 10%;
     }
   }
+  a {
+    margin: 12px auto;
+    color: rgb(29, 60, 68);
+    &:hover {
+      color: rgba(29, 60, 68, 0.459);
+    }
 `;
