@@ -6,7 +6,7 @@ import Logo from "../../../assets/logo.png";
 const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <img style={{ width: "30%" }} src={Logo} alt="SPNE logo " />
+      <img src={Logo} alt="SPNE logo " />
       <Link to="/about" onClick={() => setOpen(!open)}>
         About us
       </Link>
@@ -46,6 +46,15 @@ const StyledMenu = styled.nav`
     width: 70%;
   }
 
+  img {
+    width: 70%;
+    margin: 10px auto;
+    @media (min-width: 600px) {
+      width: 30%;
+      margin: 0px;
+    }
+  }
+
   a {
     font-size: 2rem;
     text-transform: uppercase;
@@ -56,9 +65,13 @@ const StyledMenu = styled.nav`
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
+    @media (max-width: 600px) {
       font-size: 1.5rem;
       text-align: center;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 1rem;
     }
 
     &:hover {
