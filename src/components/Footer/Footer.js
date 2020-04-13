@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import "./Footer.css";
-import oldFlag from "../../assets/oldflag.gif";
-import newFlag from "../../assets/newflag.png";
+import oldFlag from "../../assets/flags/oldflag.gif";
+import newFlag from "../../assets/flags/newflag.png";
 import logo from "../../assets/logo.png";
 
 const footer = () => {
