@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import SolarContext from "./context/SolarContext";
-import HomePage from "./routes/HomePage";
-import AboutPage from "./routes/AboutPage";
-import BlogPage from "./routes/BlogPage";
-import CareersPage from "./routes/CareersPage";
-import InvestorsPage from "./routes/InvestorsPage";
-import PartnersPage from "./routes/PartnersPage";
-import ResourcesPage from "./routes/ResourcesPage";
+import {
+  AboutPage,
+  HomePage,
+  BlogPage,
+  CareersPage,
+  InvestorsPage,
+  PartnersPage,
+  ResourcesPage,
+} from "./routes";
 import "./App.css";
 
 class App extends Component {
