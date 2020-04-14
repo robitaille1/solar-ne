@@ -31,7 +31,7 @@ const footer = () => {
         <SecondDiv>
           <h3>Social</h3>
           <a
-            href="https://www.facebook.com/mainesolarcompany/"
+            href="https://www.facebook.com/spnemaine/"
             target="_blank"
             rel="noopener noreferrer"
             alt="facebook"
