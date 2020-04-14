@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import Burger from "../UI/Burger/Burger";
-import NavFlag from "../../assets/logo-notext.png";
+// import NavFlag from "../../assets/logo-notext.png";
 import Menu from "../UI/Menu/Menu";
 import { useOnClickOutside } from "../utils/hooks";
 import { OpenContext } from "../../context/OpenContext";
@@ -31,7 +31,7 @@ const Nav = (props) => {
     <main>
       <Navigation>
         <Brand>
-          <img src={NavFlag} alt="SPNE Flag Logo" />
+          {/* <img src={NavFlag} alt="SPNE Flag Logo" /> */}
 
           <NavLink to={`/`} style={{ textDecoration: "none" }}>
             <h1>
@@ -138,14 +138,14 @@ const Brand = styled.div`
     }
   }
 
-  img {
+  /* img {
     height: 80%;
     margin: 7px 5px;
     display: none;
     @media (min-width: 455px) {
       display: inline;
     }
-  }
+  } */
 `;
 
 const NavLinks = styled.div`
