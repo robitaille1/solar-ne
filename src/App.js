@@ -1,57 +1,35 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { GlobalStyles } from "./global";
-import SolarContext from "./context/SolarContext";
+import { OpenContext } from "./context/OpenContext";
 import {
   AboutPage,
   HomePage,
-  BlogPage,
   CareersPage,
   InvestorsPage,
   PartnersPage,
   ResourcesPage,
 } from "./routes";
 
-class App extends Component {
-  state = {
-    blogs: this.context.blogs,
-  };
+const App = () => {
+  const [open] = useContext(OpenContext);
 
-  renderBlogRoutes() {
-    return (
-      <>
-        {["/blogs/:blogId"].map((path) => (
-          <Route exact key={path} path={path} component={BlogPage} />
-        ))}
-      </>
-    );
-  }
-  static contextType = SolarContext;
-
-  render() {
-    const value = {
-      blogs: this.state.blogs,
-    };
-    return (
-      <SolarContext.Provider value={value}>
-        <AppMain>
-          <GlobalStyles />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/investors" component={InvestorsPage} />
-            <Route path="/partners" component={PartnersPage} />
-            <Route path="/careers" component={CareersPage} />
-            <Route path="/resources" component={ResourcesPage} />
-            <Route render={() => <Redirect to="/" />} />
-          </Switch>
-          {this.renderBlogRoutes()}
-        </AppMain>
-      </SolarContext.Provider>
-    );
-  }
-}
+  return (
+    <AppMain>
+      <GlobalStyles open={open} />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/investors" component={InvestorsPage} />
+        <Route path="/partners" component={PartnersPage} />
+        <Route path="/careers" component={CareersPage} />
+        <Route path="/resources" component={ResourcesPage} />
+        <Route render={() => <Redirect to="/" />} />
+      </Switch>
+    </AppMain>
+  );
+};
 
 export default App;
 

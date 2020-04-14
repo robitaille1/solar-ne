@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useContext, useRef } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
@@ -6,6 +6,7 @@ import Burger from "../UI/Burger/Burger";
 import NavFlag from "../../assets/logo-notext.png";
 import Menu from "../UI/Menu/Menu";
 import { useOnClickOutside } from "../utils/hooks";
+import { OpenContext } from "../../context/OpenContext";
 
 const Nav = (props) => {
   let button = (
@@ -22,9 +23,9 @@ const Nav = (props) => {
     );
   }
 
+  const [open, setOpen] = useContext(OpenContext);
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
-  const [open, setOpen] = useState(false);
 
   return (
     <main>
