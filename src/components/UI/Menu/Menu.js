@@ -44,6 +44,7 @@ const StyledMenu = styled.nav`
 
   @media (max-width: 600px) {
     width: 70%;
+    padding: 2rem 2rem 100px;
   }
 
   img {
