@@ -144,10 +144,6 @@ const Brand = styled.div`
     @media (min-width: 455px) {
       display: inline;
     }
-
-    &:hover {
-      opacity: 0.699;
-    }
   }
 `;
 
