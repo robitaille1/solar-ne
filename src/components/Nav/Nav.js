@@ -117,7 +117,7 @@ const Brand = styled.div`
   h1 {
     font-family: "Orbitron", sans-serif;
     color: rgb(62, 141, 161);
-    margin: 7px 10px;
+    margin: 10px 10px;
     width: 100%;
 
     @media (min-width: 700px) {
