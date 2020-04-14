@@ -27,7 +27,7 @@ import {
 
 const partnersSection = () => (
   <>
-    <h2>Our partners include</h2>
+    <h2>Our partners include...</h2>
     <Partners>
       <img src={Canadian} />
       <img src={Enphase} />
