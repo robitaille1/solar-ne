@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import SolarContext from "../../context/SolarContext";
 import styled from "styled-components";
-// import './BlogSection.css'
 import BlogItem from "../BlogItem/BlogItem";
 
 class BlogSection extends Component {
@@ -10,10 +9,10 @@ class BlogSection extends Component {
     const { blogs = [] } = this.context;
     return (
       <Wrapper>
-        <div className="container">
+        <div style={{ margin: "0 10%" }}>
           <h2>Recent Blog Posts</h2>
           <section>
-            {blogs.map(blog => (
+            {blogs.map((blog) => (
               <BlogItem key={blog.id} blog={blog} />
             ))}
           </section>

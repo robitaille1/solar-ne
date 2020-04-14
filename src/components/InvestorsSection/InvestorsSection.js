@@ -18,10 +18,7 @@ const investorsSection = () => (
     <p>
       If you, your business, or partner would like to contribute to a project
       that helps a neighbor,{" "}
-      <a href="mailto:contact@solarpowerne.com" className="contact-link">
-        contact us
-      </a>{" "}
-      today.
+      <a href="mailto:contact@solarpowerne.com">contact us</a> today.
     </p>
     <Img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
   </>

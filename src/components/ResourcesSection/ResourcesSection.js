@@ -49,21 +49,6 @@ const resourcesSection = () => (
     >
       pvwatts.nrel.gov
     </a>
-
-    {/* <h3>State</h3>
-    <p>Link for Maine Regulations</p>
-    <a href="#" className="contact-link">
-      Example
-    </a>
-    <p>Maine Tax Exemptions</p>
-    <a href="#" className="contact-link">
-      Example
-    </a>
-    <h3>Federal</h3>
-    <p>Federal Solar Programs</p>
-    <a href="#" className="contact-link">
-      Example
-    </a> */}
   </>
 );
 

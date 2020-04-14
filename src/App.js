@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import SolarContext from "./context/SolarContext";
@@ -35,7 +36,7 @@ class App extends Component {
     };
     return (
       <SolarContext.Provider value={value}>
-        <main className="App">
+        <AppMain>
           <GlobalStyles />
           <Switch>
             <Route exact path="/" component={HomePage} />
@@ -47,10 +48,16 @@ class App extends Component {
             <Route render={() => <Redirect to="/" />} />
           </Switch>
           {this.renderBlogRoutes()}
-        </main>
+        </AppMain>
       </SolarContext.Provider>
     );
   }
 }
 
 export default App;
+
+const AppMain = styled.main`
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+`;

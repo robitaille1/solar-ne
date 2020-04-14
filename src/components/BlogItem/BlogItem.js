@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-// import { Link } from 'react-router-dom'
 
-const blogItem = props => (
+const blogItem = (props) => (
   <Wrapper>
     <div>
       <img
@@ -11,14 +10,7 @@ const blogItem = props => (
         samesite="None"
         secure="true"
       />
-      {/* <p className='blog-date'>{props.blog.date}</p> */}
       <h3>{props.blog.title}</h3>
-      {/* <Link 
-              className='blog-link'
-              to={`/blogs/${props.blog.id}`}
-            >
-                Read More
-            </Link> */}
       <p>Coming Soon</p>
     </div>
   </Wrapper>

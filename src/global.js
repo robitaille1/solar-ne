@@ -17,7 +17,3 @@ export const GlobalStyles = createGlobalStyle`
     background: rgb(62, 128, 145);
   }
 `;
-
-/* background: ${({ theme }) => theme.primaryDark}; */
-/* color: ${({ theme }) => theme.primaryLight}; */
-/* color: ${({ theme }) => theme.primaryHover}; */

@@ -44,8 +44,8 @@ class WhatWeDo extends Component {
   render() {
     return (
       <Wrapper>
-        <div className="container">
-          <h2 className="main-header wwd">What We Do</h2>
+        <div style={{ margin: "0 10%" }}>
+          <h2>What We Do</h2>
           <section>
             {this.state.wwd.map((wwd) => (
               <WhatWeDoItem key={wwd.id} item={wwd} />

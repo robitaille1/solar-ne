@@ -10,14 +10,14 @@ import { useOnClickOutside } from "../utils/hooks";
 const Nav = (props) => {
   let button = (
     <NavLink to={"/"} style={{ textDecoration: "none" }}>
-      <button className="button">HOME</button>
+      <button>HOME</button>
     </NavLink>
   );
 
   if (props.path === "/") {
     button = (
       <Link to="contact" spy={true} smooth={true} offset={-70} duration={2000}>
-        <button className="button">CONTACT</button>
+        <button>CONTACT</button>
       </Link>
     );
   }
@@ -27,7 +27,7 @@ const Nav = (props) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <main className="Nav">
+    <main>
       <Navigation>
         <Brand>
           <img src={NavFlag} alt="SPNE Flag Logo" />
