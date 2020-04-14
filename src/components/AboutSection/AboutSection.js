@@ -6,10 +6,9 @@ const aboutSection = () => (
   <>
     <Img alt="SPNE Logo" src={logo} />
     <h2>About Us</h2>
-    <p>"If I could reach the stars..."</p>
     <p>
       From Gorham, Maine to Boston, Massachusetts...Solar Power New England
-      began as a dream as many companies do.{" "}
+      began as a dream as many companies do.
     </p>
     <p>
       After having made a senior trip at the end of a college career at
@@ -47,11 +46,11 @@ const aboutSection = () => (
       turnaround for families and at-risk individuals in need, free of cost to
       their end users. Free installs, free equipment, and hopefully a little
       hope. Giving back is not something you're supposed to do once you can
-      afford to do it... It's something we all have to do from the start.{" "}
+      afford to do it... It's something we all have to do from the start.
     </p>
     <p>
       Live simply so others may simply live, and give simply so others may
-      simply give.{" "}
+      simply give.
     </p>
     <p>...Pull one down for you..."</p>
     <p>Let's Change the world</p>
