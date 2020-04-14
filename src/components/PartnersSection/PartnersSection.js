@@ -80,7 +80,7 @@ const Partners = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
-  img alt="" {
+  img {
     padding: 20px;
     margin: auto;
     @media (min-width: 1000px) {
