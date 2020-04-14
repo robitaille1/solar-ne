@@ -12,15 +12,24 @@ const resourcesSection = () => (
     >
       www.dsireusa.org
     </a>
-    <h3>Homeowners Guide to Solar Financing</h3>
+    <h3>Residential Resources</h3>
+    <p>Homeowners Guide to Solar Financing</p>
     <a
       href="https://www.cesa.org/assets/2015-Files/Homeowners-Guide-to-Solar-Financing.pdf"
       target="_blank"
       rel="noopener noreferrer"
       alt="Homeowners Guide to Solar Financing"
     >
-      {" "}
       https://www.cesa.org/assets/2015-Files/Homeowners-Guide-to-Solar-Financing.pdf
+    </a>
+    <p>Interstate Renewable Energy Council - Consumer Solar Checklist</p>
+    <a
+      href="https://irecusa.org/consumer/checklist.pdf  "
+      target="_blank"
+      rel="noopener noreferrer"
+      alt="Homeowners Guide to Solar Financing"
+    >
+      https://irecusa.org/consumer/checklist.pdf
     </a>
     <h3>Solar Industry Market Research</h3>
     <a
