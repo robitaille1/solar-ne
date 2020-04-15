@@ -83,8 +83,6 @@ const Partners = styled.div`
   img {
     padding: 20px;
     margin: auto;
-    @media (min-width: 1000px) {
-      padding: 10px;
-    }
+    width: 100%;
   }
 `;
