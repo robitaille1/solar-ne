@@ -13,23 +13,23 @@ const resourcesSection = () => (
       www.dsireusa.org
     </a>
     <h3>Residential Resources</h3>
-    <p>Homeowners Guide to Solar Financing</p>
     <a
       href="https://www.cesa.org/assets/2015-Files/Homeowners-Guide-to-Solar-Financing.pdf"
       target="_blank"
       rel="noopener noreferrer"
       alt="Homeowners Guide to Solar Financing"
     >
-      https://www.cesa.org/assets/2015-Files/Homeowners-Guide-to-Solar-Financing.pdf
+      Homeowners Guide to Solar Financing
     </a>
-    <p>Interstate Renewable Energy Council - Consumer Solar Checklist</p>
+    <br />
+    <br />
     <a
       href="https://irecusa.org/consumer/checklist.pdf  "
       target="_blank"
       rel="noopener noreferrer"
-      alt="Homeowners Guide to Solar Financing"
+      alt="Interstate Renewable Energy Council - Consumer Solar Checklist"
     >
-      https://irecusa.org/consumer/checklist.pdf
+      Interstate Renewable Energy Council - Consumer Solar Checklist
     </a>
     <h3>Solar Industry Market Research</h3>
     <a
@@ -40,7 +40,7 @@ const resourcesSection = () => (
     >
       www.greentechmedia.com
     </a>
-    <h2>Weather Data, Production Modelling/Estimation</h2>
+    <h2>Weather Data, Production Modelling / Estimation</h2>
     <a
       href="https://www.nrel.gov"
       target="_blank"
