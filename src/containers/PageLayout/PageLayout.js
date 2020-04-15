@@ -43,6 +43,7 @@ const Content = styled.section`
     &:hover {
       color: rgba(29, 60, 68, 0.459);
     }
+  }
 `;
 
 const Homebtn = styled.button`
