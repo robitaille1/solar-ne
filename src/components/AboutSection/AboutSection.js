@@ -52,7 +52,6 @@ const aboutSection = () => (
       Live simply so others may simply live, and give simply so others may
       simply give.
     </p>
-    <p>...Pull one down for you..."</p>
     <p>Let's Change the world</p>
     <p>-Representing the GHS class of 2005-</p>
   </>

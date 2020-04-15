@@ -11,7 +11,7 @@ const careersSection = () => (
       field to make the world a better place?
     </p>
     <p>
-      If you're interested, please submit your resume, contact information and a
+      If you're interested, please submit your resumé, contact information and a
       brief description of yourself below! We look forward to hearing from you!
     </p>
     <form
