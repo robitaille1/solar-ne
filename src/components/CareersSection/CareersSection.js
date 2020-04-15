@@ -66,7 +66,7 @@ const careersSection = () => (
         </li>
         <p className="required required-text">* Required</p>
         <li style={{ textAlign: "center" }}>
-          <input style={{ marginRight: "10px" }} type="submit" value="Submit" />
+          <input type="submit" value="Submit" />
         </li>
       </ul>
     </form>
