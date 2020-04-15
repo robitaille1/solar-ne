@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SolarContext from "../../context/SolarContext";
 import styled from "styled-components";
-import BlogItem from "../BlogItem/BlogItem";
+import BlogItem from "./BlogItem/BlogItem";
 
 class BlogSection extends Component {
   static contextType = SolarContext;
