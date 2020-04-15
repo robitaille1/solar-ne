@@ -1,26 +1,25 @@
 import React from "react";
 import Media from "react-media";
 import styled from "styled-components";
-import { Fade, Zoom } from "react-reveal";
+import { Fade } from "react-reveal";
 
 const whatWeDoItem = (props) => (
   <Media queries={{ mobile: { maxWidth: 1250 } }}>
     {(matches) =>
       matches.mobile ? (
         <Wrapper>
-          <div>
-            <Zoom duration={1500}>
+          <Fade duration={2000}>
+            <div>
               <img src={props.item.img} alt={props.item.credit} />
-            </Zoom>
-            <Fade up duration={1500}>
+
               <div>
                 <h3>{props.item.title}</h3>
                 {props.item.description === "" ? null : (
                   <p>{props.item.description}</p>
                 )}
               </div>
-            </Fade>
-          </div>
+            </div>
+          </Fade>
         </Wrapper>
       ) : (
         <Wrapper>
