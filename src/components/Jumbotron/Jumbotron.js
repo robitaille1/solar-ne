@@ -38,7 +38,7 @@ const Jumbotron = styled.section`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 `;
 
 const JumboContainer = styled.div`
