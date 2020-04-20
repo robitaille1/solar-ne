@@ -64,6 +64,7 @@ const Wrapper = styled.section`
   text-align: center;
   border-bottom: 1px solid lightgray;
   @media (min-width: 1250px) {
+    /* height: 537px; */
     padding: 50px 10%;
     margin-top: 50px;
   }
