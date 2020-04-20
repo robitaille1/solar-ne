@@ -12,12 +12,11 @@ const aboutSection = () => (
     </p>
     <p>
       After having made a senior trip at the end of a college career at
-      Northeastern University... It was in Costa Rica, Andrew, the founder,
-      discovered that a renewable future was not only doable, but could be the
-      bridge to building businesses with the essence of 'pura vida' at heart,
-      and from the start. It was there that he travelled a country that is
-      today, 100% powered by renewable energy, mainly by solar, wind and
-      geothermal power.
+      Northeastern University... It was in Costa Rica where we discovered that a
+      renewable future was not only doable, but could be the bridge to building
+      businesses with the essence of 'pura vida' at heart, and from the start.
+      It was there that he travelled a country that is today, 100% powered by
+      renewable energy, mainly by solar, wind and geothermal power.
     </p>
     <p>
       After careers in the IT industry, benefits administration, and financial
@@ -53,7 +52,7 @@ const aboutSection = () => (
       simply give.
     </p>
     <p>Let's Change the world</p>
-    <p>-Representing the GHS class of 2005-</p>
+    {/* <p>-Representing the GHS class of 2005-</p> */}
   </>
 );
 
