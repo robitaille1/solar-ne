@@ -107,11 +107,16 @@ const LinksDiv = styled.div`
   margin-top: 0px;
   padding: 10px 10%;
   justify-content: space-around;
+  max-width: 1400px;
   @media (min-width: 550px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
+  }
+  @media (min-width: 1400px) {
+    margin: 0 auto;
+    padding: 10px 1%;
   }
   h3 {
     font-size: 18px;
@@ -194,6 +199,12 @@ const FlagDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 1400px;
+
+  @media (min-width: 1400px) {
+    margin: 0 auto;
+    padding: 30px 1%;
+  }
 `;
 
 const StateFlag = styled.img`

@@ -5,7 +5,7 @@ import styled from "styled-components";
 const mainHeader = () => (
   <Main name="mainheader">
     <Media queries={{ mobile: { maxWidth: 1000 } }}>
-      {(matches) =>
+      {matches =>
         matches.mobile ? (
           <Wrapper>
             <section>
@@ -67,9 +67,11 @@ const Wrapper = styled.div`
     text-align: center;
     margin: 0px;
     font-size: 35px;
+    max-width: 1400px;
 
     @media (min-width: 600px) {
       font-size: 50px;
+      margin: 0 auto;
     }
   }
   div {

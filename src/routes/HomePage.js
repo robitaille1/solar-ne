@@ -7,7 +7,7 @@ import ContactForm from "../components/ContactForm/ContactForm";
 import BlogSection from "../components/BlogSection/BlogSection";
 import Footer from "../components/Footer/Footer";
 
-const homePage = (props) => (
+const homePage = props => (
   <main>
     <Nav path={props.match.path} />
     <Jumbotron />

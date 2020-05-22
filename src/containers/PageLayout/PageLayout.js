@@ -5,7 +5,7 @@ import Nav from "../../components/Nav/Nav";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
 
-const pageLayout = (props) => (
+const pageLayout = props => (
   <Wrapper>
     <Nav />
     <Content>

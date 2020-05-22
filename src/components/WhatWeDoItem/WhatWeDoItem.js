@@ -3,9 +3,9 @@ import Media from "react-media";
 import styled from "styled-components";
 import { Fade } from "react-reveal";
 
-const whatWeDoItem = (props) => (
+const whatWeDoItem = props => (
   <Media queries={{ mobile: { maxWidth: 1250 } }}>
-    {(matches) =>
+    {matches =>
       matches.mobile ? (
         <Wrapper>
           <Fade duration={2000}>
@@ -63,10 +63,15 @@ const Wrapper = styled.section`
   padding: 50px 15%;
   text-align: center;
   border-bottom: 1px solid lightgray;
+  max-width: 1400px;
   @media (min-width: 1250px) {
     /* height: 537px; */
     padding: 50px 10%;
     margin-top: 50px;
+  }
+  @media (min-width: 1400px) {
+    padding: 50px 1%;
+    margin: 0 auto;
   }
   div {
     display: block;

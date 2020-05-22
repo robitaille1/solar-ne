@@ -9,14 +9,14 @@ class BlogSection extends Component {
     const { blogs = [] } = this.context;
     return (
       <Wrapper>
-        <div style={{ margin: "0 10%" }}>
+        <Content>
           <h2>Recent Blog Posts</h2>
           <section>
-            {blogs.map((blog) => (
+            {blogs.map(blog => (
               <BlogItem key={blog.id} blog={blog} />
             ))}
           </section>
-        </div>
+        </Content>
       </Wrapper>
     );
   }
@@ -45,5 +45,13 @@ const Wrapper = styled.section`
     @media (min-width: 600px) {
       font-size: 50px;
     }
+  }
+`;
+
+const Content = styled.div`
+  margin: 0 10%;
+  max-width: 1400px;
+  @media (min-width: 1400px) {
+    margin: 0 auto;
   }
 `;
