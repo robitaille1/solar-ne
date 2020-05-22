@@ -46,6 +46,8 @@ const JumboContainer = styled.div`
   text-align: center;
   display: block;
   padding: 10px;
+  max-width: 1400px;
+  margin: 0px auto;
   h2 {
     font-size: 2em;
     margin-top: 0;
