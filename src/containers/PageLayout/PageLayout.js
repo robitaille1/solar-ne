@@ -34,8 +34,13 @@ const Content = styled.section`
   color: rgb(29, 60, 68);
   font-size: 18px;
   text-align: left;
+  max-width: 1400px;
   @media (min-width: 700px) {
     padding: 50px 7% 0px;
+  }
+  @media (min-width: 700px) {
+    margin: 0 auto;
+    padding: 50px 1% 0px;
   }
   a {
     margin: 12px auto;
