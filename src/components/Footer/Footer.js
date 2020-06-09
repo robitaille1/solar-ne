@@ -105,7 +105,7 @@ const LinksDiv = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 0px;
-  padding: 10px 10%;
+  padding: 10px 5%;
   justify-content: space-around;
   max-width: 1400px;
   @media (min-width: 550px) {
@@ -114,9 +114,9 @@ const LinksDiv = styled.div`
     justify-content: space-between;
     flex-wrap: nowrap;
   }
-  @media (min-width: 1400px) {
+  @media (min-width: 700px) {
     margin: 0 auto;
-    padding: 10px 1%;
+    padding: 10px 10%;
   }
   h3 {
     font-size: 18px;
@@ -195,15 +195,15 @@ const Statement = styled.div`
 `;
 
 const FlagDiv = styled.div`
-  padding: 30px 10%;
+  padding: 30px 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   max-width: 1400px;
 
-  @media (min-width: 1400px) {
+  @media (min-width: 700px) {
     margin: 0 auto;
-    padding: 30px 1%;
+    padding: 30px 10%;
   }
 `;
 

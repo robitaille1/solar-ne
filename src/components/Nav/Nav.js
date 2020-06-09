@@ -74,7 +74,6 @@ const Navigation = styled.nav`
 
   @media (min-width: 1000px) {
     text-align: left;
-    padding: 0px 10%;
     justify-content: space-between;
   }
 
