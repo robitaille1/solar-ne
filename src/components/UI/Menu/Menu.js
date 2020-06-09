@@ -8,19 +8,19 @@ const Menu = ({ open, setOpen }) => {
     <StyledMenu open={open}>
       <img src={Logo} alt="SPNE logo " />
       <Link to="/about" onClick={() => setOpen(!open)}>
-        About us
+        ABOUT US
       </Link>
       <Link to="/investors" onClick={() => setOpen(!open)}>
-        Investors
+        INVESTORS
       </Link>
       <Link to="/partners" onClick={() => setOpen(!open)}>
-        Partners
+        PARTNERS
       </Link>
       <Link to="/careers" onClick={() => setOpen(!open)}>
-        Careers
+        CAREERS
       </Link>
       <Link to="/resources" onClick={() => setOpen(!open)}>
-        Resources
+        RESOURCES
       </Link>
     </StyledMenu>
   );
@@ -33,7 +33,7 @@ const StyledMenu = styled.nav`
   justify-content: center;
   background: rgb(62, 141, 161);
   height: 100vh;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
   position: absolute;
   top: 0;
@@ -45,14 +45,23 @@ const StyledMenu = styled.nav`
   @media (max-width: 600px) {
     width: 70%;
     padding: 2rem 2rem 100px;
+    text-align: left;
+  }
+
+  @media (max-width: 375px) {
+    padding: 2rem 1rem 100px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 33.33%;
   }
 
   img {
     width: 70%;
     margin: 10px auto;
     @media (min-width: 600px) {
-      width: 30%;
-      margin: 0px;
+      width: 50%;
+      margin: 0 auto;
     }
   }
 
@@ -61,21 +70,25 @@ const StyledMenu = styled.nav`
     padding: 1rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: white;
+    color: #3e8da1;
     text-decoration: none;
     transition: color 0.3s linear;
+    border-radius: 5px;
+    padding: 5px;
+    background: #e8e8e8;
+    margin: 10px;
 
-    @media (max-width: 600px) {
+    @media (max-width: 685px) {
       font-size: 1.5rem;
       text-align: center;
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 440px) {
       font-size: 1rem;
     }
 
     &:hover {
-      color: darkgray;
+      opacity: 0.6;
     }
   }
 `;
