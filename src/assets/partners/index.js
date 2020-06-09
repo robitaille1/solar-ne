@@ -19,4 +19,3 @@ export { default as Solaria } from "./Solaria.jpg";
 export { default as Sunpower } from "./Sunpower.png";
 export { default as Trina } from "./Trina Solar.png";
 export { default as Vikram } from "./VikramSolar.png";
-export { default as Yaskawa } from "./Yaskawa Solectria.jpg";
