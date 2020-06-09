@@ -10,7 +10,11 @@ const whatWeDoItem = props => (
         <Wrapper>
           <Fade duration={2000}>
             <div>
-              <img src={props.item.img} alt={props.item.credit} />
+              <img
+                draggable="false"
+                src={props.item.img}
+                alt={props.item.credit}
+              />
 
               <div>
                 <h3>{props.item.title}</h3>
@@ -25,7 +29,11 @@ const whatWeDoItem = props => (
         <Wrapper>
           {props.item.id % 2 === 0 ? (
             <div>
-              <img src={props.item.img} alt={props.item.credit} />
+              <img
+                draggable="false"
+                src={props.item.img}
+                alt={props.item.credit}
+              />
 
               <Fade right duration={1500}>
                 <div>
@@ -47,7 +55,11 @@ const whatWeDoItem = props => (
                 </div>
               </Fade>
 
-              <img src={props.item.img} alt={props.item.credit} />
+              <img
+                draggable="false"
+                src={props.item.img}
+                alt={props.item.credit}
+              />
             </div>
           )}
         </Wrapper>

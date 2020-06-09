@@ -5,6 +5,7 @@ const blogItem = props => (
   <Wrapper>
     <div>
       <img
+        draggable="false"
         alt={props.blog.alt}
         src={props.blog.img}
         samesite="None"

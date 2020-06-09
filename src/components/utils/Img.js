@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const img = props => (
   <ImgDiv>
-    <PageImg src={props.src} />
+    <PageImg draggable="false" src={props.src} />
   </ImgDiv>
 );
 
