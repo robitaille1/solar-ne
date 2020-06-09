@@ -77,6 +77,10 @@ const Navigation = styled.nav`
     justify-content: space-between;
   }
 
+  @media (min-width: 1400px) {
+    padding: 0 10%;
+  }
+
   button {
     text-decoration: none;
     &:hover {
