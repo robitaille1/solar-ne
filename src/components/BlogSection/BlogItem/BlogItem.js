@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const blogItem = (props) => (
+const blogItem = props => (
   <Wrapper>
     <div>
       <img
+        draggable="false"
         alt={props.blog.alt}
         src={props.blog.img}
         samesite="None"
@@ -47,6 +48,10 @@ const Wrapper = styled.div`
     font-size: 12px;
     @media (min-width: 550px) {
       font-size: 15px;
+    }
+
+    &:hover {
+      cursor: not-allowed;
     }
   }
 `;

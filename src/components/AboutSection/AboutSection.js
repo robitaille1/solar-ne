@@ -52,6 +52,7 @@ const aboutSection = () => (
       simply give.
     </p>
     <p>Let's Change the world</p>
+    <a href="mailto:contact@solarpowerne.com">Contact us today!</a>
     {/* <p>-Representing the GHS class of 2005-</p> */}
   </>
 );

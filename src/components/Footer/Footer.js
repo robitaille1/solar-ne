@@ -73,9 +73,13 @@ const footer = () => {
         </Statement>
       </LinksDiv>
       <FlagDiv>
-        <StateFlag src={oldFlag} alt="old flag of Maine" />
-        <Logo src={logo} alt="Solar Power New England Logo" />
-        <StateFlag src={newFlag} alt="current flag of Maine" />
+        <StateFlag draggable="false" src={oldFlag} alt="old flag of Maine" />
+        <Logo draggable="false" src={logo} alt="Solar Power New England Logo" />
+        <StateFlag
+          draggable="false"
+          src={newFlag}
+          alt="current flag of Maine"
+        />
       </FlagDiv>
       <Copyright>
         <h5>Solar Power New England © {date.getFullYear()} </h5>
