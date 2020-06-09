@@ -21,8 +21,7 @@ import {
   Solaria,
   Trina,
   Vikram,
-  Yaskawa,
-  Sunpower,
+  Sunpower
 } from "../../assets/partners";
 
 const partnersSection = () => (
@@ -50,7 +49,6 @@ const partnersSection = () => (
       <img alt="Sun Power" src={Sunpower} />
       <img alt="Trina Solar" src={Trina} />
       <img alt="Vikram Solar" src={Vikram} />
-      <img alt="Yaskawa Solectria" src={Yaskawa} />
     </Partners>
   </>
 );
