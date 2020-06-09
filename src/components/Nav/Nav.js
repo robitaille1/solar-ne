@@ -8,7 +8,7 @@ import Menu from "../UI/Menu/Menu";
 import { useOnClickOutside } from "../utils/hooks";
 import { OpenContext } from "../../context/OpenContext";
 
-const Nav = (props) => {
+const Nav = props => {
   let button = (
     <NavLink to={"/"} style={{ textDecoration: "none" }}>
       <button>HOME</button>
