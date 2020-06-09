@@ -49,8 +49,11 @@ const Wrapper = styled.section`
 `;
 
 const Content = styled.div`
-  margin: 0 10%;
+  padding: 0 5%;
   max-width: 1400px;
+  @media (min-width: 700px) {
+    padding: 0 10%;
+  }
   @media (min-width: 1400px) {
     margin: 0 auto;
   }
