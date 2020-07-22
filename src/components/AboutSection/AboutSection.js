@@ -7,6 +7,13 @@ const aboutSection = () => (
     <Img alt="SPNE Logo" src={logo} />
     <h2>About Us</h2>
     <p>
+      We're a small Maine company with a personal commitment to improving the
+      lives of those in our community, and providing the best equipment at the
+      best possible price to save money, energy, and our environment. If you
+      would like to learn moreabout us, contact us today at{" "}
+      <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>.
+    </p>
+    {/* <p>
       From Gorham, Maine to Boston, Massachusetts...Solar Power New England
       began as a dream as many companies do.
     </p>
@@ -51,8 +58,8 @@ const aboutSection = () => (
       Live simply so others may simply live, and give simply so others may
       simply give.
     </p>
-    <p>Let's Change the world</p>
-    <a href="mailto:contact@solarpowerne.com">Contact us today!</a>
+    <p>Let's Change the world</p> */}
+
     {/* <p>-Representing the GHS class of 2005-</p> */}
   </>
 );
