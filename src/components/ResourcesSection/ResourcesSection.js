@@ -2,7 +2,7 @@ import React from "react";
 
 const resourcesSection = () => (
   <>
-    <h2>PV Incentive Resources</h2>
+    <h2>Incentives and Resources</h2>
     <h3>US Policies and Incentives by state</h3>
     <a
       href="https://www.dsireusa.org"
