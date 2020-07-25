@@ -31,7 +31,7 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgb(62, 141, 161);
+  background: white;
   height: 100vh;
   text-align: center;
   padding: 2rem;
@@ -70,13 +70,14 @@ const StyledMenu = styled.nav`
     padding: 1rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #3e8da1;
+    color: #275e1a;
     text-decoration: none;
     transition: color 0.3s linear;
     border-radius: 5px;
     padding: 5px;
-    background: #e8e8e8;
+    /* background: #e8e8e8; */
     margin: 10px;
+    transition: 0.2s;
 
     @media (max-width: 685px) {
       font-size: 1.5rem;
