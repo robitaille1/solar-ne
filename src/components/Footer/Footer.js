@@ -100,7 +100,7 @@ export default footer;
 const Footer = styled.footer`
   background-color: rgb(231, 225, 225);
   padding: 10px 0px 0px 0px;
-  color: rgb(29, 60, 68);
+  color: #132f0c;
   font-size: 18px;
 `;
 
@@ -124,7 +124,7 @@ const LinksDiv = styled.div`
   }
   h3 {
     font-size: 18px;
-    color: rgb(62, 128, 145);
+    color: #275e1a;
     font-weight: bold;
     margin: 0px;
   }
@@ -143,10 +143,12 @@ const FirstDiv = styled.div`
   }
   p {
     font-size: 100%;
-    color: rgb(29, 60, 68);
+    color: #132f0c;
     text-decoration: none;
+    transition: 0.2s;
     &:hover {
-      color: rgba(29, 60, 68, 0.459);
+      /* color: rgba(29, 60, 68, 0.459); */
+      opacity: 0.6;
     }
   }
 `;
@@ -164,11 +166,12 @@ const SecondDiv = styled.div`
   a {
     display: block;
     margin: 12px auto;
-    color: rgb(29, 60, 68);
+    color: #132f0c;
     font-size: 30px;
     text-align: center;
+    transition: 0.2s;
     &:hover {
-      color: rgba(29, 60, 68, 0.459);
+      opacity: 0.6;
     }
     @media (min-width: 550px) {
       margin: 10px 0px;
@@ -191,9 +194,10 @@ const Statement = styled.div`
   }
   a {
     font-size: 100%;
-    color: rgb(29, 60, 68);
+    color: #132f0c;
+    transition: 0.2s;
     &:hover {
-      color: rgba(29, 60, 68, 0.459);
+      opacity: 0.6;
     }
   }
 `;
