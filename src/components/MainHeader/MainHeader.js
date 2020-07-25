@@ -5,7 +5,7 @@ import styled from "styled-components";
 const mainHeader = () => (
   <Main name="mainheader">
     <Media queries={{ mobile: { maxWidth: 1000 } }}>
-      {matches =>
+      {(matches) =>
         matches.mobile ? (
           <Wrapper>
             <section>
@@ -55,7 +55,7 @@ export default mainHeader;
 
 const Main = styled.main`
   padding: 30px 10px;
-  background-color: rgb(231, 225, 225);
+  background-color: #fcfbfb;
 `;
 
 const Wrapper = styled.div`
@@ -83,6 +83,6 @@ const Wrapper = styled.div`
   span {
     font-weight: bold;
     font-family: "Orbitron", sans-serif;
-    color: rgb(56, 124, 141);
+    color: #275e1a;
   }
 `;
