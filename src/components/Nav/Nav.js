@@ -8,7 +8,7 @@ import Menu from "../UI/Menu/Menu";
 import { useOnClickOutside } from "../utils/hooks";
 import { OpenContext } from "../../context/OpenContext";
 
-const Nav = props => {
+const Nav = (props) => {
   let button = (
     <NavLink to={"/"} style={{ textDecoration: "none" }}>
       <button>HOME</button>
@@ -87,16 +87,19 @@ const Navigation = styled.nav`
       cursor: pointer;
     }
     @media (min-width: 1000px) {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+      /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
       transition: 0.3s;
-      background: #4b99ad;
-      padding: 13px;
+      background: #275e1a;
+      padding: 12px;
       color: #fff;
       border: none;
       margin-left: 20px;
+      border-radius: 2px;
+      font-size: 14px;
+      transition: 0.2s;
       &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-        background: #4691a4;
+        /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); */
+        opacity: 0.6;
       }
     }
   }
@@ -120,9 +123,10 @@ const Brand = styled.div`
 
   h1 {
     font-family: "Orbitron", sans-serif;
-    color: rgb(62, 141, 161);
+    color: #275e1a;
     margin: 10px 10px;
     width: 100%;
+    transition: 0.2s;
 
     @media (min-width: 700px) {
       padding: 10px;
@@ -130,7 +134,7 @@ const Brand = styled.div`
     }
 
     &:hover {
-      color: rgb(62, 141, 161, 0.699);
+      opacity: 0.6;
     }
   }
 
