@@ -5,7 +5,7 @@ import Nav from "../../components/Nav/Nav";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
 
-const pageLayout = props => (
+const pageLayout = (props) => (
   <Wrapper>
     <Nav />
     <Content>
@@ -31,7 +31,7 @@ const Content = styled.section`
   white-space: pre-line;
   padding: 50px 0% 0px;
   margin: 50px 5%;
-  color: rgb(29, 60, 68);
+  color: #132f0c;
   font-size: 18px;
   text-align: left;
   max-width: 1400px;
@@ -41,9 +41,10 @@ const Content = styled.section`
   }
   a {
     margin: 12px auto;
-    color: rgb(29, 60, 68);
+    color: #132f0c;
+    transition: 0.2s;
     &:hover {
-      color: rgba(29, 60, 68, 0.459);
+      opacity: 0.6;
     }
   }
 `;
