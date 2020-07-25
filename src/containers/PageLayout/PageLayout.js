@@ -53,16 +53,15 @@ const Homebtn = styled.button`
   &:hover {
     cursor: pointer;
   }
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  background: #4b99ad;
-  padding: 13px;
+  font-size: 13px;
+  background: #275e1a;
+  padding: 13px 20px;
   color: #fff;
   border: none;
+  transition: 0.2s;
+  border-radius: 2px;
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-    background: #4691a4;
+    opacity: 0.6;
   }
 
   @media (min-width: 1000px) {
