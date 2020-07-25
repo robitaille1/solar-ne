@@ -27,14 +27,17 @@ export default jumbotron;
 
 const Jumbotron = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url(https://i.imgur.com/wnbE8O7.jpg); */
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-    url(https://i.imgur.com/wnbE8O7.jpg);
+    url(https://previews.123rf.com/images/grafxart/grafxart1610/grafxart161000043/67013575-sunlit-solar-panel-in-the-forest.jpg);
+
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -48,6 +51,10 @@ const JumboContainer = styled.div`
   padding: 10px;
   max-width: 1400px;
   margin: 0px auto;
+  @media (min-width: 700px) {
+    text-align: left;
+    padding: 100px;
+  }
   h2 {
     font-size: 2em;
     margin-top: 0;
@@ -59,6 +66,7 @@ const JumboContainer = styled.div`
   }
   div {
     margin-bottom: 50px;
+    text-align: center;
     @media (min-width: 700px) {
       margin-bottom: 0px;
     }
