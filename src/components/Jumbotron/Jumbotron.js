@@ -27,7 +27,7 @@ export default jumbotron;
 
 const Jumbotron = styled.section`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,6 +40,14 @@ const Jumbotron = styled.section`
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
+
+  @media (min-width: 560px) {
+    height: 90vh;
+  }
+  @media (min-width: 1100px) {
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
 
 const JumboContainer = styled.div`
@@ -48,10 +56,15 @@ const JumboContainer = styled.div`
   display: block;
   padding: 10px;
   max-width: 1400px;
-  margin: 0px auto;
+
   @media (min-width: 700px) {
     text-align: left;
     padding: 100px;
+  }
+  @media (min-width: 1100px) {
+    width: 60%;
+    padding: 100px 20px 100px 100px;
+    margin: 0px;
   }
   h2 {
     font-size: 2em;
@@ -61,12 +74,19 @@ const JumboContainer = styled.div`
       font-size: 3em;
       margin-bottom: 90px;
     }
+    @media (min-width: 1100px) {
+      margin-bottom: 10px;
+    }
   }
   div {
     margin-bottom: 50px;
     text-align: center;
     @media (min-width: 700px) {
       margin-bottom: 0px;
+    }
+    @media (min-width: 1100px) {
+      display: flex;
+      flex-direction: column;
     }
   }
   p {
