@@ -78,6 +78,16 @@ const footer = () => {
             information!
           </p>
           <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
+          <HomeAdvisor
+            href="http://www.homeadvisor.com/rated.SolarPowerNewEngland.97092349.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="Solar Power New England is HomeAdvisor Screened & Approved"
+              src="http://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=97092349&key=9b76e46ada6034f78ad60c35d2b86fe7"
+            />
+          </HomeAdvisor>
         </Statement>
       </LinksDiv>
       <FlagDiv>
@@ -238,5 +248,24 @@ const Copyright = styled.div`
   padding: 30px 5%;
   h5 {
     margin: 0;
+  }
+`;
+
+const HomeAdvisor = styled.a`
+  display: block;
+  width: 50%;
+  margin: 40px auto 20px;
+
+  @media (min-width: 550px) {
+    margin: 20px 0;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    height: 120px;
+    @media (min-width: 550px) {
+      margin: unset;
+    }
   }
 `;
