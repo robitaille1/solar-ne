@@ -62,6 +62,14 @@ const footer = () => {
           >
             <i className="fab fa-yelp" />
           </a>
+          <a
+            href="https://www.solarreviews.com/installers/solar_power_new_england-reviews/"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="Solar Reviews"
+          >
+            <i class="far fa-sun"></i>
+          </a>
         </SecondDiv>
         <Statement>
           <p>
