@@ -79,7 +79,7 @@ const footer = () => {
           </p>
           <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
           <HomeAdvisor
-            href="http://www.homeadvisor.com/rated.SolarPowerNewEngland.97092349.html"
+            href="https://www.homeadvisor.com/rated.SolarPowerNewEngland.97092349.html"
             target="_blank"
             rel="noopener noreferrer"
           >
