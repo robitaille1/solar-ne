@@ -64,7 +64,7 @@ const careersSection = () => (
           <label htmlFor="resume">Attach resume (PDF format)</label>
           <input type="file" id="resume" name="resume" accept=".pdf"></input>
         </li>
-        <p className="required required-text">* Required</p>
+        <h5 className="required required-text">* Required</h5>
         <li style={{ textAlign: "center" }}>
           <input type="submit" value="Submit" />
         </li>

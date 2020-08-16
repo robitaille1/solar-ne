@@ -24,7 +24,7 @@ const pageLayout = (props) => (
 export default pageLayout;
 
 const Wrapper = styled.main`
-  background-color: rgb(231, 225, 225);
+  background-color: #fcfbfb;
 `;
 
 const Content = styled.section`
@@ -33,11 +33,11 @@ const Content = styled.section`
   margin: 50px 5%;
   color: #132f0c;
   font-size: 18px;
-  text-align: left;
+  text-align: center;
   max-width: 1400px;
   @media (min-width: 700px) {
     margin: 0 auto;
-    padding: 100px 10% 20px;
+    padding: 100px 15% 20px;
   }
   a {
     margin: 12px auto;
@@ -46,6 +46,10 @@ const Content = styled.section`
     &:hover {
       opacity: 0.6;
     }
+  }
+  p {
+    text-align: left;
+    line-height: 1.7;
   }
 `;
 
