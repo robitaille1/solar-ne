@@ -119,6 +119,7 @@ const Navigation = styled.nav`
 const Brand = styled.div`
   display: flex;
   flex-direction: row;
+  transition: 0.2s;
   &:hover {
     opacity: 0.6;
   }
