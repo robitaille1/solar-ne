@@ -85,7 +85,7 @@ const footer = () => {
           >
             <img
               alt="Solar Power New England is HomeAdvisor Screened & Approved"
-              src="http://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=97092349&key=9b76e46ada6034f78ad60c35d2b86fe7"
+              src="https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=97092349&key=9b76e46ada6034f78ad60c35d2b86fe7"
             />
           </HomeAdvisor>
         </Statement>
