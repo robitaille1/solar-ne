@@ -31,9 +31,8 @@ const Nav = (props) => {
     <main>
       <Navigation>
         <Brand>
-          <img src={NavFlag} alt="SPNE Flag Logo" />
-
           <NavLink to={`/`} style={{ textDecoration: "none" }}>
+            <img src={NavFlag} alt="SPNE Flag Logo" />
             <h1>
               SOLAR POWER <span>NEW ENGLAND</span>
             </h1>
@@ -120,6 +119,10 @@ const Navigation = styled.nav`
 
 const Brand = styled.div`
   display: flex;
+  flex-direction: row;
+  &:hover {
+    opacity: 0.6;
+  }
 
   h1 {
     font-family: "Orbitron", sans-serif;
@@ -132,10 +135,10 @@ const Brand = styled.div`
       padding: 10px;
       margin: 10px 10px 10px 0px;
     }
+  }
 
-    &:hover {
-      opacity: 0.6;
-    }
+  a {
+    display: inherit;
   }
 
   span {
