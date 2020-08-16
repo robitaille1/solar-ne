@@ -77,7 +77,6 @@ const Wrapper = styled.section`
   border-bottom: 1px solid lightgray;
   max-width: 1400px;
   @media (min-width: 1250px) {
-    /* height: 537px; */
     padding: 50px 10%;
     margin-top: 50px;
   }
