@@ -11,14 +11,14 @@ import { OpenContext } from "../../context/OpenContext";
 const Nav = (props) => {
   let button = (
     <NavLink to={"/"} style={{ textDecoration: "none" }}>
-      <button>HOME</button>
+      <button>Home</button>
     </NavLink>
   );
 
   if (props.path === "/") {
     button = (
       <Link to="contact" spy={true} smooth={true} offset={-70} duration={2000}>
-        <button>CONTACT</button>
+        <button>Contact</button>
       </Link>
     );
   }
@@ -82,22 +82,21 @@ const Navigation = styled.nav`
 
   button {
     text-decoration: none;
+    min-width: 91.25px;
     &:hover {
       cursor: pointer;
     }
     @media (min-width: 1000px) {
-      /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
       transition: 0.3s;
       background: #275e1a;
-      padding: 12px;
+      padding: 12px 20px;
       color: #fff;
       border: none;
       margin-left: 20px;
-      border-radius: 2px;
+      border-radius: 50px;
       font-size: 14px;
       transition: 0.2s;
       &:hover {
-        /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); */
         opacity: 0.6;
       }
     }

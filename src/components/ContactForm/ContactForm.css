@@ -121,7 +121,7 @@ select {
   padding: 8px 15px 8px 15px;
   color: #fff;
   border: none;
-  border-radius: 2px;
+  border-radius: 50px;
   font-size: 13px;
   transition: 0.2s;
 }
