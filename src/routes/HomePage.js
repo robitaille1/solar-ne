@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav/Nav";
-import Banner from "../components/Banner/Banner";
+// import Banner from "../components/Banner/Banner";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import MainHeader from "../components/MainHeader/MainHeader";
 import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
@@ -11,7 +11,7 @@ import Footer from "../components/Footer/Footer";
 const homePage = (props) => (
   <main>
     <Nav path={props.match.path} />
-    <Banner />
+    {/* <Banner /> */}
     <Jumbotron />
     <MainHeader />
     <WhatWeDo />
