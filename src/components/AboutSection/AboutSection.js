@@ -8,9 +8,10 @@ const aboutSection = () => (
     <h2>About Us</h2>
     <p>
       We're a small Maine company with a personal commitment to improving the
-      lives of those in our community, and providing the best equipment at the
+      lives of those in our community by providing the best equipment at the
       best possible price to save money, energy, and our environment. If you
-      would like to learn more about us, contact us today at{" "}
+      would like to get in touch please fill out the form below, or drop us a
+      line at{" "}
       <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>.
     </p>
   </>
