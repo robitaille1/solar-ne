@@ -52,7 +52,7 @@ export default Nav;
 
 const Navigation = styled.nav`
   position: relative;
-  z-index: 1;
+  z-index: 21;
   text-align: center;
   display: flex;
   justify-content: space-between;

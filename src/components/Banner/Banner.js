@@ -23,6 +23,7 @@ const Banner = styled.div`
   top: 70px;
   background: #132f0ce0;
   color: white;
+  z-index: 20;
 
   div {
     display: flex;
