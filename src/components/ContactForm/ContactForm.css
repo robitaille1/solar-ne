@@ -117,7 +117,7 @@ select {
   margin-top: 20px;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
   transition: 0.3s;
-  background: #275e1a;
+  background: linear-gradient(89.57deg, #3b8f28, #265e19);
   padding: 8px 15px 8px 15px;
   color: #fff;
   border: none;

@@ -88,7 +88,7 @@ const Navigation = styled.nav`
     }
     @media (min-width: 1000px) {
       transition: 0.3s;
-      background: #275e1a;
+      background: linear-gradient(89.57deg, #3b8f28, #265e19);
       padding: 12px 20px;
       color: #fff;
       border: none;
