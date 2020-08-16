@@ -5,6 +5,7 @@
 
 .section-title {
   margin: 0px;
+  font-size: 25px;
 }
 
 input::-webkit-outer-spin-button,

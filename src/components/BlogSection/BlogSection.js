@@ -41,10 +41,7 @@ const Wrapper = styled.section`
   h2 {
     margin: 0;
     text-align: center;
-    font-size: 35px;
-    @media (min-width: 600px) {
-      font-size: 50px;
-    }
+    font-size: 30px;
   }
 `;
 
