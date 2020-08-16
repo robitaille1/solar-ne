@@ -24,6 +24,10 @@ const Banner = styled.div`
   background: #132f0ce0;
   color: white;
   z-index: 20;
+  display: none;
+  @media (min-width: 500px) {
+    display: block;
+  }
 
   div {
     display: flex;
