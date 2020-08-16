@@ -32,6 +32,8 @@ const Jumbotron = styled.section`
   justify-content: center;
   align-items: center;
   color: white;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
     url(https://envato-shoebox-0.imgix.net/602c/4a68-8a1b-4c9c-b304-d00a9a91d879/15870.JPG?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=4cf94de07cd410c60223a765e36a2a36);
@@ -63,7 +65,7 @@ const JumboContainer = styled.div`
   }
   @media (min-width: 1100px) {
     width: 60%;
-    padding: 100px 20px 100px 100px;
+    padding: 100px 50px;
     margin: 0px;
   }
   h2 {
@@ -77,8 +79,12 @@ const JumboContainer = styled.div`
     @media (min-width: 1100px) {
       margin-bottom: 10px;
     }
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
   div {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     margin-bottom: 50px;
     text-align: center;
     @media (min-width: 700px) {
