@@ -12,7 +12,8 @@ const careersSection = () => (
     </p>
     <p>
       If you're interested, please submit your resumé, contact information and a
-      brief description of yourself below! We look forward to hearing from you!
+      brief description of yourself and why you want to work for us below! We
+      look forward to hearing from you!
     </p>
     <form
       action="https://formsubmit.co/contact@solarpowerne.com"
@@ -64,7 +65,7 @@ const careersSection = () => (
           <label htmlFor="resume">Attach resume (PDF format)</label>
           <input type="file" id="resume" name="resume" accept=".pdf"></input>
         </li>
-        <p className="required required-text">* Required</p>
+        <h5 className="required required-text">* Required</h5>
         <li style={{ textAlign: "center" }}>
           <input type="submit" value="Submit" />
         </li>

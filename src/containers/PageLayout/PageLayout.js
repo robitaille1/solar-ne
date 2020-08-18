@@ -5,7 +5,7 @@ import Nav from "../../components/Nav/Nav";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
 
-const pageLayout = props => (
+const pageLayout = (props) => (
   <Wrapper>
     <Nav />
     <Content>
@@ -24,27 +24,32 @@ const pageLayout = props => (
 export default pageLayout;
 
 const Wrapper = styled.main`
-  background-color: rgb(231, 225, 225);
+  background-color: #fcfbfb;
 `;
 
 const Content = styled.section`
   white-space: pre-line;
   padding: 50px 0% 0px;
   margin: 50px 5%;
-  color: rgb(29, 60, 68);
+  color: #132f0c;
   font-size: 18px;
-  text-align: left;
+  text-align: center;
   max-width: 1400px;
   @media (min-width: 700px) {
     margin: 0 auto;
-    padding: 100px 10% 20px;
+    padding: 100px 15% 20px;
   }
   a {
     margin: 12px auto;
-    color: rgb(29, 60, 68);
+    color: #132f0c;
+    transition: 0.2s;
     &:hover {
-      color: rgba(29, 60, 68, 0.459);
+      opacity: 0.6;
     }
+  }
+  p {
+    text-align: left;
+    line-height: 1.7;
   }
 `;
 
@@ -52,16 +57,15 @@ const Homebtn = styled.button`
   &:hover {
     cursor: pointer;
   }
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  background: #4b99ad;
-  padding: 13px;
+  font-size: 13px;
+  background: #275e1a;
+  padding: 13px 20px;
   color: #fff;
   border: none;
+  transition: 0.2s;
+  border-radius: 2px;
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-    background: #4691a4;
+    opacity: 0.6;
   }
 
   @media (min-width: 1000px) {

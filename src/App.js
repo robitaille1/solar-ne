@@ -10,6 +10,7 @@ import {
   InvestorsPage,
   PartnersPage,
   ResourcesPage,
+  FinancingPage,
 } from "./routes";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/partners" component={PartnersPage} />
         <Route path="/careers" component={CareersPage} />
         <Route path="/resources" component={ResourcesPage} />
+        <Route path="/financing" component={FinancingPage} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
     </AppMain>

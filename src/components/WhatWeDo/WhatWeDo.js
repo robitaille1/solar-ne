@@ -67,13 +67,13 @@ const Wrapper = styled.section`
   section {
     display: flex;
     flex-direction: column;
+    &:nth-child(4) {
+      border-bottom: none;
+    }
   }
   h2 {
     margin: 0;
     text-align: center;
-    font-size: 35px;
-    @media (min-width: 600px) {
-      font-size: 50px;
-    }
+    font-size: 30px;
   }
 `;

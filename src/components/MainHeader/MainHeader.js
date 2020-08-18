@@ -5,11 +5,12 @@ import styled from "styled-components";
 const mainHeader = () => (
   <Main name="mainheader">
     <Media queries={{ mobile: { maxWidth: 1000 } }}>
-      {matches =>
+      {(matches) =>
         matches.mobile ? (
           <Wrapper>
             <section>
               <div>
+                <h2>Our Mission</h2>
                 <p>
                   <span>Solar Power New England</span> aims to help homeowners
                   increase their ability to produce their own power, and improve
@@ -27,11 +28,11 @@ const mainHeader = () => (
           <Wrapper>
             <section>
               <div>
+                <h2>Our Mission</h2>
                 <p>
-                  Our mission at <span>Solar Power New England</span>, is to
-                  help homeowners increase their ability to produce their own
-                  power, and improve their ability to manage their energy
-                  consumption.
+                  At <span>Solar Power New England</span> our mission is to help
+                  homeowners increase their ability to produce their own power,
+                  and improve their ability to manage their energy consumption.
                 </p>
                 <p>
                   Our focus, to help the people of Maine and their neighbors, in
@@ -55,7 +56,7 @@ export default mainHeader;
 
 const Main = styled.main`
   padding: 30px 10px;
-  background-color: rgb(231, 225, 225);
+  background-color: #fcfbfb;
 `;
 
 const Wrapper = styled.div`
@@ -83,6 +84,6 @@ const Wrapper = styled.div`
   span {
     font-weight: bold;
     font-family: "Orbitron", sans-serif;
-    color: rgb(56, 124, 141);
+    color: #275e1a;
   }
 `;

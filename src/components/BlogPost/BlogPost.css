@@ -1,24 +1,24 @@
 .BlogPage {
-    background-color: rgb(62, 128, 145);
+  background-color: rgb(62, 128, 145);
 }
 
 .BlogPost {
-    white-space: pre-line;
-    padding: 30px 7%;
-    margin: 50px 10%;
-    background-color: rgb(231, 225, 225);
-    border-radius: 10px;
-    box-shadow:  0 0 15px rgba(0, 0, 0, 0.411);
+  white-space: pre-line;
+  padding: 30px 7%;
+  margin: 50px 10%;
+  background-color: #fcfbfb;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.411);
 }
 
 .blog-content {
-    text-align: left;
+  text-align: left;
 }
 
-.blog-img{
-    width: 70%;
+.blog-img {
+  width: 70%;
 }
 
 .asset {
-    width: 90%;
+  width: 90%;
 }

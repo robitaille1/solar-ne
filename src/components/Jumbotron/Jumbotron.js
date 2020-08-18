@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import BackgroundImg from "../../assets/summer.jpg";
 
 const jumbotron = () => (
   <Jumbotron>
@@ -31,14 +32,25 @@ const Jumbotron = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-    url(https://i.imgur.com/wnbE8O7.jpg);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(${BackgroundImg});
+
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
+
+  @media (min-width: 560px) {
+    height: 90vh;
+  }
+  @media (min-width: 1100px) {
+    display: flex;
+    justify-content: flex-end;
+  }
 `;
 
 const JumboContainer = styled.div`
@@ -47,7 +59,16 @@ const JumboContainer = styled.div`
   display: block;
   padding: 10px;
   max-width: 1400px;
-  margin: 0px auto;
+
+  @media (min-width: 700px) {
+    text-align: left;
+    padding: 100px;
+  }
+  @media (min-width: 1100px) {
+    width: 60%;
+    padding: 100px 50px;
+    margin: 0px;
+  }
   h2 {
     font-size: 2em;
     margin-top: 0;
@@ -56,11 +77,23 @@ const JumboContainer = styled.div`
       font-size: 3em;
       margin-bottom: 90px;
     }
+    @media (min-width: 1100px) {
+      margin-bottom: 10px;
+    }
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
   div {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     margin-bottom: 50px;
+    text-align: center;
     @media (min-width: 700px) {
       margin-bottom: 0px;
+    }
+    @media (min-width: 1100px) {
+      display: flex;
+      flex-direction: column;
     }
   }
   p {

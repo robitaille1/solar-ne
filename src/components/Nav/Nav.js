@@ -8,17 +8,17 @@ import Menu from "../UI/Menu/Menu";
 import { useOnClickOutside } from "../utils/hooks";
 import { OpenContext } from "../../context/OpenContext";
 
-const Nav = props => {
+const Nav = (props) => {
   let button = (
     <NavLink to={"/"} style={{ textDecoration: "none" }}>
-      <button>HOME</button>
+      <button>Home</button>
     </NavLink>
   );
 
   if (props.path === "/") {
     button = (
       <Link to="contact" spy={true} smooth={true} offset={-70} duration={2000}>
-        <button>CONTACT</button>
+        <button>Contact</button>
       </Link>
     );
   }
@@ -31,9 +31,8 @@ const Nav = props => {
     <main>
       <Navigation>
         <Brand>
-          <img src={NavFlag} alt="SPNE Flag Logo" />
-
           <NavLink to={`/`} style={{ textDecoration: "none" }}>
+            <img src={NavFlag} alt="SPNE Flag Logo" />
             <h1>
               SOLAR POWER <span>NEW ENGLAND</span>
             </h1>
@@ -53,7 +52,7 @@ export default Nav;
 
 const Navigation = styled.nav`
   position: relative;
-  z-index: 1;
+  z-index: 21;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -83,20 +82,22 @@ const Navigation = styled.nav`
 
   button {
     text-decoration: none;
+    min-width: 91.25px;
     &:hover {
       cursor: pointer;
     }
     @media (min-width: 1000px) {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
       transition: 0.3s;
-      background: #4b99ad;
-      padding: 13px;
+      background: linear-gradient(89.57deg, #3b8f28, #265e19);
+      padding: 12px 20px;
       color: #fff;
       border: none;
       margin-left: 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      transition: 0.2s;
       &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
-        background: #4691a4;
+        opacity: 0.6;
       }
     }
   }
@@ -117,21 +118,27 @@ const Navigation = styled.nav`
 
 const Brand = styled.div`
   display: flex;
+  flex-direction: row;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.6;
+  }
 
   h1 {
     font-family: "Orbitron", sans-serif;
-    color: rgb(62, 141, 161);
+    color: #275e1a;
     margin: 10px 10px;
     width: 100%;
+    transition: 0.2s;
 
     @media (min-width: 700px) {
       padding: 10px;
       margin: 10px 10px 10px 0px;
     }
+  }
 
-    &:hover {
-      color: rgb(62, 141, 161, 0.699);
-    }
+  a {
+    display: inherit;
   }
 
   span {

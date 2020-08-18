@@ -12,7 +12,7 @@ class BlogSection extends Component {
         <Content>
           <h2>Recent Blog Posts</h2>
           <section>
-            {blogs.map(blog => (
+            {blogs.map((blog) => (
               <BlogItem key={blog.id} blog={blog} />
             ))}
           </section>
@@ -27,7 +27,7 @@ export default BlogSection;
 const Wrapper = styled.section`
   padding: 50px 0px;
   color: white;
-  background-color: rgb(62, 128, 145);
+  background-color: #132f0c;
   section {
     display: flex;
     flex-direction: column;
@@ -41,10 +41,7 @@ const Wrapper = styled.section`
   h2 {
     margin: 0;
     text-align: center;
-    font-size: 35px;
-    @media (min-width: 600px) {
-      font-size: 50px;
-    }
+    font-size: 30px;
   }
 `;
 

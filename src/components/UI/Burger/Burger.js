@@ -36,12 +36,21 @@ const StyledBurger = styled.a`
     outline: none;
   }
 
+  &:hover {
+    div {
+      opacity: 0.6;
+      :nth-child(2) {
+        opacity: ${({ open }) => (open ? "0" : ".6")};
+      }
+    }
+  }
+
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "white" : "rgb(62, 141, 161)")};
+    background: #275e1a;
     border-radius: 10px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     position: relative;
     transform-origin: 1px;
     :first-child {

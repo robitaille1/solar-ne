@@ -3,9 +3,9 @@ import Media from "react-media";
 import styled from "styled-components";
 import { Fade } from "react-reveal";
 
-const whatWeDoItem = props => (
+const whatWeDoItem = (props) => (
   <Media queries={{ mobile: { maxWidth: 1250 } }}>
-    {matches =>
+    {(matches) =>
       matches.mobile ? (
         <Wrapper>
           <Fade duration={2000}>
@@ -77,7 +77,6 @@ const Wrapper = styled.section`
   border-bottom: 1px solid lightgray;
   max-width: 1400px;
   @media (min-width: 1250px) {
-    /* height: 537px; */
     padding: 50px 10%;
     margin-top: 50px;
   }
@@ -90,7 +89,7 @@ const Wrapper = styled.section`
     justify-content: space-between;
     @media (min-width: 1250px) {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
     }
     div {
       font-size: 16px;
@@ -113,6 +112,9 @@ const Wrapper = styled.section`
     margin-bottom: 10px;
     @media (min-width: 700px) {
       width: 35%;
+    }
+    @media (min-width: 1400px) {
+      width: 25%;
     }
   }
   h3 {
