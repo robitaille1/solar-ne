@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
@@ -16,8 +17,12 @@ const pageLayout = (props) => (
         </Link>
       </div>
     </Content>
-    <BlogSection />
-    <Footer />
+    <LazyLoad>
+      <BlogSection />
+    </LazyLoad>
+    <LazyLoad>
+      <Footer />
+    </LazyLoad>
   </Wrapper>
 );
 

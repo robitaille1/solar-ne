@@ -5,6 +5,7 @@ import battery from "../../assets/icons/battery.png";
 import home from "../../assets/icons/solarenergy.png";
 import charger from "../../assets/icons/electric.png";
 import gear from "../../assets/icons/energygear.png";
+import LazyLoad from "react-lazyload";
 
 class WhatWeDo extends Component {
   constructor(props) {
@@ -48,7 +49,9 @@ class WhatWeDo extends Component {
           <h2>What We Do</h2>
           <section>
             {this.state.wwd.map((wwd) => (
-              <WhatWeDoItem key={wwd.id} item={wwd} />
+              <LazyLoad>
+                <WhatWeDoItem key={wwd.id} item={wwd} />
+              </LazyLoad>
             ))}
           </section>
           {/* Icons made by Freepik on Flaticon.com  */}

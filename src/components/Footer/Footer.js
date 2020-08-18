@@ -4,6 +4,7 @@ import styled from "styled-components";
 import oldFlag from "../../assets/flags/oldflag.gif";
 import newFlag from "../../assets/flags/newflag.png";
 import logo from "../../assets/logo.png";
+import Lazyload from "react-lazyload";
 
 const footer = () => {
   const date = new Date();
@@ -90,15 +91,21 @@ const footer = () => {
           </HomeAdvisor>
         </Statement>
       </LinksDiv>
-      <FlagDiv>
-        <StateFlag draggable="false" src={oldFlag} alt="old flag of Maine" />
-        <Logo draggable="false" src={logo} alt="Solar Power New England Logo" />
-        <StateFlag
-          draggable="false"
-          src={newFlag}
-          alt="current flag of Maine"
-        />
-      </FlagDiv>
+      <Lazyload>
+        <FlagDiv>
+          <StateFlag draggable="false" src={oldFlag} alt="old flag of Maine" />
+          <Logo
+            draggable="false"
+            src={logo}
+            alt="Solar Power New England Logo"
+          />
+          <StateFlag
+            draggable="false"
+            src={newFlag}
+            alt="current flag of Maine"
+          />
+        </FlagDiv>
+      </Lazyload>
       <Copyright>
         <h5>Solar Power New England © {date.getFullYear()} </h5>
         <p>
