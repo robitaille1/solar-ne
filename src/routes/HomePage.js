@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import Nav from "../components/Nav/Nav";
 // import Banner from "../components/Banner/Banner";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
@@ -14,10 +15,16 @@ const homePage = (props) => (
     {/* <Banner /> */}
     <Jumbotron />
     <MainHeader />
-    <WhatWeDo />
+    <LazyLoad>
+      <WhatWeDo />
+    </LazyLoad>
     <ContactForm />
-    <BlogSection />
-    <Footer />
+    <LazyLoad>
+      <BlogSection />
+    </LazyLoad>
+    <LazyLoad>
+      <Footer />
+    </LazyLoad>
   </main>
 );
 
