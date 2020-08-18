@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import BackgroundImg from "../../assets/summer.jpg";
 
 const jumbotron = () => (
   <Jumbotron>
@@ -35,8 +36,8 @@ const Jumbotron = styled.section`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
-    url(https://envato-shoebox-0.imgix.net/602c/4a68-8a1b-4c9c-b304-d00a9a91d879/15870.JPG?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=4cf94de07cd410c60223a765e36a2a36);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(${BackgroundImg});
 
   background-size: cover;
   background-position: center center;
