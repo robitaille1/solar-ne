@@ -1,7 +1,7 @@
 import React from "react";
 
 const resourcesSection = () => (
-  <>
+  <div style={{ textAlign: "left" }}>
     <h2>Incentives and Resources</h2>
     <h3>US Policies and Incentives by state</h3>
     <a
@@ -58,7 +58,7 @@ const resourcesSection = () => (
     >
       pvwatts.nrel.gov
     </a>
-  </>
+  </div>
 );
 
 export default resourcesSection;

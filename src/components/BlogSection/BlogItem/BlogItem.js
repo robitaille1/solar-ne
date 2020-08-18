@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Lazyload from "react-lazyload";
 
 const blogItem = (props) => (
   <Wrapper>
     <div>
-      <img
-        draggable="false"
-        alt={props.blog.alt}
-        src={props.blog.img}
-        samesite="None"
-        secure="true"
-      />
+      <Lazyload>
+        <img
+          draggable="false"
+          alt={props.blog.alt}
+          src={props.blog.img}
+          samesite="None"
+          secure="true"
+        />
+      </Lazyload>
       <h3>{props.blog.title}</h3>
       <p>Coming Soon</p>
     </div>
