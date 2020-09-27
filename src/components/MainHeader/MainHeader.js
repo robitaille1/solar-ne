@@ -1,6 +1,7 @@
 import React from "react";
 import Media from "react-media";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const mainHeader = () => (
   <Main name="mainheader">
@@ -21,6 +22,9 @@ const mainHeader = () => (
                   in the transition to a renewable and sustainable energy
                   future.
                 </p>
+                <Link to="/our-work">
+                  <button>See our work</button>
+                </Link>
               </div>
             </section>
           </Wrapper>
@@ -43,6 +47,9 @@ const mainHeader = () => (
                   congratulations on taking your first step toward energy
                   independence!
                 </p>
+                <Link to="/our-work">
+                  <button>See our work</button>
+                </Link>
               </div>
             </section>
           </Wrapper>
@@ -85,5 +92,25 @@ const Wrapper = styled.div`
     font-weight: bold;
     font-family: "Orbitron", sans-serif;
     color: #275e1a;
+  }
+
+  button {
+    text-decoration: none;
+    min-width: 91.25px;
+    &:hover {
+      cursor: pointer;
+    }
+    transition: 0.3s;
+    background: linear-gradient(89.57deg, #3b8f28, #265e19);
+    padding: 12px 20px;
+    color: #fff;
+    border: none;
+    margin-left: 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 `;
