@@ -1,7 +1,9 @@
 import React from "react";
 import Masonry from "react-masonry-css";
 import styled from "styled-components";
-// import Dummy from "dummyjs";
+import Lazyload from "react-lazyload";
+import { Fade } from "react-reveal";
+
 import {
   gorham,
   gorham2,
@@ -12,19 +14,21 @@ import {
 } from "../../assets/our-work";
 
 let items = [
-  { id: 1, src: gorham, alt: "Gorham Project" },
-  { id: 2, src: gorham2, alt: "Gorham Project" },
-  { id: 3, src: gorham3, alt: "Gorham Project" },
-  { id: 4, src: gorham4, alt: "Gorham Project" },
-  { id: 5, src: portland, alt: "Portland Project" },
-  { id: 5, src: portland2, alt: "Portland Project" },
+  { id: 1, src: gorham, alt: "Gorham Project", time: "3000" },
+  { id: 2, src: gorham2, alt: "Gorham Project", time: "5000" },
+  { id: 3, src: gorham3, alt: "Gorham Project", time: "1000" },
+  { id: 4, src: gorham4, alt: "Gorham Project", time: "4000" },
+  { id: 5, src: portland, alt: "Portland Project", time: "2000" },
+  { id: 5, src: portland2, alt: "Portland Project", time: "1000" },
 ];
 
 items = items.map(function (item) {
   return (
-    <div key={item.id}>
-      <img src={item.src} alt={item.alt} style={{ width: "100%" }} />
-    </div>
+    <Fade duration={item.time}>
+      <Lazyload key={item.id}>
+        <img src={item.src} alt={item.alt} style={{ width: "100%" }} />
+      </Lazyload>
+    </Fade>
   );
 });
 

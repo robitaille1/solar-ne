@@ -2,26 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import BackgroundImg from "../../assets/summer.jpg";
+import Lazyload from "react-lazyload";
 
 const jumbotron = () => (
-  <Jumbotron>
-    <JumboContainer>
-      <h2>Invest in your home, community, and local businesses!</h2>
-      {/* Photo by American Public Power Association - @publicpowerorg */}
-      <div>
-        <p>Learn more</p>
-        <Link
-          to="mainheader"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={1000}
-        >
-          <i className="fas fa-chevron-circle-down"></i>
-        </Link>
-      </div>
-    </JumboContainer>
-  </Jumbotron>
+  <Lazyload>
+    <Jumbotron>
+      <JumboContainer>
+        <h2>Invest in your home, community, and local businesses!</h2>
+        {/* Photo by American Public Power Association - @publicpowerorg */}
+        <div>
+          <p>Learn more</p>
+          <Link
+            to="mainheader"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={1000}
+          >
+            <i className="fas fa-chevron-circle-down"></i>
+          </Link>
+        </div>
+      </JumboContainer>
+    </Jumbotron>
+  </Lazyload>
 );
 
 export default jumbotron;

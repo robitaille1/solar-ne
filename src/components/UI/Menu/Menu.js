@@ -8,22 +8,28 @@ const Menu = ({ open, setOpen }) => {
     <StyledMenu open={open}>
       <img src={Logo} alt="SPNE logo " />
       <Link to="/about" onClick={() => setOpen(!open)}>
-        ABOUT US
+        <p>ABOUT US</p>
+        <p>></p>
       </Link>
       <Link to="/our-work" onClick={() => setOpen(!open)}>
-        OUR WORK
+        <p>OUR WORK</p>
+        <p>></p>
       </Link>
       <Link to="/investors" onClick={() => setOpen(!open)}>
-        INVESTORS
+        <p>INVESTORS</p>
+        <p>></p>
       </Link>
       <Link to="/partners" onClick={() => setOpen(!open)}>
-        PARTNERS
+        <p>PARTNERS</p>
+        <p>></p>
       </Link>
       <Link to="/careers" onClick={() => setOpen(!open)}>
-        CAREERS
+        <p>CAREERS</p>
+        <p>></p>
       </Link>
       <Link to="/resources" onClick={() => setOpen(!open)}>
-        RESOURCES
+        <p>RESOURCES</p>
+        <p>></p>
       </Link>
     </StyledMenu>
   );
@@ -44,9 +50,12 @@ const StyledMenu = styled.nav`
   width: 50%;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  -webkit-box-shadow: -8px -7px 16px -11px rgba(184, 184, 184, 1);
+  -moz-box-shadow: -8px -7px 16px -11px rgba(184, 184, 184, 1);
+  box-shadow: -8px -7px 16px -11px rgba(184, 184, 184, 1);
 
   @media (max-width: 600px) {
-    width: 70%;
+    width: 100%;
     padding: 2rem 2rem 100px;
     text-align: left;
   }
@@ -62,27 +71,32 @@ const StyledMenu = styled.nav`
   img {
     width: 70%;
     margin: 10px auto;
+    display: none;
     @media (min-width: 600px) {
+      display: unset;
       width: 50%;
       margin: 0 auto;
     }
   }
 
   a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 1rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: #275e1a;
     text-decoration: none;
     transition: color 0.3s linear;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 5px;
     margin: 10px;
     transition: 0.2s;
 
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #e1e0e0;
     @media (max-width: 685px) {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: center;
     }
 
@@ -91,7 +105,16 @@ const StyledMenu = styled.nav`
     }
 
     &:hover {
-      opacity: 0.6;
+      transition: 0.3s;
+      border-bottom: 2px solid #3b8f28;
+      p {
+        transition: 0.3s;
+        color: #3b8f28;
+      }
+    }
+
+    p {
+      color: #868585;
     }
   }
 `;
