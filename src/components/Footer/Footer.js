@@ -115,6 +115,9 @@ const footer = () => {
           </span>{" "}
           from Maine
         </p>
+        <a href="https://robitaille.xyz/" target="_blank">
+          Site by LR
+        </a>
       </Copyright>
     </Footer>
   );
@@ -259,6 +262,20 @@ const Copyright = styled.div`
   padding: 30px 5%;
   h5 {
     margin: 0;
+  }
+
+  a {
+    background: linear-gradient(89.57deg, #3b8f28, #265e19);
+    padding: 8px 15px 8px 15px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.6;
+    }
   }
 `;
 
