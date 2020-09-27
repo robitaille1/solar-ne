@@ -11,6 +11,7 @@ import {
   PartnersPage,
   ResourcesPage,
   FinancingPage,
+  OurWorkPage,
 } from "./routes";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/careers" component={CareersPage} />
         <Route path="/resources" component={ResourcesPage} />
         <Route path="/financing" component={FinancingPage} />
+        <Route path="/our-work" component={OurWorkPage} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
     </AppMain>
