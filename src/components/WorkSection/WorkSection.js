@@ -14,12 +14,12 @@ import {
 } from "../../assets/our-work";
 
 let items = [
-  { id: 1, src: gorham, alt: "Gorham Project", time: "3000" },
-  { id: 2, src: gorham2, alt: "Gorham Project", time: "5000" },
-  { id: 3, src: gorham3, alt: "Gorham Project", time: "1000" },
-  { id: 4, src: gorham4, alt: "Gorham Project", time: "4000" },
-  { id: 5, src: portland, alt: "Portland Project", time: "2000" },
-  { id: 5, src: portland2, alt: "Portland Project", time: "1000" },
+  { id: 1, src: gorham, alt: "Gorham Project", time: 3000 },
+  { id: 2, src: gorham2, alt: "Gorham Project", time: 5000 },
+  { id: 3, src: gorham3, alt: "Gorham Project", time: 1000 },
+  { id: 4, src: gorham4, alt: "Gorham Project", time: 4000 },
+  { id: 5, src: portland, alt: "Portland Project", time: 2000 },
+  { id: 5, src: portland2, alt: "Portland Project", time: 1000 },
 ];
 
 items = items.map(function (item) {
