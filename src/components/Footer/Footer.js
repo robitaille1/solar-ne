@@ -69,7 +69,7 @@ const footer = () => {
             rel="noopener noreferrer"
             alt="Solar Reviews"
           >
-            <i class="far fa-sun"></i>
+            <i className="far fa-sun"></i>
           </a>
         </SecondDiv>
         <Statement>
@@ -115,7 +115,11 @@ const footer = () => {
           </span>{" "}
           from Maine
         </p>
-        <a href="https://robitaille.xyz/" target="_blank">
+        <a
+          href="https://robitaille.xyz/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Site by LR
         </a>
       </Copyright>
