@@ -3,6 +3,7 @@ import Masonry from "react-masonry-css";
 import styled from "styled-components";
 import Lazyload from "react-lazyload";
 import { Fade } from "react-reveal";
+import { SRLWrapper } from "simple-react-lightbox";
 
 import {
   gorham,
@@ -31,8 +32,15 @@ let items = [
   { id: 8, src: yarmouth4, alt: "Yarmouth Project", time: 1000 },
   { id: 9, src: yarmouth3, alt: "Yarmouth Project", time: 2000 },
   { id: 10, src: yarmouth5, alt: "Yarmouth Project", time: 6000 },
-  { id: 11, src: panels, alt: "Panels", time: 1000 },
+  { id: 11, src: panels, alt: "Up close", time: 1000 },
 ];
+
+const options = {
+  buttons: {
+    showDownloadButton: false,
+    showAutoplayButton: false,
+  },
+};
 
 items = items.map(function (item) {
   return (
@@ -59,13 +67,15 @@ const workSection = () => (
       independent!
     </p>
     <Test>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {items}
-      </Masonry>
+      <SRLWrapper options={options}>
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {items}
+        </Masonry>
+      </SRLWrapper>
     </Test>
   </>
 );
@@ -88,5 +98,11 @@ const Test = styled.div`
 
   .my-masonry-grid_column > div {
     margin-bottom: 30px;
+  }
+
+  img {
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
