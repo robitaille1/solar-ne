@@ -11,6 +11,12 @@ import {
   gorham4,
   portland,
   portland2,
+  yarmouth,
+  yarmouth2,
+  yarmouth3,
+  yarmouth4,
+  yarmouth5,
+  panels,
 } from "../../assets/our-work";
 
 let items = [
@@ -20,6 +26,12 @@ let items = [
   { id: 4, src: gorham4, alt: "Gorham Project", time: 4000 },
   { id: 5, src: portland, alt: "Portland Project", time: 2000 },
   { id: 5, src: portland2, alt: "Portland Project", time: 1000 },
+  { id: 6, src: yarmouth, alt: "Yarmouth Project", time: 3000 },
+  { id: 7, src: yarmouth2, alt: "Yarmouth Project", time: 5000 },
+  { id: 8, src: yarmouth4, alt: "Yarmouth Project", time: 1000 },
+  { id: 9, src: yarmouth3, alt: "Yarmouth Project", time: 2000 },
+  { id: 10, src: yarmouth5, alt: "Yarmouth Project", time: 6000 },
+  { id: 11, src: panels, alt: "Panels", time: 1000 },
 ];
 
 items = items.map(function (item) {
