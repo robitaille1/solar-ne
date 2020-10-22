@@ -12,7 +12,11 @@ const aboutSection = () => (
       best possible price to save money, energy, and our environment. If you
       would like to get in touch please fill out the form below, or drop us a
       line at{" "}
-      <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>.
+      <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a> or{" "}
+      <a style={{ marginRight: "10px" }} href="tel:207-387-0037">
+        207-387-0037
+      </a>
+      .
     </p>
   </>
 );
