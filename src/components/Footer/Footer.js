@@ -92,6 +92,28 @@ const footer = () => {
               src="https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=97092349&key=9b76e46ada6034f78ad60c35d2b86fe7"
             />
           </HomeAdvisor>
+          <a
+            href="https://www.lightstream.com/?fact=14070&cid=AA|DSK|P|solar|E|AFF|fact=14070&irad=68132&irmp=2437142"
+            id="68132"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="//a.impactradius-go.com/display-ad/1695-68132"
+              border="0"
+              alt="lightstream"
+              style={{ maxWidth: "100%" }}
+              height="auto"
+            />
+          </a>
+          <img
+            alt="lightstream"
+            height="0"
+            width="0"
+            src="https://lightstream.gr4q.net/i/2437142/68132/1695"
+            style={{ position: "absolute", visibility: "hidden" }}
+            border="0"
+          />
         </Statement>
       </LinksDiv>
       <Lazyload>
