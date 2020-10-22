@@ -78,6 +78,9 @@ const footer = () => {
             more sustainable and energy independent? Contact us today for more
             information!
           </p>
+          <a style={{ marginRight: "10px" }} href="tel:207-387-0037">
+            207-387-0037
+          </a>
           <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
           <HomeAdvisor
             href="https://www.homeadvisor.com/rated.SolarPowerNewEngland.97092349.html"
