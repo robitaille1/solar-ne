@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.20.0",
+    "cloudinary-react": "^1.6.7",
     "dummyjs": "^1.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -12,8 +14,9 @@
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^1.2.2",
-    "react-scripts": "^3.4.3",
+    "react-scripts": "^3.4.4",
     "react-scroll": "^1.8.1",
+    "simple-react-lightbox": "^3.3.4-1",
     "styled-components": "^5.2.0"
   },
   "scripts": {
