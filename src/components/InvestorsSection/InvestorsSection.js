@@ -20,7 +20,7 @@ const investorsSection = () => (
       that helps a neighbor,{" "}
       <a href="mailto:contact@solarpowerne.com">contact us</a> today.
     </p>
-    <Img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
+    <Img src="https://res.cloudinary.com/robitaille/image/upload/v1603768005/photo-1454165804606-c3d57bc86b40_qfvjv0.webp" />
   </>
 );
 
