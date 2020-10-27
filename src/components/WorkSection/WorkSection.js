@@ -4,35 +4,21 @@ import styled from "styled-components";
 import Lazyload from "react-lazyload";
 import { Fade } from "react-reveal";
 import { SRLWrapper } from "simple-react-lightbox";
-
-import {
-  gorham,
-  gorham2,
-  gorham3,
-  gorham4,
-  portland,
-  portland2,
-  yarmouth,
-  yarmouth2,
-  yarmouth3,
-  yarmouth4,
-  yarmouth5,
-  panels,
-} from "../../assets/our-work";
+import { Image } from "cloudinary-react";
 
 let items = [
-  { id: 1, src: gorham, alt: "Gorham Project", time: 3000 },
-  { id: 2, src: gorham2, alt: "Gorham Project", time: 5000 },
-  { id: 3, src: gorham3, alt: "Gorham Project", time: 1000 },
-  { id: 4, src: gorham4, alt: "Gorham Project", time: 4000 },
-  { id: 5, src: portland, alt: "Portland Project", time: 2000 },
-  { id: 5, src: portland2, alt: "Portland Project", time: 1000 },
-  { id: 6, src: yarmouth, alt: "Yarmouth Project", time: 3000 },
-  { id: 7, src: yarmouth2, alt: "Yarmouth Project", time: 5000 },
-  { id: 8, src: yarmouth4, alt: "Yarmouth Project", time: 1000 },
-  { id: 9, src: yarmouth3, alt: "Yarmouth Project", time: 2000 },
-  { id: 10, src: yarmouth5, alt: "Yarmouth Project", time: 6000 },
-  { id: 11, src: panels, alt: "Up close", time: 1000 },
+  { id: 1, src: "gorham", alt: "Gorham Project", time: 3000 },
+  { id: 2, src: "gorham2", alt: "Gorham Project", time: 5000 },
+  { id: 3, src: "gorham3", alt: "Gorham Project", time: 1000 },
+  { id: 4, src: "gorham4", alt: "Gorham Project", time: 4000 },
+  { id: 5, src: "portland", alt: "Portland Project", time: 2000 },
+  { id: 5, src: "portland2", alt: "Portland Project", time: 1000 },
+  { id: 6, src: "yarmouth", alt: "Yarmouth Project", time: 3000 },
+  { id: 7, src: "yarmouth2", alt: "Yarmouth Project", time: 5000 },
+  { id: 8, src: "yarmouth4", alt: "Yarmouth Project", time: 1000 },
+  { id: 9, src: "yarmouth3", alt: "Yarmouth Project", time: 2000 },
+  { id: 10, src: "yarmouth5", alt: "Yarmouth Project", time: 6000 },
+  { id: 11, src: "panels", alt: "Up close", time: 1000 },
 ];
 
 const options = {
@@ -46,7 +32,12 @@ items = items.map(function (item) {
   return (
     <Fade duration={item.time}>
       <Lazyload key={item.id}>
-        <img src={item.src} alt={item.alt} style={{ width: "100%" }} />
+        <Image
+          cloudName="robitaille"
+          publicId={item.src}
+          width="100%"
+          alt={item.alt}
+        />
       </Lazyload>
     </Fade>
   );
