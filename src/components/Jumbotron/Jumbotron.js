@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-import BackgroundImg from "../../assets/summer.jpg";
 import Lazyload from "react-lazyload";
 
 const jumbotron = () => (
@@ -40,7 +39,7 @@ const Jumbotron = styled.section`
   transform: scaleX(-1);
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url(${BackgroundImg});
+    url("https://res.cloudinary.com/robitaille/image/upload/v1603767476/summer_vc4x1a.jpg");
 
   background-size: cover;
   background-position: center center;
