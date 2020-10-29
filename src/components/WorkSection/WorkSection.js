@@ -57,6 +57,13 @@ const workSection = () => (
       From projects big to small, we love helping our neighbors become energy
       independent!
     </p>
+    <p style={{ textAlign: "center" }}>
+      Interested in how we can help you? Contact us today!{" "}
+      <a style={{ marginRight: "10px" }} href="tel:207-387-0037">
+        207-387-0037
+      </a>
+      <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
+    </p>
     <Test>
       <SRLWrapper options={options}>
         <Masonry
