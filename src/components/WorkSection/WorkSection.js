@@ -58,11 +58,14 @@ const workSection = () => (
       independent!
     </p>
     <p style={{ textAlign: "center" }}>
-      Interested in how we can help you? Contact us today!{" "}
-      <a style={{ marginRight: "10px" }} href="tel:207-387-0037">
+      Interested in how we can help you start your clean energy journey? Contact
+      us today!{" "}
+      <ContactLink style={{ marginRight: "10px" }} href="tel:207-387-0037">
         207-387-0037
-      </a>
-      <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
+      </ContactLink>
+      <ContactLink href="mailto:contact@solarpowerne.com">
+        contact@solarpowerne.com
+      </ContactLink>
     </p>
     <Test>
       <SRLWrapper options={options}>
@@ -102,5 +105,12 @@ const Test = styled.div`
     &:hover {
       cursor: pointer;
     }
+  }
+`;
+
+const ContactLink = styled.a`
+  display: block;
+  @media (min-width: 499px) {
+    display: inline;
   }
 `;
