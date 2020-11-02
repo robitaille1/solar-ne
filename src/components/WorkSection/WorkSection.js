@@ -52,21 +52,13 @@ const breakpointColumnsObj = {
 
 const workSection = () => (
   <>
-    <h2>We're extremely proud of our work!</h2>
-    <p style={{ textAlign: "center" }}>
-      From projects big to small, we love helping our neighbors become energy
-      independent!
-    </p>
-    <p style={{ textAlign: "center" }}>
-      Interested in how we can help you start your clean energy journey? Contact
-      us today!{" "}
-      <ContactLink style={{ marginRight: "10px" }} href="tel:207-387-0037">
-        207-387-0037
-      </ContactLink>
-      <ContactLink href="mailto:contact@solarpowerne.com">
-        contact@solarpowerne.com
-      </ContactLink>
-    </p>
+    <HeadingDiv>
+      <h2>We're extremely proud of our work!</h2>
+      <p style={{ textAlign: "center" }}>
+        From projects big to small, we love helping our neighbors become energy
+        independent!
+      </p>
+    </HeadingDiv>
     <Test>
       <SRLWrapper options={options}>
         <Masonry
@@ -78,6 +70,18 @@ const workSection = () => (
         </Masonry>
       </SRLWrapper>
     </Test>
+    <FootingDiv>
+      <p>Interested in how we can help you start your clean energy journey?</p>
+      <p>
+        Contact us today!{" "}
+        <ContactLink style={{ marginRight: "10px" }} href="tel:207-387-0037">
+          207-387-0037
+        </ContactLink>
+        <ContactLink href="mailto:contact@solarpowerne.com">
+          contact@solarpowerne.com
+        </ContactLink>
+      </p>
+    </FootingDiv>
   </>
 );
 
@@ -108,8 +112,36 @@ const Test = styled.div`
   }
 `;
 
+const HeadingDiv = styled.div`
+  background-color: #1f4a15;
+  color: white;
+  padding: 20px 20px;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 0 0;
+
+  a {
+    color: #ece485;
+  }
+`;
+
+const FootingDiv = styled.div`
+  background-color: #1f4a15;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 0 0 10px 10px;
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: #ece485;
+  }
+`;
+
 const ContactLink = styled.a`
   display: block;
+  word-break: normal;
   @media (min-width: 499px) {
     display: inline;
   }
