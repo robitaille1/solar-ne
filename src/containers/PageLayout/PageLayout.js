@@ -42,7 +42,7 @@ const Content = styled.section`
   max-width: 1400px;
   @media (min-width: 700px) {
     margin: 0 auto;
-    padding: 100px 15% 20px;
+    padding: 100px 10% 20px;
   }
   a {
     margin: 12px auto;
