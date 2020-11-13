@@ -13,10 +13,12 @@ import {
   FinancingPage,
   OurWorkPage,
 } from "./routes";
+import ReactGA from "react-ga";
 
 const App = () => {
   const [open] = useContext(OpenContext);
 
+  ReactGA.initialize("G-SB5GXTWERK");
   return (
     <AppMain>
       <GlobalStyles open={open} />
