@@ -8,6 +8,7 @@
     "dummyjs": "^1.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-ga": "^3.2.1",
     "react-lazyload": "^3.0.0",
     "react-masonry-css": "^1.0.14",
     "react-media": "^1.10.0",
