@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactForm.css";
+import { Event } from "../Tracking/Tracking";
 
 const contactForm = () => {
   return (
@@ -9,6 +10,7 @@ const contactForm = () => {
         <form
           action="https://formsubmit.co/contact@solarpowerne.com"
           method="POST"
+          onSubmit={() => Event("FORM", "Contact form submitted", "HOME_PAGE")}
         >
           <ul className="form-style-1">
             <li>

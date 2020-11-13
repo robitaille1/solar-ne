@@ -5,6 +5,7 @@ import oldFlag from "../../assets/flags/oldflag.gif";
 import newFlag from "../../assets/flags/newflag.png";
 import logo from "../../assets/logo.png";
 import Lazyload from "react-lazyload";
+import { Event } from "../Tracking/Tracking";
 
 const footer = () => {
   const date = new Date();
@@ -78,10 +79,19 @@ const footer = () => {
             more sustainable and energy independent? Contact us today for more
             information!
           </p>
-          <a style={{ marginRight: "10px" }} href="tel:207-387-0037">
+          <a
+            style={{ marginRight: "10px" }}
+            href="tel:207-387-0037"
+            onClick={() => Event("PHONE", "Phone number clicked", "HOME_PAGE")}
+          >
             207-387-0037
           </a>
-          <a href="mailto:contact@solarpowerne.com">contact@solarpowerne.com</a>
+          <a
+            onClick={() => Event("EMAIL", "Email address clicked", "HOME_PAGE")}
+            href="mailto:contact@solarpowerne.com"
+          >
+            contact@solarpowerne.com
+          </a>
           <HomeAdvisor
             href="https://www.homeadvisor.com/rated.SolarPowerNewEngland.97092349.html"
             target="_blank"

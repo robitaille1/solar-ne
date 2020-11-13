@@ -5,6 +5,7 @@ import Lazyload from "react-lazyload";
 import { Fade } from "react-reveal";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Image } from "cloudinary-react";
+import { Event } from "../Tracking/Tracking";
 
 let items = [
   { id: 1, src: "gorham", alt: "Gorham Project", time: 3000 },
@@ -74,10 +75,17 @@ const workSection = () => (
       <p>Interested in how we can help you start your clean energy journey?</p>
       <p>
         Contact us today!{" "}
-        <ContactLink style={{ marginRight: "10px" }} href="tel:207-387-0037">
+        <ContactLink
+          style={{ marginRight: "10px" }}
+          href="tel:207-387-0037"
+          onClick={() => Event("PHONE", "Phone number clicked", "WORK_PAGE")}
+        >
           207-387-0037
         </ContactLink>
-        <ContactLink href="mailto:contact@solarpowerne.com">
+        <ContactLink
+          href="mailto:contact@solarpowerne.com"
+          onClick={() => Event("EMAIL", "Email address clicked", "WORK_PAGE")}
+        >
           contact@solarpowerne.com
         </ContactLink>
       </p>

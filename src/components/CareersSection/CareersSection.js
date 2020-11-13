@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "../utils/Img";
+import { Event } from "../Tracking/Tracking";
 
 const careersSection = () => (
   <>
@@ -19,6 +20,7 @@ const careersSection = () => (
       action="https://formsubmit.co/contact@solarpowerne.com"
       method="POST"
       encType="multipart/form-data"
+      onSubmit={() => Event("FORM", "Careers form submitted", "CAREERS_PAGE")}
     >
       <ul className="form-style-1">
         <li>
