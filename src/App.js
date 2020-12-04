@@ -18,7 +18,7 @@ import ReactGA from "react-ga";
 const App = () => {
   const [open] = useContext(OpenContext);
 
-  ReactGA.initialize("G-SB5GXTWERK");
+  ReactGA.initialize("UA-181331175-1");
   return (
     <AppMain>
       <GlobalStyles open={open} />
