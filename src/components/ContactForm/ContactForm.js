@@ -1,6 +1,7 @@
 import React from "react";
 import "./ContactForm.css";
-import { Event } from "../Tracking/Tracking";
+// import { Event } from "../Tracking/Tracking";
+import ReactGA from "react-ga";
 
 const contactForm = () => {
   return (
@@ -10,7 +11,11 @@ const contactForm = () => {
         <form
           action="https://formsubmit.co/contact@solarpowerne.com"
           method="POST"
-          onSubmit={() => Event("FORM", "Contact form submitted", "HOME_PAGE")}
+          onSubmit={ReactGA.event({
+            category: "FORM",
+            action: "Contact form submitted",
+            label: "HOME_PAGE",
+          })}
         >
           <ul className="form-style-1">
             <li>

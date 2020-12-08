@@ -5,7 +5,8 @@ import oldFlag from "../../assets/flags/oldflag.gif";
 import newFlag from "../../assets/flags/newflag.png";
 import logo from "../../assets/logo.png";
 import Lazyload from "react-lazyload";
-import { Event } from "../Tracking/Tracking";
+// import { Event } from "../Tracking/Tracking";
+import ReactGA from "react-ga";
 
 const footer = () => {
   const date = new Date();
@@ -82,12 +83,20 @@ const footer = () => {
           <a
             style={{ marginRight: "10px" }}
             href="tel:207-387-0037"
-            onClick={() => Event("PHONE", "Phone number clicked", "HOME_PAGE")}
+            onClick={ReactGA.event({
+              category: "PHONE",
+              action: "Phone number clicked",
+              label: "FOOTER",
+            })}
           >
             207-387-0037
           </a>
           <a
-            onClick={() => Event("EMAIL", "Email address clicked", "HOME_PAGE")}
+            onClick={ReactGA.event({
+              category: "EMAIL",
+              action: "Email address clicked",
+              label: "FOOTER",
+            })}
             href="mailto:contact@solarpowerne.com"
           >
             contact@solarpowerne.com

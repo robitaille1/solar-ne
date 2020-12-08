@@ -5,7 +5,8 @@ import Lazyload from "react-lazyload";
 import { Fade } from "react-reveal";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Image } from "cloudinary-react";
-import { Event } from "../Tracking/Tracking";
+// import { Event } from "../Tracking/Tracking";
+import ReactGA from "react-ga";
 
 let items = [
   { id: 1, src: "gorham", alt: "Gorham Project", time: 3000 },
@@ -78,13 +79,21 @@ const workSection = () => (
         <ContactLink
           style={{ marginRight: "10px" }}
           href="tel:207-387-0037"
-          onClick={() => Event("PHONE", "Phone number clicked", "WORK_PAGE")}
+          onClick={ReactGA.event({
+            category: "PHONE",
+            action: "Phone number clicked",
+            label: "WORK_PAGE",
+          })}
         >
           207-387-0037
         </ContactLink>
         <ContactLink
           href="mailto:contact@solarpowerne.com"
-          onClick={() => Event("EMAIL", "Email address clicked", "WORK_PAGE")}
+          onClick={ReactGA.event({
+            category: "EMAIL",
+            action: "Email address clicked",
+            label: "WORK_PAGE",
+          })}
         >
           contact@solarpowerne.com
         </ContactLink>
