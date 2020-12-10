@@ -1,6 +1,5 @@
 import React from "react";
 import "./ContactForm.css";
-// import { Event } from "../Tracking/Tracking";
 import ReactGA from "react-ga";
 
 const contactForm = () => {

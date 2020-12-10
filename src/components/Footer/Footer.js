@@ -5,7 +5,6 @@ import oldFlag from "../../assets/flags/oldflag.gif";
 import newFlag from "../../assets/flags/newflag.png";
 import logo from "../../assets/logo.png";
 import Lazyload from "react-lazyload";
-// import { Event } from "../Tracking/Tracking";
 import ReactGA from "react-ga";
 
 const footer = () => {
@@ -223,7 +222,6 @@ const FirstDiv = styled.div`
     text-decoration: none;
     transition: 0.2s;
     &:hover {
-      /* color: rgba(29, 60, 68, 0.459); */
       opacity: 0.6;
     }
   }

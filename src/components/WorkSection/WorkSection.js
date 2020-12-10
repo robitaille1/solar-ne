@@ -5,7 +5,6 @@ import Lazyload from "react-lazyload";
 import { Fade } from "react-reveal";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Image } from "cloudinary-react";
-// import { Event } from "../Tracking/Tracking";
 import ReactGA from "react-ga";
 
 let items = [
