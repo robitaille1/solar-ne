@@ -14,19 +14,59 @@ const footer = () => {
       <LinksDiv>
         <FirstDiv>
           <h3>Info</h3>
-          <Link to={`/about`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`/about`}
+            style={{ textDecoration: "none" }}
+            onClick={ReactGA.event({
+              category: "MENU-LINK",
+              action: "About footer link clicked",
+              label: "FOOTER",
+            })}
+          >
             <p>About Us</p>
           </Link>
-          <Link to={`/investors`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`/investors`}
+            style={{ textDecoration: "none" }}
+            onClick={ReactGA.event({
+              category: "MENU-LINK",
+              action: "Investors footer link clicked",
+              label: "FOOTER",
+            })}
+          >
             <p>Investors</p>
           </Link>
-          <Link to={`/partners`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`/partners`}
+            style={{ textDecoration: "none" }}
+            onClick={ReactGA.event({
+              category: "MENU-LINK",
+              action: "Partners footer link clicked",
+              label: "FOOTER",
+            })}
+          >
             <p>Partners</p>
           </Link>
-          <Link to={`/careers`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`/careers`}
+            style={{ textDecoration: "none" }}
+            onClick={ReactGA.event({
+              category: "MENU-LINK",
+              action: "Careers footer link clicked",
+              label: "FOOTER",
+            })}
+          >
             <p>Careers</p>
           </Link>
-          <Link to={`/resources`} style={{ textDecoration: "none" }}>
+          <Link
+            to={`/resources`}
+            style={{ textDecoration: "none" }}
+            onClick={ReactGA.event({
+              category: "MENU-LINK",
+              action: "Resources footer link clicked",
+              label: "FOOTER",
+            })}
+          >
             <p>Resources</p>
           </Link>
         </FirstDiv>
@@ -37,6 +77,11 @@ const footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="facebook"
+            onClick={ReactGA.event({
+              category: "FOOTER-LINK",
+              action: "Facebook footer link clicked",
+              label: "FOOTER-SOCIAL",
+            })}
           >
             <i className="fab fa-facebook" />
           </a>
@@ -45,6 +90,11 @@ const footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="instagram"
+            onClick={ReactGA.event({
+              category: "FOOTER-LINK",
+              action: "Instagram footer link clicked",
+              label: "FOOTER-SOCIAL",
+            })}
           >
             <i className="fab fa-instagram" />
           </a>
@@ -53,6 +103,11 @@ const footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="pinterest"
+            onClick={ReactGA.event({
+              category: "FOOTER-LINK",
+              action: "Pinterest footer link clicked",
+              label: "FOOTER-SOCIAL",
+            })}
           >
             <i className="fab fa-pinterest" />
           </a>
@@ -61,6 +116,11 @@ const footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="yelp"
+            onClick={ReactGA.event({
+              category: "FOOTER-LINK",
+              action: "Yelp footer link clicked",
+              label: "FOOTER-SOCIAL",
+            })}
           >
             <i className="fab fa-yelp" />
           </a>
@@ -69,6 +129,11 @@ const footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             alt="Solar Reviews"
+            onClick={ReactGA.event({
+              category: "FOOTER-LINK",
+              action: "Solar reviews footer link clicked",
+              label: "FOOTER-SOCIAL",
+            })}
           >
             <i className="far fa-sun"></i>
           </a>

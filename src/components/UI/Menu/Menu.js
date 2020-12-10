@@ -2,32 +2,43 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../../assets/logo.png";
+import ReactGA from "react-ga";
 
 const Menu = ({ open, setOpen }) => {
+  const clicked = (link) => {
+    setOpen(!open);
+
+    ReactGA.event({
+      category: "MENU-LINK",
+      action: `${link} menu link clicked`,
+      label: "MENU",
+    });
+  };
+
   return (
     <StyledMenu open={open}>
       <img src={Logo} alt="SPNE logo " />
-      <Link to="/about" onClick={() => setOpen(!open)}>
+      <Link to="/about" onClick={() => clicked("About")}>
         <p>ABOUT US</p>
         <p>></p>
       </Link>
-      <Link to="/our-work" onClick={() => setOpen(!open)}>
+      <Link to="/our-work" onClick={() => clicked("Our Work")}>
         <p>OUR WORK</p>
         <p>></p>
       </Link>
-      <Link to="/investors" onClick={() => setOpen(!open)}>
+      <Link to="/investors" onClick={() => clicked("Investors")}>
         <p>INVESTORS</p>
         <p>></p>
       </Link>
-      <Link to="/partners" onClick={() => setOpen(!open)}>
+      <Link to="/partners" onClick={() => clicked("Partners")}>
         <p>PARTNERS</p>
         <p>></p>
       </Link>
-      <Link to="/careers" onClick={() => setOpen(!open)}>
+      <Link to="/careers" onClick={() => clicked("Careers")}>
         <p>CAREERS</p>
         <p>></p>
       </Link>
-      <Link to="/resources" onClick={() => setOpen(!open)}>
+      <Link to="/resources" onClick={() => clicked("Resources")}>
         <p>RESOURCES</p>
         <p>></p>
       </Link>
