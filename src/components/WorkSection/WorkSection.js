@@ -129,11 +129,11 @@ const Test = styled.div`
 `;
 
 const HeadingDiv = styled.div`
-  background-color: #1f4a15;
+  background-color: #3b8f28;
   color: white;
   padding: 20px 20px;
   margin-bottom: 30px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 
   a {
     color: #ece485;
@@ -141,10 +141,10 @@ const HeadingDiv = styled.div`
 `;
 
 const FootingDiv = styled.div`
-  background-color: #1f4a15;
+  background-color: #3b8f28;
   color: white;
   padding: 20px 20px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
 
   p {
     text-align: center;

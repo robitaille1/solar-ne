@@ -155,7 +155,7 @@ const footer = () => {
           >
             207-387-0037
           </a>
-          <a
+          <EmailLink
             onClick={ReactGA.event({
               category: "EMAIL",
               action: "Email address clicked",
@@ -164,7 +164,7 @@ const footer = () => {
             href="mailto:contact@solarpowerne.com"
           >
             contact@solarpowerne.com
-          </a>
+          </EmailLink>
           <HomeAdvisor
             href="https://www.homeadvisor.com/rated.SolarPowerNewEngland.97092349.html"
             target="_blank"
@@ -406,5 +406,12 @@ const HomeAdvisor = styled.a`
     @media (min-width: 550px) {
       margin: unset;
     }
+  }
+`;
+
+const EmailLink = styled.a`
+  display: block;
+  @media (min-width: 750px) {
+    display: inline;
   }
 `;

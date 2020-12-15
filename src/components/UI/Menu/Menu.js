@@ -61,9 +61,12 @@ const StyledMenu = styled.nav`
   width: 50%;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-  -webkit-box-shadow: -8px -7px 16px -11px rgba(184, 184, 184, 1);
-  -moz-box-shadow: -8px -7px 16px -11px rgba(184, 184, 184, 1);
-  box-shadow: -8px -7px 16px -11px rgba(184, 184, 184, 1);
+  -webkit-box-shadow: ${({ open }) =>
+    open ? "-8px -7px 16px -11px rgba(184, 184, 184, 1)" : "none"};
+  -moz-box-shadow: ${({ open }) =>
+    open ? "-8px -7px 16px -11px rgba(184, 184, 184, 1)" : "none"};
+  box-shadow: ${({ open }) =>
+    open ? "-8px -7px 16px -11px rgba(184, 184, 184, 1)" : "none"};
 
   @media (max-width: 600px) {
     width: 100%;
