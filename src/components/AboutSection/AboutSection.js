@@ -4,8 +4,8 @@ import Img from "../utils/Img";
 
 const aboutSection = () => (
   <>
-    <Img alt="SPNE Logo" src={logo} />
     <h2>About Us</h2>
+    <Img alt="SPNE Logo" src={logo} />
     <p>
       We're a small Maine company with a personal commitment to improving the
       lives of those in our community by providing the best equipment at the

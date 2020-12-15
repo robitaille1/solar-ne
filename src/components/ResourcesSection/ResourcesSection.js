@@ -1,10 +1,11 @@
 import React from "react";
 
 const resourcesSection = () => (
-  <div style={{ textAlign: "left" }}>
+  <div style={{ textAlign: "left", paddingBottom: "20px" }}>
     <h2>Incentives and Resources</h2>
     <h3>US Policies and Incentives by state</h3>
     <a
+      style={{ padding: "0 20px" }}
       href="https://www.dsireusa.org"
       target="_blank"
       rel="noopener noreferrer"
@@ -14,6 +15,7 @@ const resourcesSection = () => (
     </a>
     <h3>Residential Resources</h3>
     <a
+      style={{ padding: "0 20px" }}
       href="https://www.cesa.org/assets/2015-Files/Homeowners-Guide-to-Solar-Financing.pdf"
       target="_blank"
       rel="noopener noreferrer"
@@ -24,6 +26,7 @@ const resourcesSection = () => (
     <br />
     <br />
     <a
+      style={{ padding: "0 20px" }}
       href="https://irecusa.org/consumer/checklist.pdf  "
       target="_blank"
       rel="noopener noreferrer"
@@ -33,6 +36,7 @@ const resourcesSection = () => (
     </a>
     <h3>Solar Industry Market Research</h3>
     <a
+      style={{ padding: "0 20px" }}
       href="https://www.greentechmedia.com"
       target="_blank"
       rel="noopener noreferrer"
@@ -40,8 +44,11 @@ const resourcesSection = () => (
     >
       www.greentechmedia.com
     </a>
-    <h2>Weather Data, Production Modelling / Estimation</h2>
+    <h2 style={{ marginTop: "20px" }}>
+      Weather Data, Production Modelling / Estimation
+    </h2>
     <a
+      style={{ padding: "0 20px" }}
       href="https://www.nrel.gov"
       target="_blank"
       rel="noopener noreferrer"
