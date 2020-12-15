@@ -68,7 +68,7 @@ const ContentContainer = styled.div`
   border-radius: 5px;
 
   h2 {
-    background: #5a9734;
+    background: #3b8f28;
     border-radius: 5px 5px 0 0;
     color: white;
     padding: 20px;
