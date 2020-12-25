@@ -20,6 +20,12 @@ let items = [
   { id: 9, src: "yarmouth3", alt: "Yarmouth Project", time: 2000 },
   { id: 10, src: "yarmouth5", alt: "Yarmouth Project", time: 6000 },
   { id: 11, src: "panels", alt: "Up close", time: 1000 },
+  { id: 12, src: "wells1", alt: "Wells Project", time: 4000 },
+  { id: 13, src: "wells2", alt: "Wells Project", time: 2000 },
+  { id: 14, src: "wells3", alt: "Wells up close", time: 6000 },
+  { id: 15, src: "wells4", alt: "Wells up close", time: 1000 },
+  { id: 16, src: "wells5", alt: "Wells up close", time: 3000 },
+  { id: 17, src: "wells6", alt: "Another happy customer!", time: 2000 },
 ];
 
 const options = {
@@ -31,8 +37,8 @@ const options = {
 
 items = items.map(function (item) {
   return (
-    <Fade duration={item.time}>
-      <Lazyload key={item.id}>
+    <Fade key={item.id} duration={item.time}>
+      <Lazyload>
         <Image
           cloudName="robitaille"
           publicId={item.src}
