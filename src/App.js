@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { OpenContext } from "./context/OpenContext";
+import { SolarContext } from "./context/SolarContext";
 import {
   AboutPage,
   HomePage,
@@ -17,6 +18,11 @@ import ReactGA from "react-ga";
 
 const App = () => {
   const [open] = useContext(OpenContext);
+  const { fetchData } = useContext(SolarContext);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   ReactGA.initialize("UA-181331175-1");
   return (
