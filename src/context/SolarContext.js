@@ -25,7 +25,6 @@ const SolarContextProvider = (props) => {
       .then((response) => response.json())
       .then((resData) => {
         dispatch({ type: "SET_BLOGS", blogs: resData });
-        console.log(resData);
       });
   }, []);
 
