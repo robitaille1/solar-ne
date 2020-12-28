@@ -5,14 +5,17 @@ import ScrollToTop from "./utility/ScrollToTop";
 import App from "./App";
 import OpenContextProvider from "./context/OpenContext";
 import SimpleReactLightbox from "simple-react-lightbox";
+import SolarContextProvider from "./context/SolarContext";
 
 ReactDOM.render(
   <BrowserRouter>
     <ScrollToTop>
       <OpenContextProvider>
-        <SimpleReactLightbox>
-          <App />
-        </SimpleReactLightbox>
+        <SolarContextProvider>
+          <SimpleReactLightbox>
+            <App />
+          </SimpleReactLightbox>
+        </SolarContextProvider>
       </OpenContextProvider>
     </ScrollToTop>
   </BrowserRouter>,
