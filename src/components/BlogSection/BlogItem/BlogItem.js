@@ -8,8 +8,8 @@ const blogItem = (props) => (
       <Lazyload>
         <img
           draggable="false"
-          alt={props.blog.alt}
-          src={props.blog.img}
+          alt={props.blog.image.alternativeText}
+          src={props.blog.image.formats.thumbnail.url}
           samesite="None"
           secure="true"
         />

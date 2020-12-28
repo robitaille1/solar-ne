@@ -1,26 +1,37 @@
-import React, { Component } from "react";
-import SolarContext from "../../context/SolarContext";
+import React, { useContext } from "react";
+import { SolarContext } from "../../context/SolarContext";
 import styled from "styled-components";
 import BlogItem from "./BlogItem/BlogItem";
 
-class BlogSection extends Component {
-  static contextType = SolarContext;
-  render() {
-    const { blogs = [] } = this.context;
-    return (
-      <Wrapper>
-        <Content>
-          <h2>Recent Blog Posts</h2>
-          <section>
-            {blogs.map((blog) => (
-              <BlogItem key={blog.id} blog={blog} />
-            ))}
-          </section>
-        </Content>
-      </Wrapper>
+const BlogSection = () => {
+  const { blogs } = useContext(SolarContext);
+
+  let showBlogs = <div>Loading</div>;
+
+  if (blogs) {
+    let display = [];
+    for (let key in blogs) {
+      display.unshift(blogs[key]);
+    }
+
+    showBlogs = (
+      <section>
+        {display.map((blog) => (
+          <BlogItem key={blog.id} blog={blog} />
+        ))}
+      </section>
     );
   }
-}
+
+  return (
+    <Wrapper>
+      <Content>
+        <h2>Recent Blog Posts</h2>
+        {showBlogs}
+      </Content>
+    </Wrapper>
+  );
+};
 
 export default BlogSection;
 
