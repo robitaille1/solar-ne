@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Lazyload from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const blogItem = (props) => (
   <Wrapper>
@@ -15,7 +16,7 @@ const blogItem = (props) => (
         />
       </Lazyload>
       <h3>{props.blog.title}</h3>
-      <p>Coming Soon</p>
+      <Link to={`/blog/${props.blog.id}`}>Read more</Link>
     </div>
   </Wrapper>
 );
@@ -55,6 +56,15 @@ const Wrapper = styled.div`
 
     &:hover {
       cursor: not-allowed;
+    }
+  }
+
+  a {
+    font-size: 100%;
+    color: #132f0c;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.6;
     }
   }
 `;
