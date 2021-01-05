@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SolarContext } from "../../context/SolarContext";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import oldFlag from "../../assets/flags/oldflag.gif";
@@ -7,10 +8,11 @@ import logo from "../../assets/logo.png";
 import Lazyload from "react-lazyload";
 import ReactGA from "react-ga";
 
-const footer = () => {
+const Footer = () => {
+  const { homepage } = useContext(SolarContext);
   const date = new Date();
   return (
-    <Footer>
+    <Footer1>
       <LinksDiv>
         <FirstDiv>
           <h3>Info</h3>
@@ -139,11 +141,7 @@ const footer = () => {
           </a>
         </SecondDiv>
         <Statement>
-          <p>
-            Interested in solar for your home or helping your neighbors become
-            more sustainable and energy independent? Contact us today for more
-            information!
-          </p>
+          <p>{homepage.footerText}</p>
           <a
             style={{ marginRight: "10px" }}
             href="tel:207-387-0037"
@@ -231,13 +229,13 @@ const footer = () => {
           Site by LR
         </a>
       </Copyright>
-    </Footer>
+    </Footer1>
   );
 };
 
-export default footer;
+export default Footer;
 
-const Footer = styled.footer`
+const Footer1 = styled.footer`
   background-color: rgb(231, 225, 225);
   padding: 10px 0px 0px 0px;
   color: #132f0c;
