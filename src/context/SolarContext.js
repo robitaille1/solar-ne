@@ -13,6 +13,11 @@ const solarReducer = (state, action) => {
         ...state,
         homepage: action.homepage,
       };
+    case "SET_IMAGES":
+      return {
+        ...state,
+        images: action.images,
+      };
     default:
       throw new Error("Nada");
   }
@@ -22,9 +27,10 @@ const SolarContextProvider = (props) => {
   const [state, dispatch] = useReducer(solarReducer, {
     blogs: null,
     homepage: {},
+    images: null,
   });
 
-  const { blogs, homepage } = state;
+  const { blogs, homepage, images } = state;
 
   const fetchData = useCallback(() => {
     Promise.all([
@@ -38,10 +44,20 @@ const SolarContextProvider = (props) => {
       });
   }, []);
 
+  const fetchImages = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/our-work-images")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_IMAGES", images: resData });
+      });
+  }, []);
+
   const providerValue = {
     fetchData,
+    fetchImages,
     blogs,
     homepage,
+    images,
   };
 
   return (
