@@ -1,7 +1,6 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
@@ -10,21 +9,14 @@ const pageLayout = (props) => (
   <Wrapper>
     <Nav />
     <Content>
-      <ContentContainer>
-        {props.children}
-        {/* <div style={{ textAlign: "center", marginTop: "50px" }}>
-          <Link to={"/"} style={{ textDecoration: "none" }}>
-            <Homebtn>HOME</Homebtn>
-          </Link>
-        </div> */}
-      </ContentContainer>
+      <ContentContainer>{props.children}</ContentContainer>
     </Content>
-    <LazyLoad>
-      <BlogSection />
-    </LazyLoad>
-    <LazyLoad>
-      <Footer />
-    </LazyLoad>
+    {/* <LazyLoad> */}
+    <BlogSection />
+    {/* </LazyLoad> */}
+    {/* <LazyLoad> */}
+    <Footer />
+    {/* </LazyLoad> */}
   </Wrapper>
 );
 
@@ -82,24 +74,8 @@ const ContentContainer = styled.div`
   h3 {
     padding: 0 20px;
   }
+
+  main {
+    background-color: white;
+  }
 `;
-
-// const Homebtn = styled.button`
-//   &:hover {
-//     cursor: pointer;
-//   }
-//   font-size: 13px;
-//   background: #275e1a;
-//   padding: 13px 20px;
-//   color: #fff;
-//   border: none;
-//   transition: 0.2s;
-//   border-radius: 2px;
-//   &:hover {
-//     opacity: 0.6;
-//   }
-
-//   @media (min-width: 1000px) {
-//     display: none;
-//   }
-// `;
