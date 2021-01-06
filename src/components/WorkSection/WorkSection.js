@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { SolarContext } from "../../context/SolarContext";
 import Masonry from "react-masonry-css";
 import styled from "styled-components";
 import Lazyload from "react-lazyload";
@@ -51,57 +52,87 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-const workSection = () => (
-  <>
-    <HeadingDiv>
-      <h2>We're extremely proud of our work!</h2>
-      <p style={{ textAlign: "center" }}>
-        From projects big to small, we love helping our neighbors become energy
-        independent!
-      </p>
-    </HeadingDiv>
-    <Test>
-      <SRLWrapper options={options}>
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="my-masonry-grid"
-          columnClassName="my-masonry-grid_column"
-        >
-          {items}
-        </Masonry>
-      </SRLWrapper>
-    </Test>
-    <FootingDiv>
-      <p>Interested in how we can help you start your clean energy journey?</p>
-      <p>
-        Contact us today!{" "}
-        <ContactLink
-          style={{ marginRight: "10px" }}
-          href="tel:207-387-0037"
-          onClick={ReactGA.event({
-            category: "PHONE",
-            action: "Phone number clicked",
-            label: "WORK_PAGE",
-          })}
-        >
-          207-387-0037
-        </ContactLink>
-        <ContactLink
-          href="mailto:contact@solarpowerne.com"
-          onClick={ReactGA.event({
-            category: "EMAIL",
-            action: "Email address clicked",
-            label: "WORK_PAGE",
-          })}
-        >
-          contact@solarpowerne.com
-        </ContactLink>
-      </p>
-    </FootingDiv>
-  </>
-);
+const WorkSection = () => {
+  const { fetchImages, images } = useContext(SolarContext);
+  useEffect(() => {
+    fetchImages();
+  }, [fetchImages]);
 
-export default workSection;
+  if (images) {
+    items = images.map(function (item) {
+      let description = `${item.location}`;
+      if (item.description !== null) {
+        description = `${item.description} - ${item.location}`;
+      }
+      return (
+        <Fade duration={Math.floor(Math.random() * 7000) + 1000}>
+          <Lazyload key={item.id}>
+            <Image
+              cloudName="robitaille"
+              publicId={item.Image.hash}
+              width="100%"
+              alt={description}
+            />
+          </Lazyload>
+        </Fade>
+      );
+    });
+  }
+
+  return (
+    <>
+      <HeadingDiv>
+        <h2>We're extremely proud of our work!</h2>
+        <p style={{ textAlign: "center" }}>
+          From projects big to small, we love helping our neighbors become
+          energy independent!
+        </p>
+      </HeadingDiv>
+      <Test>
+        <SRLWrapper options={options}>
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="my-masonry-grid"
+            columnClassName="my-masonry-grid_column"
+          >
+            {items}
+          </Masonry>
+        </SRLWrapper>
+      </Test>
+      <FootingDiv>
+        <p>
+          Interested in how we can help you start your clean energy journey?
+        </p>
+        <p>
+          Contact us today!{" "}
+          <ContactLink
+            style={{ marginRight: "10px" }}
+            href="tel:207-387-0037"
+            onClick={ReactGA.event({
+              category: "PHONE",
+              action: "Phone number clicked",
+              label: "WORK_PAGE",
+            })}
+          >
+            207-387-0037
+          </ContactLink>
+          <ContactLink
+            href="mailto:contact@solarpowerne.com"
+            onClick={ReactGA.event({
+              category: "EMAIL",
+              action: "Email address clicked",
+              label: "WORK_PAGE",
+            })}
+          >
+            contact@solarpowerne.com
+          </ContactLink>
+        </p>
+      </FootingDiv>
+    </>
+  );
+};
+
+export default WorkSection;
 
 const Test = styled.div`
   .my-masonry-grid {
