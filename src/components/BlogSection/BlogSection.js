@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { SolarContext } from "../../context/SolarContext";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import BlogItem from "./BlogItem/BlogItem";
 
@@ -29,6 +30,9 @@ const BlogSection = () => {
         <h2>Recent Blog Posts</h2>
         {showBlogs}
       </Content>
+      <Link style={{ color: "white", marginTop: "10px" }} to="/blogs">
+        All Blogs
+      </Link>
     </Wrapper>
   );
 };
@@ -59,6 +63,7 @@ const Wrapper = styled.section`
 const Content = styled.div`
   padding: 0 5%;
   max-width: 1400px;
+  margin-bottom: 20px;
   @media (min-width: 700px) {
     padding: 0 10%;
   }

@@ -16,7 +16,7 @@ const blogItem = (props) => (
         />
       </Lazyload>
       <h3>{props.blog.title}</h3>
-      <Link to={`/blog/${props.blog.id}`}>Read more</Link>
+      <Link to={`/blogs/${props.blog.id}`}>Read more</Link>
     </div>
   </Wrapper>
 );

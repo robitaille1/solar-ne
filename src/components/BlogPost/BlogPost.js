@@ -2,6 +2,7 @@ import React from "react";
 import "./BlogPost.css";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const blogPost = (props) => (
   <main>
@@ -15,6 +16,10 @@ const blogPost = (props) => (
     <BlogContent>
       <ReactMarkdown source={props.blog.content} />
     </BlogContent>
+
+    <Link to="/">Home</Link>
+    <br />
+    <Link to="/blogs">All Blogs</Link>
   </main>
 );
 
