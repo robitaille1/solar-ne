@@ -42,6 +42,10 @@ const Menu = ({ open, setOpen }) => {
         <p>RESOURCES</p>
         <p>></p>
       </Link>
+      <Link to="/blogs" onClick={() => clicked("Blogs")}>
+        <p>BLOGS</p>
+        <p>></p>
+      </Link>
     </StyledMenu>
   );
 };
