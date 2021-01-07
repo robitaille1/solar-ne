@@ -14,6 +14,7 @@ import {
   FinancingPage,
   OurWorkPage,
   BlogPage,
+  BlogsPage,
 } from "./routes";
 import ReactGA from "react-ga";
 
@@ -39,8 +40,8 @@ const App = () => {
         <Route path="/financing" component={FinancingPage} />
         <Route path="/our-work" component={OurWorkPage} />
 
-        <Route path="/blog/:blogId" component={BlogPage} />
-        {/* <Route exact path="/blog" component={BlogsPage} /> */}
+        <Route path="/blogs/:blogId" component={BlogPage} />
+        <Route exact path="/blogs" component={BlogsPage} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
     </AppMain>
