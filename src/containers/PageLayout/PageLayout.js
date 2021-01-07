@@ -66,6 +66,7 @@ const ContentContainer = styled.div`
   margin-bottom: 15px;
   border: 1px solid #ece7e7;
   border-radius: 5px;
+  padding-bottom: 20px;
 
   h2 {
     background: #3b8f28;
