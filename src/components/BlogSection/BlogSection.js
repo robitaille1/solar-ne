@@ -16,7 +16,7 @@ const BlogSection = () => {
     }
 
     showBlogs = (
-      <section>
+      <section style={{ marginBottom: "30px" }}>
         {display.slice(0, 3).map((blog) => (
           <BlogItem key={blog.id} blog={blog} />
         ))}
