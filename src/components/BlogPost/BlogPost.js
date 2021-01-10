@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const blogPost = (props) => (
   <main>
     <h2>{props.blog.title}</h2>
-    <p style={{ textAlign: "center" }}>By: Andy @ Solar Power NE</p>
     <img
       style={{ maxWidth: "100%" }}
       src={props.blog.image.url}
