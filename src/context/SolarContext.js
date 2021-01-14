@@ -18,6 +18,11 @@ const solarReducer = (state, action) => {
         ...state,
         images: action.images,
       };
+    case "SET_ABOUT":
+      return {
+        ...state,
+        aboutPage: action.aboutPage,
+      };
     default:
       throw new Error("Nada");
   }
@@ -28,9 +33,21 @@ const SolarContextProvider = (props) => {
     blogs: null,
     homepage: {},
     images: null,
+    aboutPage: {},
+    investorsPage: {},
+    careersPage: {},
+    resourcesPage: {},
   });
 
-  const { blogs, homepage, images } = state;
+  const {
+    blogs,
+    homepage,
+    images,
+    aboutPage,
+    investorsPage,
+    careersPage,
+    resourcesPage,
+  } = state;
 
   const fetchData = useCallback(() => {
     Promise.all([
@@ -52,12 +69,52 @@ const SolarContextProvider = (props) => {
       });
   }, []);
 
+  const fetchAboutPage = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/about-page")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_ABOUT", aboutPage: resData });
+      });
+  }, []);
+
+  const fetchInvestorsPage = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/investors-page")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_INVESTORS", investorsPage: resData });
+      });
+  }, []);
+
+  const fetchCareersPage = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/careers-images")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_CAREERS", careersPage: resData });
+      });
+  }, []);
+
+  const fetchResourcesPage = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/resources-images")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_RESOURCES", resourcesPage: resData });
+      });
+  }, []);
+
   const providerValue = {
     fetchData,
     fetchImages,
+    fetchAboutPage,
+    fetchInvestorsPage,
+    fetchCareersPage,
+    fetchResourcesPage,
     blogs,
     homepage,
     images,
+    aboutPage,
+    investorsPage,
+    careersPage,
+    resourcesPage,
   };
 
   return (
