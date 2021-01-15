@@ -23,6 +23,11 @@ const solarReducer = (state, action) => {
         ...state,
         aboutPage: action.aboutPage,
       };
+    case "SET_INVESTORS":
+      return {
+        ...state,
+        investorsPage: action.investorsPage,
+      };
     default:
       throw new Error("Nada");
   }

@@ -1,12 +1,20 @@
-import React from 'react';
-import PageLayout from '../containers/PageLayout/PageLayout';
-import InvestorsSection from '../components/InvestorsSection/InvestorsSection';
+import React, { useContext, useEffect } from "react";
+import PageLayout from "../containers/PageLayout/PageLayout";
+import InvestorsSection from "../components/InvestorsSection/InvestorsSection";
+import { SolarContext } from "../context/SolarContext";
 
-const investorsPage = () => (
-        <PageLayout>
-            <InvestorsSection />  
-        </PageLayout>
-);
+const InvestorsPage = () => {
+  const { fetchInvestorsPage, investorsPage } = useContext(SolarContext);
 
+  useEffect(() => {
+    fetchInvestorsPage();
+  }, [fetchInvestorsPage]);
 
-export default investorsPage;
+  return (
+    <PageLayout>
+      <InvestorsSection content={investorsPage.Content} />
+    </PageLayout>
+  );
+};
+
+export default InvestorsPage;
