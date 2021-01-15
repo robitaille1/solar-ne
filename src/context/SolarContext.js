@@ -28,6 +28,11 @@ const solarReducer = (state, action) => {
         ...state,
         investorsPage: action.investorsPage,
       };
+    case "SET_CAREERS":
+      return {
+        ...state,
+        careersPage: action.careersPage,
+      };
     default:
       throw new Error("Nada");
   }
@@ -91,7 +96,7 @@ const SolarContextProvider = (props) => {
   }, []);
 
   const fetchCareersPage = useCallback(() => {
-    fetch("https://solarpowerne.herokuapp.com/careers-images")
+    fetch("https://solarpowerne.herokuapp.com/careers-page")
       .then((response) => response.json())
       .then((resData) => {
         dispatch({ type: "SET_CAREERS", careersPage: resData });
@@ -99,7 +104,7 @@ const SolarContextProvider = (props) => {
   }, []);
 
   const fetchResourcesPage = useCallback(() => {
-    fetch("https://solarpowerne.herokuapp.com/resources-images")
+    fetch("https://solarpowerne.herokuapp.com/resources-page")
       .then((response) => response.json())
       .then((resData) => {
         dispatch({ type: "SET_RESOURCES", resourcesPage: resData });
