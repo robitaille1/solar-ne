@@ -9,7 +9,7 @@ const aboutSection = (props) => (
     <Content>
       <h2>About Us</h2>
       <Img alt="SPNE Logo" src={logo} />
-      <ReactMarkdown source={props.content.Content} />
+      <ReactMarkdown source={props.content} />
       <p>
         If you would like to get in touch please fill out the form below, or
         drop us a line at{" "}

@@ -13,7 +13,7 @@ const AboutPage = () => {
 
   return (
     <PageLayout>
-      <AboutSection content={aboutPage} />
+      <AboutSection content={aboutPage.Content} />
       <ContactForm />
     </PageLayout>
   );
