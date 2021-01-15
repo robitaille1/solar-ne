@@ -33,6 +33,11 @@ const solarReducer = (state, action) => {
         ...state,
         careersPage: action.careersPage,
       };
+    case "SET_RESOURCES":
+      return {
+        ...state,
+        resourcesPage: action.resourcesPage,
+      };
     default:
       throw new Error("Nada");
   }

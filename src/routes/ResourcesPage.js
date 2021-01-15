@@ -1,12 +1,20 @@
-import React from 'react';
-import PageLayout from '../containers/PageLayout/PageLayout';
-import ResourcesSection from '../components/ResourcesSection/ResourcesSection';
+import React, { useContext, useEffect } from "react";
+import PageLayout from "../containers/PageLayout/PageLayout";
+import ResourcesSection from "../components/ResourcesSection/ResourcesSection";
+import { SolarContext } from "../context/SolarContext";
 
+const ResourcesPage = () => {
+  const { fetchResourcesPage, resourcesPage } = useContext(SolarContext);
 
-const resourcesPage = () => (
+  useEffect(() => {
+    fetchResourcesPage();
+  }, [fetchResourcesPage]);
+
+  return (
     <PageLayout>
-        <ResourcesSection />
-    </PageLayout>        
-);
+      <ResourcesSection content={resourcesPage.Content} />
+    </PageLayout>
+  );
+};
 
-export default resourcesPage;
+export default ResourcesPage;
