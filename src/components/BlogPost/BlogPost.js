@@ -8,7 +8,7 @@ const blogPost = (props) => (
   <main>
     <h2>{props.blog.title}</h2>
     <img
-      style={{ maxWidth: "100%" }}
+      style={{ maxWidth: "100%", width: "50%" }}
       src={props.blog.image.url}
       alt={props.blog.image.alternativeText}
     />
@@ -29,5 +29,12 @@ const BlogContent = styled.div`
 
   img {
     max-width: 100%;
+  }
+
+  p {
+    display: inline-block;
+    img {
+      justify-self: center;
+    }
   }
 `;
