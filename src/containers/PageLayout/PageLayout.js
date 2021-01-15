@@ -80,7 +80,9 @@ const ContentContainer = styled.div`
       font-size: 35px;
     }
   }
-  h3 {
+  h3,
+  h4,
+  h5 {
     padding: 0 20px;
   }
 `;
