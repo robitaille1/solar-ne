@@ -40,7 +40,7 @@ const App = () => {
         <Route path="/financing" component={FinancingPage} />
         <Route path="/our-work" component={OurWorkPage} />
 
-        <Route path="/blogs/:blogId" component={BlogPage} />
+        <Route path="/blogs/:blogId/:blogSlug" component={BlogPage} />
         <Route exact path="/blogs" component={BlogsPage} />
         <Route render={() => <Redirect to="/" />} />
       </Switch>
