@@ -13,7 +13,7 @@ const blogPost = (props) => (
       alt={props.blog.image.alternativeText}
     />
     <BlogContent>
-      <ReactMarkdown source={props.blog.content} />
+      <ReactMarkdown linkTarget="_blank" source={props.blog.content} />
     </BlogContent>
 
     <Link to="/">Home</Link>
