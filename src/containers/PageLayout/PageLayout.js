@@ -85,8 +85,11 @@ const ContentContainer = styled.div`
   h5 {
     padding: 0 20px;
   }
-  h3 {
-    margin: 60px 0 0 0;
+
+  main {
+    h3 {
+      margin: 60px 0 0 0;
+    }
   }
 `;
 
