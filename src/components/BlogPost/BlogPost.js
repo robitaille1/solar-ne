@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 
 const blogPost = (props) => (
   <main>
-    <h2>{props.blog.title}</h2>
+    <h2>{props.blog[0].title}</h2>
     <img
       style={{ maxWidth: "100%", width: "50%" }}
-      src={props.blog.image.url}
-      alt={props.blog.image.alternativeText}
+      src={props.blog[0].image.url}
+      alt={props.blog[0].image.alternativeText}
     />
     <BlogContent>
-      <ReactMarkdown linkTarget="_blank" source={props.blog.content} />
+      <ReactMarkdown linkTarget="_blank" source={props.blog[0].content} />
     </BlogContent>
 
     <Link to="/">Home</Link>

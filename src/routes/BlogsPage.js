@@ -40,7 +40,7 @@ export default BlogsPage;
 const BlogsContainer = styled.section`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding-bottom: 30px;
 

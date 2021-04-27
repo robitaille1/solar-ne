@@ -16,7 +16,12 @@ const blogItem = (props) => (
         />
       </Lazyload>
       <h3>{props.blog.title}</h3>
-      <Link to={`/blogs/${props.blog.id}/${props.blog.slug}`}>Read more</Link>
+
+      {props.blog.ComingSoon ? (
+        <p style={{ textAlign: "center" }}>Coming Soon</p>
+      ) : (
+        <Link to={`/blogs/${props.blog.slug}`}>Read more</Link>
+      )}
     </div>
   </Wrapper>
 );

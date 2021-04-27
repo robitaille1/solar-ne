@@ -38,6 +38,16 @@ const solarReducer = (state, action) => {
         ...state,
         resourcesPage: action.resourcesPage,
       };
+    case "SET_PARTNERS":
+      return {
+        ...state,
+        partners: action.partners,
+      };
+    case "SET_HERO":
+      return {
+        ...state,
+        hero: action.hero,
+      };
     default:
       throw new Error("Nada");
   }
@@ -52,6 +62,8 @@ const SolarContextProvider = (props) => {
     investorsPage: {},
     careersPage: {},
     resourcesPage: {},
+    partners: {},
+    hero: null,
   });
 
   const {
@@ -62,17 +74,23 @@ const SolarContextProvider = (props) => {
     investorsPage,
     careersPage,
     resourcesPage,
+    partners,
+    hero,
   } = state;
 
   const fetchData = useCallback(() => {
     Promise.all([
       fetch("https://solarpowerne.herokuapp.com/homepage"),
       fetch("https://solarpowerne.herokuapp.com/blogs"),
+      fetch("https://solarpowerne.herokuapp.com/hero-image"),
     ])
-      .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
-      .then(([data1, data2]) => {
+      .then(([res1, res2, res3]) =>
+        Promise.all([res1.json(), res2.json(), res3.json()])
+      )
+      .then(([data1, data2, data3]) => {
         dispatch({ type: "SET_HOMEPAGE", homepage: data1 });
         dispatch({ type: "SET_BLOGS", blogs: data2 });
+        dispatch({ type: "SET_HERO", hero: data3 });
       });
   }, []);
 
@@ -116,6 +134,14 @@ const SolarContextProvider = (props) => {
       });
   }, []);
 
+  const fetchPartners = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/partners")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_PARTNERS", partners: resData });
+      });
+  }, []);
+
   const providerValue = {
     fetchData,
     fetchImages,
@@ -123,6 +149,7 @@ const SolarContextProvider = (props) => {
     fetchInvestorsPage,
     fetchCareersPage,
     fetchResourcesPage,
+    fetchPartners,
     blogs,
     homepage,
     images,
@@ -130,6 +157,8 @@ const SolarContextProvider = (props) => {
     investorsPage,
     careersPage,
     resourcesPage,
+    partners,
+    hero,
   };
 
   return (
