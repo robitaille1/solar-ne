@@ -33,8 +33,10 @@ const BlogContent = styled.div`
 
   p {
     display: inline-block;
+    text-align: center;
     img {
       justify-self: center;
+      width: 50%;
     }
   }
 `;
