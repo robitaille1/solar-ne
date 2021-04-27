@@ -11,8 +11,11 @@ const partnersCard = (props) => (
       samesite="None"
       secure="true"
     />
-
-    <Link to={`/partners/lg-solar`}>{props.partner.PartnerName}</Link>
+    <p style={{ marginBottom: "0", fontWeight: "bold" }}>
+      {props.partner.PartnerName}
+    </p>
+    <p>{props.partner.ShortDescription}</p>
+    <Link to={`/partners/lg-solar`}>Learn More</Link>
   </Card>
 );
 
