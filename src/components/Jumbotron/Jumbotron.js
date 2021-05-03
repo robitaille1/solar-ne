@@ -39,7 +39,7 @@ const Jumbotron = styled.section`
   transform: scaleX(-1);
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-    url("https://res.cloudinary.com/robitaille/image/upload/v1603767480/winter_jq2zpw.jpg");
+    url("https://res.cloudinary.com/robitaille/image/upload/v1603767476/summer_vc4x1a.jpg");
 
   background-size: cover;
   background-position: center center;
