@@ -37,7 +37,7 @@ const Jumbotron = styled.section`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
     url("https://res.cloudinary.com/robitaille/image/upload/v1603767476/summer_vc4x1a.jpg");
 
   background-size: cover;

@@ -1,7 +1,6 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
 import Nav from "../../components/Nav/Nav";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Footer from "../../components/Footer/Footer";
@@ -12,12 +11,12 @@ const pageLayout = (props) => (
     <Content>
       <ContentContainer>{props.children}</ContentContainer>
     </Content>
-    <LazyLoad>
-      <BlogSection />
-    </LazyLoad>
-    <LazyLoad>
-      <Footer />
-    </LazyLoad>
+    {/* <LazyLoad> */}
+    <BlogSection />
+    {/* </LazyLoad> */}
+    {/* <LazyLoad> */}
+    <Footer />
+    {/* </LazyLoad> */}
   </Wrapper>
 );
 
@@ -104,7 +103,7 @@ const ContentContainer = styled.div`
 //     opacity: 0.6;
 //   }
 
-//   @media (min-width: 1000px) {
-//     display: none;
-//   }
-// `;
+  main {
+    background-color: white;
+  }
+`;
