@@ -15,7 +15,8 @@ const partnersCard = (props) => (
       {props.partner.PartnerName}
     </p>
     <p>{props.partner.ShortDescription}</p>
-    <Link to={`/partners/lg-solar`}>Learn More</Link>
+
+    <Link to={`/partners/${props.partner.slug}`}>Learn More</Link>
   </Card>
 );
 

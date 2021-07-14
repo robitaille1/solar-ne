@@ -13,7 +13,10 @@ const partnerSection = (props) => {
         alt={props.partner[0].PartnerImage[0].alternativeText}
         src={props.partner[0].PartnerImage[0].formats.thumbnail.url}
       />
-      <ReactMarkdown source={props.partner[0].PartnerDescription} />
+      <PartnerContent>
+        <ReactMarkdown source={props.partner[0].PartnerDescription} />
+      </PartnerContent>
+
       <Contact>
         <p>Interested in how we partner with {props.partner[0].PartnerName}?</p>
         <p>
@@ -70,5 +73,22 @@ const Contact = styled.div`
     color: white;
     margin: 0;
     text-align: center;
+  }
+`;
+
+const PartnerContent = styled.div`
+  padding-bottom: 20px;
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    display: inline-block;
+    text-align: center;
+    img {
+      justify-self: center;
+      width: 50%;
+    }
   }
 `;
