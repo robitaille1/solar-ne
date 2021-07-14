@@ -7,7 +7,7 @@ const partnersCard = (props) => (
     <img
       draggable="false"
       alt={props.partner.PartnerImage[0].alternativeText}
-      src={props.partner.PartnerImage[0].formats.thumbnail.url}
+      src={props.partner.PartnerImage[0].formats.small.url}
       samesite="None"
       secure="true"
     />
@@ -30,7 +30,7 @@ const Card = styled.div`
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   img {
-    margin: auto;
+    margin: 0 !important;
     width: 100%;
     padding: 0 !important;
   }

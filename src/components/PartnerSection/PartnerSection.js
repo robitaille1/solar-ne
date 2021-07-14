@@ -11,7 +11,7 @@ const partnerSection = (props) => {
       <h2>{props.partner[0].PartnerName}</h2>
       <Img
         alt={props.partner[0].PartnerImage[0].alternativeText}
-        src={props.partner[0].PartnerImage[0].formats.thumbnail.url}
+        src={props.partner[0].PartnerImage[0].formats.large.url}
       />
       <PartnerContent>
         <ReactMarkdown source={props.partner[0].PartnerDescription} />
