@@ -1,21 +1,12 @@
 import React from "react";
 import Img from "../utils/Img";
-// import { Event } from "../Tracking/Tracking";
+import ReactMarkdown from "react-markdown";
 
-const careersSection = () => (
+const careersSection = (props) => (
   <>
     <h2>Careers</h2>
     <Img src="https://images.unsplash.com/photo-1574170623305-76d87a78cfcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
-    <p>Would you like to work in a fast-paced start up?</p>
-    <p>
-      Perhaps you're interested in working in the solar or renewable energy
-      field to make the world a better place?
-    </p>
-    <p>
-      If you're interested, please submit your resumé, contact information and a
-      brief description of yourself and why you want to work for us below! We
-      look forward to hearing from you!
-    </p>
+    <ReactMarkdown source={props.content} />
     <form
       action="https://formsubmit.co/contact@solarpowerne.com"
       method="POST"

@@ -8,7 +8,6 @@ const jumbotron = () => (
     <Jumbotron>
       <JumboContainer>
         <h2>Invest in your home, community, and local businesses!</h2>
-        {/* Photo by American Public Power Association - @publicpowerorg */}
         <div>
           <p>Learn more</p>
           <Link

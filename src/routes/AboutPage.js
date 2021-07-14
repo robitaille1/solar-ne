@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import PageLayout from "../containers/PageLayout/PageLayout";
 import AboutSection from "../components/AboutSection/AboutSection";
 import ContactForm from "../components/ContactForm/ContactForm";
+import { SolarContext } from "../context/SolarContext";
 
-const aboutPage = () => (
-  <PageLayout>
-    <AboutSection />
-    <ContactForm />
-  </PageLayout>
-);
+const AboutPage = () => {
+  const { fetchAboutPage, aboutPage } = useContext(SolarContext);
 
-export default aboutPage;
+  useEffect(() => {
+    fetchAboutPage();
+  }, [fetchAboutPage]);
+
+  return (
+    <PageLayout>
+      <AboutSection content={aboutPage.Content} />
+      <ContactForm />
+    </PageLayout>
+  );
+};
+
+export default AboutPage;

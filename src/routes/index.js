@@ -8,3 +8,5 @@ export { default as PartnersPage } from "./PartnersPage";
 export { default as ErrorPage } from "./ErrorPage";
 export { default as FinancingPage } from "./FinancingPage";
 export { default as OurWorkPage } from "./OurWorkPage";
+export { default as BlogsPage } from "./BlogsPage";
+export { default as PartnerPage } from "./PartnerPage";

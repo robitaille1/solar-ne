@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Lazyload from "react-lazyload";
+import { Link } from "react-router-dom";
 
 const blogItem = (props) => (
   <Wrapper>
@@ -8,14 +9,19 @@ const blogItem = (props) => (
       <Lazyload>
         <img
           draggable="false"
-          alt={props.blog.alt}
-          src={props.blog.img}
+          alt={props.blog.image.alternativeText}
+          src={props.blog.image.formats.thumbnail.url}
           samesite="None"
           secure="true"
         />
       </Lazyload>
       <h3>{props.blog.title}</h3>
-      <p>Coming Soon</p>
+
+      {props.blog.ComingSoon ? (
+        <p style={{ textAlign: "center" }}>Coming Soon</p>
+      ) : (
+        <Link to={`/blogs/${props.blog.slug}`}>Read more</Link>
+      )}
     </div>
   </Wrapper>
 );
@@ -55,6 +61,15 @@ const Wrapper = styled.div`
 
     &:hover {
       cursor: not-allowed;
+    }
+  }
+
+  a {
+    font-size: 100%;
+    color: #132f0c;
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.6;
     }
   }
 `;
