@@ -103,7 +103,7 @@ const ContentContainer = styled.div`
 //     opacity: 0.6;
 //   }
 
-  main {
-    background-color: white;
-  }
-`;
+//   main {
+//     background-color: white;
+//   }
+// `;
