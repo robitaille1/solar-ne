@@ -6,6 +6,7 @@ import App from "./App";
 import OpenContextProvider from "./context/OpenContext";
 import SimpleReactLightbox from "simple-react-lightbox";
 import SolarContextProvider from "./context/SolarContext";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.render(
   <BrowserRouter>
