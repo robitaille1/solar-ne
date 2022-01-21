@@ -6,18 +6,21 @@ import App from "./App";
 import OpenContextProvider from "./context/OpenContext";
 import SimpleReactLightbox from "simple-react-lightbox";
 import SolarContextProvider from "./context/SolarContext";
+import { ChakraProvider } from "@chakra-ui/react";
 
 ReactDOM.render(
   <BrowserRouter>
-    <ScrollToTop>
-      <OpenContextProvider>
-        <SolarContextProvider>
-          <SimpleReactLightbox>
-            <App />
-          </SimpleReactLightbox>
-        </SolarContextProvider>
-      </OpenContextProvider>
-    </ScrollToTop>
+    <ChakraProvider>
+      <ScrollToTop>
+        <OpenContextProvider>
+          <SolarContextProvider>
+            <SimpleReactLightbox>
+              <App />
+            </SimpleReactLightbox>
+          </SolarContextProvider>
+        </OpenContextProvider>
+      </ScrollToTop>
+    </ChakraProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );
