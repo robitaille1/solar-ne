@@ -65,13 +65,13 @@ export default function WithSubnavigation() {
           <Link
             as={ReachLink}
             to="/"
-            _hover={{ textDecoration: "none" }}
+            _hover={{ textDecoration: "none", opacity: ".6" }}
             display={"flex"}
             alignItems={"center"}
           >
             <Image
               height={"40px"}
-              marginRight={"20px"}
+              marginRight={"10px"}
               src={NavFlag}
               alt="SPNE Flag Logo"
               display={{ base: "none", md: "block" }}
