@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { OpenContext } from "./context/OpenContext";
 import { SolarContext } from "./context/SolarContext";
@@ -16,6 +16,7 @@ import {
   BlogPage,
   BlogsPage,
   PartnerPage,
+  NotFound,
 } from "./routes";
 import ReactGA from "react-ga";
 
@@ -44,7 +45,7 @@ const App = () => {
         <Route path="/partners/:partnerSlug" component={PartnerPage} />
         <Route exact path="/partners" component={PartnersPage} />
         <Route exact path="/blogs" component={BlogsPage} />
-        <Route render={() => <Redirect to="/" />} />
+        <Route component={NotFound} />
       </Switch>
     </AppMain>
   );
@@ -53,7 +54,6 @@ const App = () => {
 export default App;
 
 const AppMain = styled.main`
-  text-align: center;
   width: 100%;
   box-sizing: border-box;
 `;
