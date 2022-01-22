@@ -26,9 +26,18 @@ import {
 import NavFlag from "../../assets/logo-notext.png";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as ReachLink } from "react-router-dom";
+import ReactGA from "react-ga";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+
+  const ClickHandler = (item) => {
+    ReactGA.event({
+      category: "NAV-LINK",
+      action: `${item} Clicked`,
+      label: "NAV",
+    });
+  };
 
   return (
     <Box maxW={"6xl"} margin={"0 auto"}>
@@ -116,6 +125,7 @@ export default function WithSubnavigation() {
               _hover={{
                 bg: "green.300",
               }}
+              onClick={() => ClickHandler("Contact Button")}
             >
               Contact Us
             </Button>
@@ -134,6 +144,13 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const ClickHandler = (item) => {
+    ReactGA.event({
+      category: "NAV-LINK",
+      action: `${item} Clicked`,
+      label: "NAV",
+    });
+  };
 
   return (
     <Stack direction={"row"} spacing={4}>
@@ -143,7 +160,7 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
-                href={navItem.href ?? "#"}
+                to={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
                 color={linkColor}
@@ -151,6 +168,8 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: linkHoverColor,
                 }}
+                onClick={() => ClickHandler(navItem.label)}
+                as={ReachLink}
               >
                 {navItem.label}
               </Link>
@@ -180,14 +199,23 @@ const DesktopNav = () => {
 };
 
 const DesktopSubNav = ({ label, href, subLabel }) => {
+  const ClickHandler = (item) => {
+    ReactGA.event({
+      category: "NAV-LINK",
+      action: `${item} Clicked (Mobile)`,
+      label: "NAV",
+    });
+  };
   return (
     <Link
-      href={href}
+      to={href}
       role={"group"}
       display={"block"}
       p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("green.50", "gray.900") }}
+      onClick={() => ClickHandler(label)}
+      as={ReachLink}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
@@ -232,6 +260,13 @@ const MobileNav = () => {
 
 const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
+  const ClickHandler = (item) => {
+    ReactGA.event({
+      category: "NAV-LINK",
+      action: `${item} Clicked (Mobile)`,
+      label: "NAV",
+    });
+  };
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
@@ -273,7 +308,13 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link
+                key={child.label}
+                py={2}
+                to={child.href}
+                onClick={() => ClickHandler(child.label)}
+                as={ReachLink}
+              >
                 {child.label}
               </Link>
             ))}
