@@ -17,6 +17,7 @@ import {
   BlogsPage,
   PartnerPage,
   NotFound,
+  ContactPage,
 } from "./routes";
 import ReactGA from "react-ga";
 
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/partners/:partnerSlug" component={PartnerPage} />
         <Route exact path="/partners" component={PartnersPage} />
         <Route exact path="/blogs" component={BlogsPage} />
+        <Route exact path="/contact" component={ContactPage} />
         <Route component={NotFound} />
       </Switch>
     </AppMain>
