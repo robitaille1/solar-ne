@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
-import PageLayout from "../containers/PageLayout/PageLayout";
+import PageLayout from "../components/Redesign/PageLayout2";
 import AboutSection from "../components/AboutSection/AboutSection";
-import ContactForm from "../components/ContactForm/ContactForm";
+import Contact from "../components/Redesign/Contact2";
 import { SolarContext } from "../context/SolarContext";
 
 const AboutPage = () => {
@@ -14,7 +14,7 @@ const AboutPage = () => {
   return (
     <PageLayout>
       <AboutSection content={aboutPage.Content} />
-      <ContactForm />
+      <Contact title="Get in Touch" />
     </PageLayout>
   );
 };
