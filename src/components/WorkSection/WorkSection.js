@@ -7,6 +7,7 @@ import { Fade } from "react-reveal";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Image } from "cloudinary-react";
 import ReactGA from "react-ga";
+import { Text, Heading, Box, Link, Stack, Container } from "@chakra-ui/react";
 
 let items = [
   { id: 1, src: "gorham", alt: "Gorham Project", time: 3000 },
@@ -86,14 +87,14 @@ const WorkSection = () => {
   }
 
   return (
-    <>
-      <HeadingDiv>
-        <h2>We're extremely proud of our work!</h2>
-        <p style={{ textAlign: "center" }}>
+    <Container maxW={"6xl"}>
+      <Stack padding={10} align={"center"}>
+        <Heading>We're extremely proud of our work!</Heading>
+        <Text color={"gray.500"}>
           From projects big to small, we love helping our neighbors become
           energy independent!
-        </p>
-      </HeadingDiv>
+        </Text>
+      </Stack>
       <Test>
         <SRLWrapper options={options}>
           <Masonry
@@ -105,36 +106,36 @@ const WorkSection = () => {
           </Masonry>
         </SRLWrapper>
       </Test>
-      <FootingDiv>
-        <p>
+      <Box fontSize={20} padding={10} textAlign={"center"}>
+        <Text>
           Interested in how we can help you start your clean energy journey?
-        </p>
-        <p>
-          Contact us today!{" "}
-          <ContactLink
-            style={{ marginRight: "10px" }}
-            href="tel:207-387-0037"
-            onClick={ReactGA.event({
-              category: "PHONE",
-              action: "Phone number clicked",
-              label: "WORK_PAGE",
-            })}
-          >
-            207-387-0037
-          </ContactLink>
-          <ContactLink
-            href="mailto:contact@solarpowerne.com"
-            onClick={ReactGA.event({
-              category: "EMAIL",
-              action: "Email address clicked",
-              label: "WORK_PAGE",
-            })}
-          >
-            contact@solarpowerne.com
-          </ContactLink>
-        </p>
-      </FootingDiv>
-    </>
+        </Text>
+        <Text>Contact us today!</Text>
+        <Link
+          style={{ marginRight: "10px" }}
+          href="tel:207-387-0037"
+          onClick={ReactGA.event({
+            category: "PHONE",
+            action: "Phone number clicked",
+            label: "WORK_PAGE",
+          })}
+          textDecoration={"underline"}
+        >
+          207-387-0037
+        </Link>
+        <Link
+          href="mailto:contact@solarpowerne.com"
+          onClick={ReactGA.event({
+            category: "EMAIL",
+            action: "Email address clicked",
+            label: "WORK_PAGE",
+          })}
+          textDecoration={"underline"}
+        >
+          contact@solarpowerne.com
+        </Link>
+      </Box>
+    </Container>
   );
 };
 
@@ -162,40 +163,5 @@ const Test = styled.div`
     &:hover {
       cursor: pointer;
     }
-  }
-`;
-
-const HeadingDiv = styled.div`
-  background-color: #3b8f28;
-  color: white;
-  padding: 20px 20px;
-  margin-bottom: 30px;
-  border-radius: 5px 5px 0 0;
-
-  a {
-    color: #ece485;
-  }
-`;
-
-const FootingDiv = styled.div`
-  background-color: #3b8f28;
-  color: white;
-  padding: 20px 20px;
-  border-radius: 0 0 5px 5px;
-
-  p {
-    text-align: center;
-  }
-
-  a {
-    color: #ece485;
-  }
-`;
-
-const ContactLink = styled.a`
-  display: block;
-  word-break: normal;
-  @media (min-width: 499px) {
-    display: inline;
   }
 `;
