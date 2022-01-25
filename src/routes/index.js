@@ -12,3 +12,4 @@ export { default as BlogsPage } from "./BlogsPage";
 export { default as PartnerPage } from "./PartnerPage";
 export { default as NotFound } from "./NotFound";
 export { default as ContactPage } from "./ContactPage";
+export { default as TestimonialsPage } from "./TestimonialsPage";
