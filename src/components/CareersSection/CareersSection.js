@@ -1,70 +1,195 @@
 import React from "react";
-import Img from "../utils/Img";
+import Banner from "../Redesign/Banner";
 import ReactMarkdown from "react-markdown";
+import {
+  Box,
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Stack,
+  Textarea,
+  useColorModeValue,
+  VStack,
+  Container,
+  Text,
+} from "@chakra-ui/react";
+import { BsPerson } from "react-icons/bs";
+import { MdOutlineEmail, MdPhoneIphone } from "react-icons/md";
+import ReactGA from "react-ga";
 
-const careersSection = (props) => (
-  <>
-    <h2>Careers</h2>
-    <Img src="https://images.unsplash.com/photo-1574170623305-76d87a78cfcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" />
-    <ReactMarkdown source={props.content} />
-    <form
-      action="https://formsubmit.co/contact@solarpowerne.com"
-      method="POST"
-      encType="multipart/form-data"
-      onSubmit={() => Event("FORM", "Careers form submitted", "CAREERS_PAGE")}
-    >
-      <ul className="form-style-1">
-        <li>
-          <label>
-            Full Name <span className="required">*</span>
-          </label>
-          <input
-            type="text"
-            name="first name"
-            className="field-divided first-name"
-            placeholder="First"
-            required
-          />
-          <input
-            type="text"
-            name="last name"
-            className="field-divided"
-            placeholder="Last"
-            required
-          />
-        </li>
-        <li>
-          <label>
-            Email <span className="required">*</span>
-          </label>
-          <input type="email" name="email" className="field-long" required />
-        </li>
-        <li>
-          <label>Phone Number</label>
-          <input type="tel" name="phone" className="field-long"></input>
-        </li>
-        <li>
-          <label>
-            Description <span className="required">*</span>
-          </label>
-          <textarea
-            name="description"
-            id="message"
-            className="field-long field-textarea"
-            required
-          />
-        </li>
-        <li>
-          <label htmlFor="resume">Attach resume (PDF format)</label>
-          <input type="file" id="resume" name="resume" accept=".pdf"></input>
-        </li>
-        <h5 className="required required-text">* Required</h5>
-        <li style={{ textAlign: "center" }}>
-          <input type="submit" value="Submit" />
-        </li>
-      </ul>
-    </form>
-  </>
-);
+const CareersSection = (props) => {
+  const formSubmit = (e) => {
+    ReactGA.event({
+      category: "FORM",
+      action: "Contact form submitted",
+      label: "HOME_PAGE",
+    });
+  };
+  return (
+    <Box>
+      <Banner
+        title="Careers"
+        image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
+      />
 
-export default careersSection;
+      <Container maxW={"5xl"} py={12}>
+        <Heading mb={5}>Join the team!</Heading>
+        <Text color={"gray.500"} fontSize={"lg"}>
+          <ReactMarkdown source={props.content} />
+        </Text>
+      </Container>
+
+      <Flex
+        bg={useColorModeValue("gray.100", "gray.900")}
+        align="center"
+        justify="center"
+        id="contact"
+      >
+        <Box
+          borderRadius="lg"
+          m={{ base: 5, md: 5, lg: 5 }}
+          p={{ base: 5, lg: 10 }}
+          width={"100%"}
+        >
+          <Box>
+            <VStack spacing={{ base: 4, md: 8, lg: 10 }}>
+              <Heading
+                fontSize={{
+                  base: "4xl",
+                  md: "5xl",
+                }}
+              >
+                {props.title}
+              </Heading>
+
+              <Stack
+                spacing={{ base: 4, md: 8, lg: 20 }}
+                direction={{ base: "column", md: "row" }}
+                width={{
+                  base: "100%",
+                  sm: "100%",
+                  md: "75%",
+                  lg: "65%",
+                }}
+              >
+                <Box
+                  bg={useColorModeValue("white", "gray.700")}
+                  borderRadius="lg"
+                  p={8}
+                  color={useColorModeValue("gray.700", "whiteAlpha.900")}
+                  shadow="base"
+                  width={"100%"}
+                >
+                  <VStack spacing={5}>
+                    <form
+                      action="https://formsubmit.co/contact@solarpowerne.com"
+                      method="POST"
+                      onSubmit={() => formSubmit()}
+                      style={{ width: "100%" }}
+                    >
+                      <FormControl mt={5} isRequired>
+                        <FormLabel>Name</FormLabel>
+
+                        <InputGroup>
+                          <InputLeftElement children={<BsPerson />} />
+                          <Input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl mt={5} isRequired>
+                        <FormLabel>Email</FormLabel>
+
+                        <InputGroup>
+                          <InputLeftElement children={<MdOutlineEmail />} />
+                          <Input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl mt={5}>
+                        <FormLabel>Phone</FormLabel>
+
+                        <InputGroup>
+                          <InputLeftElement children={<MdPhoneIphone />} />
+                          <Input
+                            type="tel"
+                            name="phone"
+                            placeholder="Your Phone Number"
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl mt={5} isRequired>
+                        <FormLabel>Message</FormLabel>
+
+                        <Textarea
+                          name="message"
+                          placeholder="Your Message"
+                          rows={6}
+                          resize="none"
+                        />
+                      </FormControl>
+
+                      <FormControl mt={5}>
+                        <FormLabel>Phone</FormLabel>
+
+                        <InputGroup>
+                          <InputLeftElement children={<MdPhoneIphone />} />
+                          <Input
+                            type="tel"
+                            name="phone"
+                            placeholder="Your Phone Number"
+                          />
+                        </InputGroup>
+                      </FormControl>
+
+                      <FormControl mt={5}>
+                        <FormLabel>Attach Resume (PDF Format)</FormLabel>
+
+                        <Input
+                          paddingLeft={0}
+                          border={"none"}
+                          type="file"
+                          name="resume"
+                          accept="application/pdf"
+                        />
+                      </FormControl>
+
+                      <Button
+                        mt={5}
+                        colorScheme="green"
+                        bg="green.400"
+                        color="white"
+                        _hover={{
+                          bg: "green.500",
+                        }}
+                        isFullWidth
+                        type="submit"
+                      >
+                        Send Message
+                      </Button>
+                    </form>
+                  </VStack>
+                </Box>
+              </Stack>
+            </VStack>
+          </Box>
+        </Box>
+      </Flex>
+    </Box>
+  );
+};
+
+export default CareersSection;
