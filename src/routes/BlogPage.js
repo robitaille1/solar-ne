@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BlogPost from "../components/BlogPost/BlogPost";
-import PageLayout from "../containers/PageLayout/PageLayout";
+import BlogPost from "../components/Redesign/BlogPost2";
+import PageLayout from "../components/Redesign/PageLayout2";
 import { useParams } from "react-router-dom";
 
 const BlogPage = () => {
@@ -20,15 +20,13 @@ const BlogPage = () => {
   let showBlog = <div>Loading</div>;
 
   if (blog) {
-    showBlog = <BlogPost blog={blog} />;
+    showBlog = <BlogPost blog={blog[0]} />;
   }
 
   return (
-    <main>
-      <PageLayout>
-        <div>{showBlog}</div>
-      </PageLayout>
-    </main>
+    <PageLayout>
+      <div>{showBlog}</div>
+    </PageLayout>
   );
 };
 
