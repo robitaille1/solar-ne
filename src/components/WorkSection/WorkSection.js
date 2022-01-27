@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from "react";
-import { SolarContext } from "../../context/SolarContext";
+import React from "react";
 import Masonry from "react-masonry-css";
 import styled from "styled-components";
 import Lazyload from "react-lazyload";
@@ -9,48 +8,12 @@ import { Image } from "cloudinary-react";
 import ReactGA from "react-ga";
 import { Text, Heading, Box, Link, Stack, Container } from "@chakra-ui/react";
 
-let items = [
-  { id: 1, src: "gorham", alt: "Gorham Project", time: 3000 },
-  { id: 2, src: "gorham2", alt: "Gorham Project", time: 5000 },
-  { id: 3, src: "gorham3", alt: "Gorham Project", time: 1000 },
-  { id: 4, src: "gorham4", alt: "Gorham Project", time: 4000 },
-  { id: 5, src: "portland", alt: "Portland Project", time: 2000 },
-  { id: 5, src: "portland2", alt: "Portland Project", time: 1000 },
-  { id: 6, src: "yarmouth", alt: "Yarmouth Project", time: 3000 },
-  { id: 7, src: "yarmouth2", alt: "Yarmouth Project", time: 5000 },
-  { id: 8, src: "yarmouth4", alt: "Yarmouth Project", time: 1000 },
-  { id: 9, src: "yarmouth3", alt: "Yarmouth Project", time: 2000 },
-  { id: 10, src: "yarmouth5", alt: "Yarmouth Project", time: 6000 },
-  { id: 11, src: "panels", alt: "Up close", time: 1000 },
-  { id: 12, src: "wells1", alt: "Wells Project", time: 4000 },
-  { id: 13, src: "wells2", alt: "Wells Project", time: 2000 },
-  { id: 14, src: "wells3", alt: "Wells up close", time: 6000 },
-  { id: 15, src: "wells4", alt: "Wells up close", time: 1000 },
-  { id: 16, src: "wells5", alt: "Wells up close", time: 3000 },
-  { id: 17, src: "wells6", alt: "Another happy customer!", time: 2000 },
-];
-
 const options = {
   buttons: {
     showDownloadButton: false,
     showAutoplayButton: false,
   },
 };
-
-items = items.map(function (item) {
-  return (
-    <Fade key={item.id} duration={item.time}>
-      <Lazyload>
-        <Image
-          cloudName="robitaille"
-          publicId={item.src}
-          width="100%"
-          alt={item.alt}
-        />
-      </Lazyload>
-    </Fade>
-  );
-});
 
 const breakpointColumnsObj = {
   default: 4,
@@ -59,12 +22,8 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-const WorkSection = () => {
-  const { fetchImages, images } = useContext(SolarContext);
-  useEffect(() => {
-    fetchImages();
-  }, [fetchImages]);
-
+const WorkSection = ({ images }) => {
+  let items;
   if (images) {
     items = images.map(function (item) {
       let description = `${item.location}`;
