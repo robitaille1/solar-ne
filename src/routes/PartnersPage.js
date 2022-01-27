@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import PageLayout from "../containers/PageLayout/PageLayout";
+import PageLayout from "../components/Redesign/PageLayout2";
 import PartnersSection from "../components/PartnersSection/PartnersSection";
 import { SolarContext } from "../context/SolarContext";
 

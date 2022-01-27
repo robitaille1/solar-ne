@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PageLayout from "../containers/PageLayout/PageLayout";
+import PageLayout from "../components/Redesign/PageLayout2";
 import PartnerSection from "../components/PartnerSection/PartnerSection";
 import { useParams } from "react-router-dom";
 
