@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { SolarContext } from "../context/SolarContext";
 import Nav from "../components/Redesign/Nav2";
 import Footer from "../components/Redesign/Footer2";
@@ -8,7 +8,11 @@ import BlogList from "../components/Redesign/BlogList";
 import Banner from "../components/Redesign/Banner";
 
 const BlogsPage = () => {
-  const { blogs } = useContext(SolarContext);
+  const { blogs, blogsPage, fetchBlogsPage } = useContext(SolarContext);
+
+  useEffect(() => {
+    fetchBlogsPage();
+  }, [fetchBlogsPage]);
 
   return (
     <Box>
@@ -19,7 +23,7 @@ const BlogsPage = () => {
       />
       <Box>
         <Box>
-          <BlogList blogs={blogs} />
+          <BlogList content={blogsPage} blogs={blogs} />
         </Box>
       </Box>
       <Reviews />

@@ -19,19 +19,20 @@ import { Link as ReachLink } from "react-router-dom";
 const BlogTags = (props) => {
   return (
     <HStack spacing={2} marginTop={props.marginTop}>
-      {props.tags.map((tag) => {
-        return (
-          <Tag
-            size={"md"}
-            variant="solid"
-            color={"green.400"}
-            backgroundColor={"green.50"}
-            key={tag}
-          >
-            {tag}
-          </Tag>
-        );
-      })}
+      {props.tags &&
+        props.tags.map((tag) => {
+          return (
+            <Tag
+              size={"md"}
+              variant="solid"
+              color={"green.400"}
+              backgroundColor={"green.50"}
+              key={tag}
+            >
+              {tag}
+            </Tag>
+          );
+        })}
     </HStack>
   );
 };
@@ -56,10 +57,10 @@ export const BlogAuthor = (props) => {
   );
 };
 
-const BlogList = (props) => {
+const BlogList = ({ blogs, content }) => {
   const sortedBlogs =
-    props.blogs &&
-    props.blogs.sort(function (a, b) {
+    blogs &&
+    blogs.sort(function (a, b) {
       return new Date(b.published_at) - new Date(a.published_at);
     });
   return (
@@ -87,7 +88,7 @@ const BlogList = (props) => {
               <Image
                 width={"100%"}
                 borderRadius="lg"
-                src={props.blogs && sortedBlogs[0].image.url}
+                src={blogs && sortedBlogs[0].image.url}
                 alt="some good alt text"
                 objectFit="contain"
               />
@@ -117,23 +118,16 @@ const BlogList = (props) => {
             as={ReachLink}
             textDecoration="none"
             _hover={{ textDecoration: "none" }}
-            to={`/blogs/${props.blogs && sortedBlogs[0].slug}`}
+            to={`/blogs/${blogs && sortedBlogs[0].slug}`}
           >
-            <BlogTags tags={["Solar", "Finance"]} />
-            <Heading marginTop="1">
-              {/* <Link textDecoration="none" _hover={{ textDecoration: "none" }}> */}
-              {props.blogs && sortedBlogs[0].title}
-              {/* </Link> */}
-            </Heading>
+            <BlogTags tags={blogs && sortedBlogs[0].Tags.split(",")} />
+            <Heading marginTop="1">{blogs && sortedBlogs[0].title}</Heading>
             <Text as="p" marginTop="2" color={"gray.500"} fontSize="lg">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              {blogs && sortedBlogs[0].Excerpt}
             </Text>
             <BlogAuthor
               name="Andy"
-              date={props.blogs && sortedBlogs[0].published_at}
+              date={blogs && sortedBlogs[0].published_at}
             />
           </Link>
         </Box>
@@ -143,7 +137,7 @@ const BlogList = (props) => {
       </Heading>
       <Divider marginTop="5" />
       <Wrap spacing="30px" marginTop="5">
-        {props.blogs &&
+        {blogs &&
           sortedBlogs.slice(1).map((blog) => (
             <WrapItem
               width={{ base: "100%", sm: "100%", md: "45%", lg: "30%" }}
@@ -173,7 +167,10 @@ const BlogList = (props) => {
                       />
                     </Link>
                   </Box>
-                  <BlogTags tags={["Engineering", "Product"]} marginTop="3" />
+                  <BlogTags
+                    tags={blog.Tags && blog.Tags.split(",")}
+                    marginTop="3"
+                  />
                   <Heading fontSize="xl" marginTop="2">
                     <Link
                       textDecoration="none"
@@ -183,11 +180,7 @@ const BlogList = (props) => {
                     </Link>
                   </Heading>
                   <Text as="p" fontSize="md" marginTop="2" color={"gray.500"}>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    {blog.Excerpt}
                   </Text>
                   <BlogAuthor name="Andy" date={blog.published_at} />
                 </Box>
@@ -198,28 +191,7 @@ const BlogList = (props) => {
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
         <Heading as="h2">What we write about</Heading>
         <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
-        </Text>
-        <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
-        </Text>
-        <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+          {content.BlogsDescription}
         </Text>
       </VStack>
     </Container>

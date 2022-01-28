@@ -9,6 +9,10 @@ import {
   Link,
   Button,
   Flex,
+  SimpleGrid,
+  Stack,
+  Divider,
+  Tag,
 } from "@chakra-ui/react";
 import { Link as ReachLink } from "react-router-dom";
 import { FiChevronRight } from "react-icons/fi";
@@ -37,15 +41,42 @@ export const BlogAuthor = (props) => {
 const BlogPost = ({ blog }) => {
   return (
     <Container maxW={"5xl"} py={12}>
-      <HStack>
-        <Image width={"40%"} src={blog.image.url} />
-        <Box pl={10} width={"60%"}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} rounded={"md"}>
+        <Flex>
+          <Image
+            rounded={"md"}
+            alt={"feature image"}
+            width={"100%"}
+            src={blog.image.url}
+            objectFit={"cover"}
+          />
+        </Flex>
+
+        <Stack justify={"center"} pr={10}>
+          <HStack spacing={2}>
+            {blog.Tags &&
+              blog.Tags.split(",").map((tag) => {
+                return (
+                  <Tag
+                    size={"md"}
+                    variant="solid"
+                    color={"green.400"}
+                    backgroundColor={"green.50"}
+                    key={tag}
+                  >
+                    {tag}
+                  </Tag>
+                );
+              })}
+          </HStack>
           <Heading>{blog.title}</Heading>
           <BlogAuthor name="Andy" date={blog && blog.published_at} />
-        </Box>
-      </HStack>
+        </Stack>
+      </SimpleGrid>
 
-      <Box py={10}>
+      <Divider my={10} />
+
+      <Box pb={10}>
         <Markdown content={blog.content} />
       </Box>
 
