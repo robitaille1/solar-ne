@@ -16,6 +16,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   Image,
+  chakra,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -25,11 +26,12 @@ import {
 } from "@chakra-ui/icons";
 import NavFlag from "../../assets/logo-notext.png";
 import { Link as ScrollLink } from "react-scroll";
-import { Link as ReachLink } from "react-router-dom";
+import { Link as ReachLink, useLocation } from "react-router-dom";
 import ReactGA from "react-ga";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const location = useLocation();
 
   const ClickHandler = (item) => {
     ReactGA.event({
@@ -93,7 +95,10 @@ export default function WithSubnavigation() {
               fontSize={{ base: 20, md: 14, lg: 20 }}
               as={"h1"}
             >
-              Solar Power New England
+              Solar Power{" "}
+              <chakra.span display={{ base: "block", md: "inline" }}>
+                New England
+              </chakra.span>
             </Text>
           </Link>
 
@@ -108,28 +113,47 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <ScrollLink
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={2000}
-          >
-            <Button
-              display={{ base: "none", md: "inline-flex" }}
-              fontSize={"sm"}
-              fontWeight={600}
-              color={"white"}
-              bg={"green.400"}
-              href={"#"}
-              _hover={{
-                bg: "green.300",
-              }}
-              onClick={() => ClickHandler("Contact Button")}
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={2000}
             >
-              Contact Us
-            </Button>
-          </ScrollLink>
+              <Button
+                display={{ base: "none", md: "inline-flex" }}
+                fontSize={"sm"}
+                fontWeight={600}
+                color={"white"}
+                bg={"green.400"}
+                href={"#"}
+                _hover={{
+                  bg: "green.300",
+                }}
+                onClick={() => ClickHandler("Contact Button")}
+              >
+                Contact Us
+              </Button>
+            </ScrollLink>
+          ) : (
+            <Link as={ReachLink} to="/contact">
+              <Button
+                display={{ base: "none", md: "inline-flex" }}
+                fontSize={"sm"}
+                fontWeight={600}
+                color={"white"}
+                bg={"green.400"}
+                href={"#"}
+                _hover={{
+                  bg: "green.300",
+                }}
+                onClick={() => ClickHandler("Contact Button")}
+              >
+                Contact Us
+              </Button>
+            </Link>
+          )}
         </Stack>
       </Flex>
 
@@ -339,6 +363,11 @@ const NAV_ITEMS = [
         href: "/our-work",
       },
       {
+        label: "Partners",
+        subLabel: "See who we partner with",
+        href: "/partners",
+      },
+      {
         label: "Blogs",
         subLabel: "Keep up to date with everything solar",
         href: "/blogs",
@@ -352,11 +381,6 @@ const NAV_ITEMS = [
         label: "Investors",
         subLabel: "Contribute to sustainability",
         href: "/investors",
-      },
-      {
-        label: "Partners",
-        subLabel: "See who we partner with",
-        href: "/partners",
       },
       {
         label: "Careers",
