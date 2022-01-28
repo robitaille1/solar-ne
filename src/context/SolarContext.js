@@ -33,6 +33,11 @@ const solarReducer = (state, action) => {
         ...state,
         careersPage: action.careersPage,
       };
+    case "SET_BLOGSPAGE":
+      return {
+        ...state,
+        blogsPage: action.blogsPage,
+      };
     case "SET_RESOURCES":
       return {
         ...state,
@@ -47,6 +52,16 @@ const solarReducer = (state, action) => {
       return {
         ...state,
         hero: action.hero,
+      };
+    case "SET_TESTIMONIALS":
+      return {
+        ...state,
+        testimonials: action.testimonials,
+      };
+    case "SET_TESTIMONIALSSECTION":
+      return {
+        ...state,
+        testimonialsSection: action.testimonialsSection,
       };
     default:
       throw new Error("Nada");
@@ -64,6 +79,9 @@ const SolarContextProvider = (props) => {
     resourcesPage: {},
     partners: {},
     hero: null,
+    blogsPage: {},
+    testimonialsSection: {},
+    testimonials: {},
   });
 
   const {
@@ -76,6 +94,9 @@ const SolarContextProvider = (props) => {
     resourcesPage,
     partners,
     hero,
+    blogsPage,
+    testimonialsSection,
+    testimonials,
   } = state;
 
   const fetchData = useCallback(() => {
@@ -83,14 +104,19 @@ const SolarContextProvider = (props) => {
       fetch("https://solarpowerne.herokuapp.com/homepage"),
       fetch("https://solarpowerne.herokuapp.com/blogs"),
       fetch("https://solarpowerne.herokuapp.com/hero-image"),
+      fetch("https://solarpowerne.herokuapp.com/testimonials-section"),
     ])
-      .then(([res1, res2, res3]) =>
-        Promise.all([res1.json(), res2.json(), res3.json()])
+      .then(([res1, res2, res3, res4]) =>
+        Promise.all([res1.json(), res2.json(), res3.json(), res4.json()])
       )
-      .then(([data1, data2, data3]) => {
+      .then(([data1, data2, data3, data4]) => {
         dispatch({ type: "SET_HOMEPAGE", homepage: data1 });
         dispatch({ type: "SET_BLOGS", blogs: data2 });
         dispatch({ type: "SET_HERO", hero: data3 });
+        dispatch({
+          type: "SET_TESTIMONIALSSECTION",
+          testimonialsSection: data4,
+        });
       });
   }, []);
 
@@ -142,6 +168,22 @@ const SolarContextProvider = (props) => {
       });
   }, []);
 
+  const fetchBlogsPage = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/blogs-page")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_BLOGSPAGE", blogsPage: resData });
+      });
+  }, []);
+
+  const fetchTestimonials = useCallback(() => {
+    fetch("https://solarpowerne.herokuapp.com/testimonials")
+      .then((response) => response.json())
+      .then((resData) => {
+        dispatch({ type: "SET_TESTIMONIALS", testimonials: resData });
+      });
+  }, []);
+
   const providerValue = {
     fetchData,
     fetchImages,
@@ -150,6 +192,7 @@ const SolarContextProvider = (props) => {
     fetchCareersPage,
     fetchResourcesPage,
     fetchPartners,
+    fetchBlogsPage,
     blogs,
     homepage,
     images,
@@ -159,6 +202,10 @@ const SolarContextProvider = (props) => {
     resourcesPage,
     partners,
     hero,
+    blogsPage,
+    fetchTestimonials,
+    testimonials,
+    testimonialsSection,
   };
 
   return (
