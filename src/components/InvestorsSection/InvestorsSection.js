@@ -1,17 +1,26 @@
 import React from "react";
 import Banner from "../Redesign/Banner";
-import { Container, Box } from "@chakra-ui/react";
+import { Container, Box, Skeleton, Stack } from "@chakra-ui/react";
 import ContactCTA from "../Redesign/ContactCTA";
 import Markdown from "../Redesign/Markdown";
 
-const investorsSection = (props) => (
+const investorsSection = ({ content }) => (
   <Box>
     <Banner
       title="Investors"
       image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
     />
     <Container maxW={"5xl"} py={12} color={"gray.500"}>
-      <Markdown content={props.content} />
+      {content ? (
+        <Markdown content={content} />
+      ) : (
+        <Stack>
+          <Skeleton height="30px" />
+          <Skeleton height="30px" />
+          <Skeleton height="30px" />
+          <Skeleton height="30px" />
+        </Stack>
+      )}
     </Container>
     <ContactCTA
       title="Join the Equitable Energy Initiative"

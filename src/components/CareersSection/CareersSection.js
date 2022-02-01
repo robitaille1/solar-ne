@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "../Redesign/Banner";
-import ReactMarkdown from "react-markdown";
 import {
   Box,
   Button,
@@ -17,12 +16,14 @@ import {
   VStack,
   Container,
   Text,
+  Skeleton,
 } from "@chakra-ui/react";
 import { BsPerson } from "react-icons/bs";
 import { MdOutlineEmail, MdPhoneIphone } from "react-icons/md";
 import ReactGA from "react-ga";
+import Markdown from "../Redesign/Markdown";
 
-const CareersSection = (props) => {
+const CareersSection = ({ content, title }) => {
   const formSubmit = (e) => {
     ReactGA.event({
       category: "FORM",
@@ -40,7 +41,16 @@ const CareersSection = (props) => {
       <Container maxW={"5xl"} py={12}>
         <Heading mb={5}>Join the team!</Heading>
         <Text color={"gray.500"} fontSize={"lg"}>
-          <ReactMarkdown source={props.content} />
+          {content ? (
+            <Markdown content={content} />
+          ) : (
+            <Stack>
+              <Skeleton height="30px" />
+              <Skeleton height="30px" />
+              <Skeleton height="30px" />
+              <Skeleton height="30px" />
+            </Stack>
+          )}
         </Text>
       </Container>
 
@@ -64,7 +74,7 @@ const CareersSection = (props) => {
                   md: "5xl",
                 }}
               >
-                {props.title}
+                {title}
               </Heading>
 
               <Stack
