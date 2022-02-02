@@ -7,11 +7,12 @@ import {
   Stack,
   Heading,
   Skeleton,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
 import Markdown from "./Markdown";
 
-export default function SplitWithImage(props) {
+export default function SplitWithImage({ content, content2 }) {
   return (
     <Container maxW={"5xl"} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
@@ -34,14 +35,23 @@ export default function SplitWithImage(props) {
             , We're Solar Power New England
           </Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
-            {props.content ? (
-              <Markdown content={props.content} />
+            {content ? (
+              <Markdown content={content} />
             ) : (
               <Skeleton height="100px" />
             )}
           </Text>
         </Stack>
       </SimpleGrid>
+      <Box mt={{ base: 1, md: 5 }}>
+        <Text color={"gray.500"} fontSize={"lg"}>
+          {content2 ? (
+            <Markdown content={content2} />
+          ) : (
+            <Skeleton height="100px" />
+          )}
+        </Text>
+      </Box>
     </Container>
   );
 }
