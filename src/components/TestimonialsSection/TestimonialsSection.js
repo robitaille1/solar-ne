@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   Heading,
   Text,
+  Skeleton,
 } from "@chakra-ui/react";
 
 function TestmonialCard({ name, city, image, quote }) {
@@ -101,17 +102,33 @@ const TestimonialsSection = ({ t }) => {
             Northeast!
           </Text>
         </Box>
-        <SimpleGrid
-          columns={{ base: 1, xl: 2 }}
-          spacing={"20"}
-          mt={16}
-          mx={"auto"}
-        >
-          {t.length &&
-            t.map((cardInfo, index) => (
+        {t.length > 0 ? (
+          <SimpleGrid
+            columns={{ base: 1, xl: 2 }}
+            spacing={"20"}
+            mt={16}
+            mx={"auto"}
+            width={"100%"}
+            maxW={"6xl"}
+          >
+            {t.map((cardInfo, index) => (
               <TestmonialCard {...cardInfo} index={index} />
             ))}
-        </SimpleGrid>
+          </SimpleGrid>
+        ) : (
+          <SimpleGrid
+            columns={{ base: 1, xl: 2 }}
+            spacing={"20"}
+            mt={16}
+            mx={"auto"}
+            width={"100%"}
+            maxW={"6xl"}
+          >
+            <Skeleton rounded={"xl"} height={200} />
+            <Skeleton rounded={"xl"} height={200} />
+          </SimpleGrid>
+        )}
+
         <Box mb={50}>
           <Icon viewBox="0 0 40 35" mt={14} boxSize={10} color={"green.400"}>
             <path

@@ -6,7 +6,16 @@ import { Fade } from "react-reveal";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Image } from "cloudinary-react";
 import ReactGA from "react-ga";
-import { Text, Heading, Box, Link, Stack, Container } from "@chakra-ui/react";
+import {
+  Text,
+  Heading,
+  Box,
+  Link,
+  Stack,
+  Container,
+  Skeleton,
+  SimpleGrid,
+} from "@chakra-ui/react";
 
 const options = {
   buttons: {
@@ -31,8 +40,8 @@ const WorkSection = ({ images }) => {
         description = `${item.description} - ${item.location}`;
       }
       return (
-        <Fade duration={Math.floor(Math.random() * 7000) + 1000}>
-          <Lazyload key={item.id}>
+        <Fade key={item.id} duration={Math.floor(Math.random() * 7000) + 1000}>
+          <Lazyload>
             <Image
               cloudName="robitaille"
               publicId={item.Image.hash}
@@ -54,17 +63,32 @@ const WorkSection = ({ images }) => {
           energy independent!
         </Text>
       </Stack>
-      <Test>
-        <SRLWrapper options={options}>
-          <Masonry
-            breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
-          >
-            {items}
-          </Masonry>
-        </SRLWrapper>
-      </Test>
+
+      {images ? (
+        <Test>
+          <SRLWrapper options={options}>
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {items}
+            </Masonry>
+          </SRLWrapper>
+        </Test>
+      ) : (
+        <SimpleGrid spacing={5} columns={{ base: 1, sm: 2, md: 3, lg: 4 }}>
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+          <Skeleton height={"330px"} width={"100%"} />
+        </SimpleGrid>
+      )}
+
       <Box fontSize={20} padding={10} textAlign={"center"}>
         <Text>
           Interested in how we can help you start your clean energy journey?
