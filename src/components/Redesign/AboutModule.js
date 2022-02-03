@@ -14,7 +14,7 @@ import Markdown from "./Markdown";
 
 export default function SplitWithImage({ content, content2 }) {
   return (
-    <Container maxW={"5xl"} py={12}>
+    <Container maxW={"5xl"} pt={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Flex>
           <Image

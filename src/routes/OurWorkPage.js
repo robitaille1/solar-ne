@@ -9,6 +9,7 @@ const OurWorkPage = () => {
   useEffect(() => {
     fetchImages();
   }, [fetchImages]);
+
   return (
     <PageLayout>
       <Banner

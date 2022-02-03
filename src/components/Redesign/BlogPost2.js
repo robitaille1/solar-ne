@@ -43,13 +43,15 @@ const BlogPost = ({ blog }) => {
     <Container maxW={"5xl"} py={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} rounded={"md"}>
         <Flex>
-          <Image
-            rounded={"md"}
-            alt={"feature image"}
-            width={"100%"}
-            src={blog.image.url}
-            objectFit={"cover"}
-          />
+          {blog && (
+            <Image
+              rounded={"md"}
+              alt={"feature image"}
+              width={"100%"}
+              src={blog.image.url}
+              objectFit={"cover"}
+            />
+          )}
         </Flex>
 
         <Stack justify={"center"} pr={10}>
@@ -69,8 +71,12 @@ const BlogPost = ({ blog }) => {
                 );
               })}
           </HStack>
-          <Heading>{blog.title}</Heading>
-          <BlogAuthor name="Andy" date={blog && blog.published_at} />
+          {blog && (
+            <>
+              <Heading>{blog.title}</Heading>
+              <BlogAuthor name="Andy" date={blog && blog.published_at} />
+            </>
+          )}
         </Stack>
       </SimpleGrid>
 
@@ -95,8 +101,9 @@ const BlogPost = ({ blog }) => {
           <Button
             bg={"white"}
             rounded={"full"}
-            _hover={{ bg: "whiteAlpha.800" }}
-            color={"gray.700"}
+            variant={"ghost"}
+            colorScheme={"green"}
+            ml={2}
           >
             All Blogs <FiChevronRight style={{ marginTop: "2px" }} />
           </Button>

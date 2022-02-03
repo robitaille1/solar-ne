@@ -63,13 +63,15 @@ function TestmonialCard({ name, city, image, quote }) {
           <chakra.span color={"gray.500"}> - {city}</chakra.span>
         </Text>
       </Flex>
-      <Avatar
-        src={image.url}
-        height={"80px"}
-        width={"80px"}
-        alignSelf={"center"}
-        m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
-      />
+      {image && (
+        <Avatar
+          src={image.url}
+          height={"80px"}
+          width={"80px"}
+          alignSelf={"center"}
+          m={{ base: "0 0 35px 0", md: "0 0 0 50px" }}
+        />
+      )}
     </Flex>
   );
 }
@@ -90,9 +92,9 @@ const TestimonialsSection = ({ t }) => {
       >
         <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
           <Text fontWeight={"bold"} fontSize={"lg"} color={"green.400"}>
-            People love us
+            Good Work
           </Text>
-          <Heading py={5}>You're in good company</Heading>
+          <Heading py={5}>You're in great company</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             See why{" "}
             <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
