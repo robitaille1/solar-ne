@@ -103,16 +103,15 @@ const SolarContextProvider = (props) => {
     Promise.all([
       fetch("https://solarpowerne.herokuapp.com/homepage"),
       fetch("https://solarpowerne.herokuapp.com/blogs"),
-      fetch("https://solarpowerne.herokuapp.com/hero-image"),
       fetch("https://solarpowerne.herokuapp.com/testimonials-section"),
     ])
-      .then(([res1, res2, res3, res4]) =>
-        Promise.all([res1.json(), res2.json(), res3.json(), res4.json()])
+      .then(([res1, res2, res4]) =>
+        Promise.all([res1.json(), res2.json(), res4.json()])
       )
-      .then(([data1, data2, data3, data4]) => {
+      .then(([data1, data2, data4]) => {
         dispatch({ type: "SET_HOMEPAGE", homepage: data1 });
         dispatch({ type: "SET_BLOGS", blogs: data2 });
-        dispatch({ type: "SET_HERO", hero: data3 });
+        // dispatch({ type: "SET_HERO", hero: data3 });
         dispatch({
           type: "SET_TESTIMONIALSSECTION",
           testimonialsSection: data4,
