@@ -50,6 +50,14 @@ const SocialButton = ({ children, label, href }) => {
   );
 };
 
+const ListHeader = ({ children }) => {
+  return (
+    <Text fontWeight={"500"} fontSize={"md"} mb={1}>
+      {children}
+    </Text>
+  );
+};
+
 export default function LargeWithNewsletter() {
   const { homepage } = useContext(SolarContext);
   const date = new Date();
@@ -165,20 +173,25 @@ export default function LargeWithNewsletter() {
             </Text>
           </Stack>
           <Stack align={"flex-start"}>
+            <ListHeader>About Us</ListHeader>
             <ChakraLink as={ReachLink} to={"/about"}>
-              About Us
+              Our Story
             </ChakraLink>
             <ChakraLink as={ReachLink} to={"/our-work"}>
               Our Work
             </ChakraLink>
+            <ChakraLink as={ReachLink} to={"/testimonials"}>
+              Testimonials
+            </ChakraLink>
             <ChakraLink as={ReachLink} to={"/blogs"}>
               Blogs
             </ChakraLink>
-            <ChakraLink as={ReachLink} to={"/contact"}>
-              Contact
+            <ChakraLink mt={2} as={ReachLink} to={"/resources"}>
+              Resources
             </ChakraLink>
           </Stack>
           <Stack align={"flex-start"}>
+            <ListHeader>Get Involved</ListHeader>
             <ChakraLink as={ReachLink} to={"/investors"}>
               Investors
             </ChakraLink>
@@ -188,8 +201,8 @@ export default function LargeWithNewsletter() {
             <ChakraLink as={ReachLink} to={"/careers"}>
               Careers
             </ChakraLink>
-            <ChakraLink as={ReachLink} to={"/resources"}>
-              Resources
+            <ChakraLink as={ReachLink} to={"/contact"}>
+              Contact
             </ChakraLink>
           </Stack>
           <Stack align={"flex-start"} justifyContent={"space-between"}>

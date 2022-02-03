@@ -363,15 +363,20 @@ const NAV_ITEMS = [
         href: "/our-work",
       },
       {
+        label: "Testimonials",
+        subLabel: "See what our clients have to say",
+        href: "/testimonials",
+      },
+      {
         label: "Partners",
         subLabel: "See who we partner with",
         href: "/partners",
       },
-      {
-        label: "Blogs",
-        subLabel: "Keep up to date with everything solar",
-        href: "/blogs",
-      },
+      // {
+      //   label: "Blogs",
+      //   subLabel: "Keep up to date with everything solar",
+      //   href: "/blogs",
+      // },
     ],
   },
   {
@@ -391,6 +396,18 @@ const NAV_ITEMS = [
   },
   {
     label: "Resources",
-    href: "/resources",
+    children: [
+      {
+        label: "Useful Links",
+        subLabel:
+          "Resources that we hope are helpful on your clean energy journey",
+        href: "/resources",
+      },
+      {
+        label: "Blogs",
+        subLabel: "Keep up to date with everything solar",
+        href: "/blogs",
+      },
+    ],
   },
 ];
