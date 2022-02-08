@@ -35,8 +35,9 @@ export default function ContactFormWithSocialButtons(props) {
     >
       <Box
         borderRadius="lg"
-        m={{ base: 5, md: 5, lg: 5 }}
-        p={{ base: 5, lg: 10 }}
+        m={4}
+        p={{ base: 0, lg: 10 }}
+        pb={4}
         width={"100%"}
       >
         <Box>

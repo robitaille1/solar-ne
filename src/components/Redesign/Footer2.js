@@ -52,7 +52,7 @@ const SocialButton = ({ children, label, href }) => {
 
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"md"} mb={1}>
+    <Text as={"h4"} fontWeight={"500"} fontSize={"md"} mb={1}>
       {children}
     </Text>
   );
@@ -87,7 +87,11 @@ export default function LargeWithNewsletter() {
             src="https://www.homeadvisor.com/images/sp-badges/soap-solid-border.png?sp=97092349&key=9b76e46ada6034f78ad60c35d2b86fe7"
             height={"100px"}
           />
-          <Box ml={10} maxW={"50%"}>
+          <Box
+            ml={{ base: 0, md: 10 }}
+            mt={{ base: 5, md: 0 }}
+            maxW={{ base: "80%", md: "50%" }}
+          >
             <a
               href="https://www.lightstream.com/?fact=14070&cid=AA|DSK|P|solar|E|AFF|fact=14070&irad=68132&irmp=2437142"
               id="68132"

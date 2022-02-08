@@ -19,7 +19,7 @@ const NotFound = (props) => (
         404
       </Heading>
       <Text fontSize="18px" mt={3} mb={2}>
-        Page Not Found
+        Sorry! It looks like the power went out
       </Text>
       <Text color={"gray.500"} mb={6}>
         The page you're looking for does not seem to exist
