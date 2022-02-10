@@ -22,6 +22,8 @@ const partnersSection = (props) => {
           alignItems={"start"}
           templateColumns={{ sm: "1fr", md: "1fr 1fr 1fr" }}
           spacing={8}
+          maxW={"6xl"}
+          m={"0 auto"}
         >
           {partners.map((p) => (
             <PartnersCard key={p.id} partner={p} />
