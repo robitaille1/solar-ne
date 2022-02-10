@@ -40,7 +40,7 @@ export default function ContactCTA({ title, description, image }) {
           {description}
         </Text>
         <Box display="inline-flex" rounded="md" shadow="md">
-          <Link as={ReachLink} to="/contact">
+          <Link as={ReachLink} to="/contact" style={{ textDecoration: "none" }}>
             <Button
               display={{ base: "none", md: "inline-flex" }}
               fontSize={"sm"}

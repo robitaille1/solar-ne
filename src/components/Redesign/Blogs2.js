@@ -42,6 +42,7 @@ export default function Blogs() {
           textAlign={"center"}
           width={"max-content"}
           margin={"0 auto"}
+          style={{ textDecoration: "none" }}
         >
           <Button
             bg={"white"}

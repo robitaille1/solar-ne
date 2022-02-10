@@ -24,14 +24,14 @@ const NotFound = (props) => (
       <Text color={"gray.500"} mb={6}>
         The page you're looking for does not seem to exist
       </Text>
-      <Link as={ReachLink} to="/">
+      <Link as={ReachLink} to="/" style={{ textDecoration: "none" }}>
         <Button
           colorScheme="green"
           bgGradient="linear(to-r, green.400, green.500, green.600)"
           color="white"
           variant="solid"
         >
-          Go to Home
+          Home
         </Button>
       </Link>
     </Box>

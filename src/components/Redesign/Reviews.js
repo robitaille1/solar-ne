@@ -184,6 +184,7 @@ export default function WithSpeechBubbles() {
             to="/testimonials"
             textAlign={"center"}
             width={"max-content"}
+            style={{ textDecoration: "none" }}
           >
             <Button
               bg={"green.400"}

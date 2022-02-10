@@ -87,7 +87,7 @@ const BlogPost = ({ blog }) => {
       </Box>
 
       <Flex justify={"center"}>
-        <Link as={ReachLink} to="/">
+        <Link as={ReachLink} to="/" style={{ textDecoration: "none" }}>
           <Button
             bg={"green.400"}
             rounded={"full"}
@@ -97,7 +97,7 @@ const BlogPost = ({ blog }) => {
             Home
           </Button>
         </Link>
-        <Link as={ReachLink} to="/blogs">
+        <Link as={ReachLink} to="/blogs" style={{ textDecoration: "none" }}>
           <Button
             bg={"white"}
             rounded={"full"}

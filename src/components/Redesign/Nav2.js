@@ -75,6 +75,7 @@ export default function WithSubnavigation() {
         >
           <Link
             as={ReachLink}
+            style={{ textDecoration: "none" }}
             to="/"
             _hover={{ textDecoration: "none", opacity: ".6" }}
             display={"flex"}
@@ -137,7 +138,11 @@ export default function WithSubnavigation() {
               </Button>
             </ScrollLink>
           ) : (
-            <Link as={ReachLink} to="/contact">
+            <Link
+              as={ReachLink}
+              to="/contact"
+              style={{ textDecoration: "none" }}
+            >
               <Button
                 display={{ base: "none", md: "inline-flex" }}
                 fontSize={"sm"}

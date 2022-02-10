@@ -23,7 +23,7 @@ const partnerSection = ({ partner }) => {
       <Box py={10}>
         <Markdown content={partner && partner[0].PartnerDescription} />
         <Flex justify={"center"} mt={10}>
-          <Link as={ReachLink} to="/">
+          <Link as={ReachLink} to="/" style={{ textDecoration: "none" }}>
             <Button
               bg={"green.400"}
               rounded={"full"}
@@ -33,7 +33,11 @@ const partnerSection = ({ partner }) => {
               Home
             </Button>
           </Link>
-          <Link as={ReachLink} to="/partners">
+          <Link
+            as={ReachLink}
+            to="/partners"
+            style={{ textDecoration: "none" }}
+          >
             <Button
               bg={"white"}
               rounded={"full"}
