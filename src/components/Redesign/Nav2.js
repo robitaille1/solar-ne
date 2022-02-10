@@ -372,11 +372,6 @@ const NAV_ITEMS = [
         subLabel: "See who we partner with",
         href: "/partners",
       },
-      // {
-      //   label: "Blogs",
-      //   subLabel: "Keep up to date with everything solar",
-      //   href: "/blogs",
-      // },
     ],
   },
   {
@@ -399,8 +394,7 @@ const NAV_ITEMS = [
     children: [
       {
         label: "Useful Links",
-        subLabel:
-          "Resources that we hope are helpful on your clean energy journey",
+        subLabel: "Resources to help jumpstart your clean energy journey",
         href: "/resources",
       },
       {

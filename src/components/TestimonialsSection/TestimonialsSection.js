@@ -22,8 +22,8 @@ function TestmonialCard({ name, city, image, quote }) {
       width={"full"}
       rounded={"xl"}
       p={10}
-      justifyContent={"space-between"}
       position={"relative"}
+      h={"max-content"}
       bg={useColorModeValue("white", "gray.800")}
       _after={{
         content: '""',
@@ -91,27 +91,24 @@ const TestimonialsSection = ({ t }) => {
         width={"full"}
       >
         <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
-          <Text fontWeight={"bold"} fontSize={"lg"} color={"green.400"}>
-            Good Work
-          </Text>
           <Heading py={5}>You're in great company</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             See why{" "}
-            <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
+            <chakra.strong color={"green.400"}>
               Solar Power New England
             </chakra.strong>{" "}
-            is one of the most highly praised Solar PV installers in the
-            Northeast!
+            is one of the most highly praised Solar PV installers in Maine!
           </Text>
         </Box>
         {t.length > 0 ? (
           <SimpleGrid
-            columns={{ base: 1, xl: 2 }}
+            columns={{ base: 1, md: 2 }}
             spacing={"20"}
             mt={16}
             mx={"auto"}
             width={"100%"}
             maxW={"6xl"}
+            px={{ base: "10px", md: "unset" }}
           >
             {t.map((cardInfo, index) => (
               <TestmonialCard {...cardInfo} index={index} />
@@ -125,6 +122,7 @@ const TestimonialsSection = ({ t }) => {
             mx={"auto"}
             width={"100%"}
             maxW={"6xl"}
+            // px={{ base: "10px" }}
           >
             <Skeleton rounded={"xl"} height={200} />
             <Skeleton rounded={"xl"} height={200} />

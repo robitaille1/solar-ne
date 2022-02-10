@@ -11,7 +11,7 @@ export default function Banner(props) {
   return (
     <Flex
       w={"full"}
-      h={{ base: "10vh", md: "20vh" }}
+      h={{ base: "12vh", md: "20vh" }}
       backgroundImage={props.image}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
