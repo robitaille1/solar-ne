@@ -120,10 +120,14 @@ const BlogList = ({ blogs, content }) => {
             _hover={{ textDecoration: "none" }}
             to={`/blogs/${blogs && sortedBlogs[0].slug}`}
           >
-            <BlogTags tags={blogs && sortedBlogs[0].Tags.split(",")} />
+            <BlogTags
+              tags={
+                blogs && sortedBlogs[0].Tags && sortedBlogs[0].Tags.split(",")
+              }
+            />
             <Heading marginTop="1">{blogs && sortedBlogs[0].title}</Heading>
             <Text as="p" marginTop="2" color={"gray.500"} fontSize="lg">
-              {blogs && sortedBlogs[0].Excerpt}
+              {blogs && sortedBlogs[0].Excerpt && sortedBlogs[0].Excerpt}
             </Text>
             <BlogAuthor
               name="Andy"
@@ -156,7 +160,7 @@ const BlogList = ({ blogs, content }) => {
                     >
                       <Image
                         transform="scale(1.0)"
-                        src={blog.image.url}
+                        src={blog.image && blog.image.url}
                         alt="some text"
                         objectFit="contain"
                         width="100%"
@@ -180,7 +184,7 @@ const BlogList = ({ blogs, content }) => {
                     </Link>
                   </Heading>
                   <Text as="p" fontSize="md" marginTop="2" color={"gray.500"}>
-                    {blog.Excerpt}
+                    {blog.Excerpt && blog.Excerpt}
                   </Text>
                   <BlogAuthor name="Andy" date={blog.published_at} />
                 </Box>
@@ -188,12 +192,14 @@ const BlogList = ({ blogs, content }) => {
             </WrapItem>
           ))}
       </Wrap>
-      <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-        <Heading as="h2">What we write about</Heading>
-        <Text as="p" fontSize="lg">
-          {content.BlogsDescription}
-        </Text>
-      </VStack>
+      {content.BlogsDescription && (
+        <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
+          <Heading as="h2">What we write about</Heading>
+          <Text as="p" fontSize="lg">
+            {content.BlogsDescription}
+          </Text>
+        </VStack>
+      )}
     </Container>
   );
 };

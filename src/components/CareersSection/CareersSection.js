@@ -86,6 +86,7 @@ const CareersSection = ({ content, title }) => {
                   md: "75%",
                   lg: "65%",
                 }}
+                maxW={"700px"}
               >
                 <Box
                   bg={useColorModeValue("white", "gray.700")}

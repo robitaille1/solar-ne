@@ -52,7 +52,7 @@ const SocialButton = ({ children, label, href }) => {
 
 const ListHeader = ({ children }) => {
   return (
-    <Text as={"h4"} fontWeight={"500"} fontSize={"md"} mb={1}>
+    <Text as={"h4"} fontWeight={"500"} fontSize={"lg"} mb={1}>
       {children}
     </Text>
   );
@@ -187,11 +187,8 @@ export default function LargeWithNewsletter() {
             <ChakraLink as={ReachLink} to={"/testimonials"}>
               Testimonials
             </ChakraLink>
-            <ChakraLink as={ReachLink} to={"/blogs"}>
-              Blogs
-            </ChakraLink>
-            <ChakraLink mt={2} as={ReachLink} to={"/resources"}>
-              Resources
+            <ChakraLink as={ReachLink} to={"/partners"}>
+              Partners
             </ChakraLink>
           </Stack>
           <Stack align={"flex-start"}>
@@ -199,15 +196,22 @@ export default function LargeWithNewsletter() {
             <ChakraLink as={ReachLink} to={"/investors"}>
               Investors
             </ChakraLink>
-            <ChakraLink as={ReachLink} to={"/partners"}>
-              Partners
-            </ChakraLink>
             <ChakraLink as={ReachLink} to={"/careers"}>
               Careers
             </ChakraLink>
             <ChakraLink as={ReachLink} to={"/contact"}>
               Contact
             </ChakraLink>
+
+            <Stack mt={"1.5rem !important"}>
+              <ListHeader>Resources</ListHeader>
+              <ChakraLink as={ReachLink} to={"/resources"}>
+                Useful Links
+              </ChakraLink>
+              <ChakraLink as={ReachLink} to={"/blogs"}>
+                Blogs
+              </ChakraLink>
+            </Stack>
           </Stack>
           <Stack align={"flex-start"} justifyContent={"space-between"}>
             <Box display={"flex"} flexDirection={"column"}>

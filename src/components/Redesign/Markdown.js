@@ -20,11 +20,7 @@ const Markdown = ({ content }) => {
   const theme = {
     p: (props) => {
       const { children } = props;
-      return (
-        <Text mb={5} color={"gray.500"}>
-          {children}
-        </Text>
-      );
+      return <Text mb={5}>{children}</Text>;
     },
     h2: (props) => {
       const { children } = props;
