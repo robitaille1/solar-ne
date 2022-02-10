@@ -199,9 +199,6 @@ export default function LargeWithNewsletter() {
             <ChakraLink as={ReachLink} to={"/careers"}>
               Careers
             </ChakraLink>
-            <ChakraLink as={ReachLink} to={"/contact"}>
-              Contact
-            </ChakraLink>
 
             <Stack mt={"1.5rem !important"}>
               <ListHeader>Resources</ListHeader>
@@ -210,6 +207,9 @@ export default function LargeWithNewsletter() {
               </ChakraLink>
               <ChakraLink as={ReachLink} to={"/blogs"}>
                 Blogs
+              </ChakraLink>
+              <ChakraLink as={ReachLink} to={"/contact"}>
+                Contact
               </ChakraLink>
             </Stack>
           </Stack>
