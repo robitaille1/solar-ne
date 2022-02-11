@@ -25,7 +25,7 @@ const investorsSection = ({ content }) => (
     <ContactCTA
       title="Join the Equitable Energy Initiative"
       description="We provide $0-Down solar design, procurement and installation services to Non-Profits while educating our communities about the importance of clean energy."
-      image="https://images.unsplash.com/photo-1628010055450-21f2a0863767?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+      image="https://res.cloudinary.com/robitaille/image/upload/v1644602497/photo-1628010055450-21f2a0863767_vetogh.avif"
     />
   </Box>
 );

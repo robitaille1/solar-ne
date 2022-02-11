@@ -64,7 +64,6 @@ const Markdown = ({ content }) => {
       if (depth === 1) styleType = "circle";
       return (
         <Element
-          color={"gray.500"}
           spacing={2}
           as={ordered ? "ol" : "ul"}
           styleType={styleType}
