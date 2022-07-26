@@ -29,6 +29,7 @@ export default function Banner(props) {
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
             textAlign={"left"}
+            as="h2"
           >
             {props.title}
           </Text>

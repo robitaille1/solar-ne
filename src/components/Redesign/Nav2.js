@@ -95,11 +95,14 @@ export default function WithSubnavigation() {
               fontWeight={400}
               fontSize={{ base: 20, md: 14, lg: 20 }}
               as={"h1"}
+              // as={'h1'}
             >
-              Solar Power{" "}
-              <chakra.span display={{ base: "block", md: "inline" }}>
-                New England
-              </chakra.span>
+              <h1>
+                Solar Power{' '}
+                <chakra.span display={{ base: 'block', md: 'inline' }}>
+                  New England
+                </chakra.span>
+              </h1>
             </Text>
           </Link>
 
