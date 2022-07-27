@@ -48,7 +48,7 @@ export default function SplitWithImage() {
             alt={"feature image"}
             opacity={0.9}
             src={
-              "https://res.cloudinary.com/robitaille/image/upload/v1642716887/install-wmaP3Tl80ww-unsplash_wejvi1.jpg"
+              'https://res.cloudinary.com/robitaille/image/upload/v1658951088/gorham3_b3798280cb.jpg'
             }
             objectFit={"cover"}
           />
