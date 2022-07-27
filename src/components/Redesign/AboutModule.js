@@ -44,12 +44,8 @@ export default function SplitWithImage({ content, content2 }) {
         </Stack>
       </SimpleGrid>
       <Box mt={{ base: 1, md: 5 }}>
-        <Text color={"gray.500"} fontSize={"lg"}>
-          {content2 ? (
-            <Markdown content={content2} />
-          ) : (
-            <Skeleton height="100px" />
-          )}
+        <Text color={'gray.500'} fontSize={'lg'}>
+          {content2 && <Markdown content={content2} />}
         </Text>
       </Box>
     </Container>
