@@ -36,7 +36,7 @@ function ProductAddToCart({ partner }) {
           ></Box>
 
           <Box p="6">
-            <Box d="flex" alignItems="baseline">
+            <Box d="flex" alignItems="baseline" flexWrap="wrap">
               {partner.Tags &&
                 partner.Tags.split(",").map((tag) => {
                   return (
