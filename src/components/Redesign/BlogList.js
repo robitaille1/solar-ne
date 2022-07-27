@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Box,
   Heading,
@@ -13,20 +13,20 @@ import {
   useColorModeValue,
   Container,
   VStack,
-} from "@chakra-ui/react";
-import { Link as ReachLink } from "react-router-dom";
+} from '@chakra-ui/react';
+import { Link as ReachLink } from 'react-router-dom';
 
 const BlogTags = (props) => {
   return (
-    <HStack spacing={2} marginTop={props.marginTop}>
+    <HStack spacing={2} marginTop={props.marginTop} flexWrap="wrap">
       {props.tags &&
         props.tags.map((tag) => {
           return (
             <Tag
-              size={"md"}
+              size={'md'}
               variant="solid"
-              color={"green.400"}
-              backgroundColor={"green.50"}
+              color={'green.400'}
+              backgroundColor={'green.50'}
               key={tag}
             >
               {tag}
@@ -46,10 +46,10 @@ export const BlogAuthor = (props) => {
         {new Date(props.date).toLocaleDateString(
           {},
           {
-            timeZone: "UTC",
-            month: "long",
-            day: "2-digit",
-            year: "numeric",
+            timeZone: 'UTC',
+            month: 'long',
+            day: '2-digit',
+            year: 'numeric',
           }
         )}
       </Text>
@@ -64,11 +64,11 @@ const BlogList = ({ blogs, content }) => {
       return new Date(b.published_at) - new Date(a.published_at);
     });
   return (
-    <Container maxW={"7xl"} p="12">
+    <Container maxW={'7xl'} p="12">
       <Box
-        marginTop={{ base: "1", sm: "5" }}
+        marginTop={{ base: '1', sm: '5' }}
         display="flex"
-        flexDirection={{ base: "column", sm: "row" }}
+        flexDirection={{ base: 'column', sm: 'row' }}
         justifyContent="space-between"
       >
         <Box
@@ -79,14 +79,14 @@ const BlogList = ({ blogs, content }) => {
           alignItems="center"
         >
           <Box
-            width={{ base: "100%", sm: "85%" }}
+            width={{ base: '100%', sm: '85%' }}
             zIndex="2"
-            marginLeft={{ base: "0", sm: "5%" }}
+            marginLeft={{ base: '0', sm: '5%' }}
             marginTop="5%"
           >
-            <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+            <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
-                width={"100%"}
+                width={'100%'}
                 borderRadius="lg"
                 src={blogs && sortedBlogs[0].image.url}
                 alt="some good alt text"
@@ -97,8 +97,8 @@ const BlogList = ({ blogs, content }) => {
           <Box zIndex="1" width="100%" position="absolute" height="100%">
             <Box
               bgGradient={useColorModeValue(
-                "radial(green.600 1px, transparent 1px)",
-                "radial(green.300 1px, transparent 1px)"
+                'radial(green.600 1px, transparent 1px)',
+                'radial(green.300 1px, transparent 1px)'
               )}
               backgroundSize="20px 20px"
               opacity="0.4"
@@ -112,21 +112,21 @@ const BlogList = ({ blogs, content }) => {
           flex="1"
           flexDirection="column"
           justifyContent="center"
-          marginTop={{ base: "3", sm: "0" }}
+          marginTop={{ base: '3', sm: '0' }}
         >
           <Link
             as={ReachLink}
             textDecoration="none"
-            _hover={{ textDecoration: "none" }}
+            _hover={{ textDecoration: 'none' }}
             to={`/blogs/${blogs && sortedBlogs[0].slug}`}
           >
             <BlogTags
               tags={
-                blogs && sortedBlogs[0].Tags && sortedBlogs[0].Tags.split(",")
+                blogs && sortedBlogs[0].Tags && sortedBlogs[0].Tags.split(',')
               }
             />
             <Heading marginTop="1">{blogs && sortedBlogs[0].title}</Heading>
-            <Text as="p" marginTop="2" color={"gray.500"} fontSize="lg">
+            <Text as="p" marginTop="2" color={'gray.500'} fontSize="lg">
               {blogs && sortedBlogs[0].Excerpt && sortedBlogs[0].Excerpt}
             </Text>
             <BlogAuthor
@@ -144,19 +144,19 @@ const BlogList = ({ blogs, content }) => {
         {blogs &&
           sortedBlogs.slice(1).map((blog) => (
             <WrapItem
-              width={{ base: "100%", sm: "100%", md: "45%", lg: "30%" }}
+              width={{ base: '100%', sm: '100%', md: '45%', lg: '30%' }}
             >
               <Link
                 as={ReachLink}
                 textDecoration="none"
-                _hover={{ textDecoration: "none" }}
+                _hover={{ textDecoration: 'none' }}
                 to={`/blogs/${blog.slug}`}
               >
                 <Box w="100%">
                   <Box borderRadius="lg" overflow="hidden">
                     <Link
                       textDecoration="none"
-                      _hover={{ textDecoration: "none" }}
+                      _hover={{ textDecoration: 'none' }}
                     >
                       <Image
                         transform="scale(1.0)"
@@ -166,24 +166,24 @@ const BlogList = ({ blogs, content }) => {
                         width="100%"
                         transition="0.3s ease-in-out"
                         _hover={{
-                          transform: "scale(1.05)",
+                          transform: 'scale(1.05)',
                         }}
                       />
                     </Link>
                   </Box>
                   <BlogTags
-                    tags={blog.Tags && blog.Tags.split(",")}
+                    tags={blog.Tags && blog.Tags.split(',')}
                     marginTop="3"
                   />
                   <Heading fontSize="xl" marginTop="2">
                     <Link
                       textDecoration="none"
-                      _hover={{ textDecoration: "none" }}
+                      _hover={{ textDecoration: 'none' }}
                     >
                       {blog.title}
                     </Link>
                   </Heading>
-                  <Text as="p" fontSize="md" marginTop="2" color={"gray.500"}>
+                  <Text as="p" fontSize="md" marginTop="2" color={'gray.500'}>
                     {blog.Excerpt && blog.Excerpt}
                   </Text>
                   <BlogAuthor name="Andy" date={blog.published_at} />

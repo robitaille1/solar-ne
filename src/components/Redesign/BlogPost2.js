@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Text,
   Container,
@@ -13,10 +13,10 @@ import {
   Stack,
   Divider,
   Tag,
-} from "@chakra-ui/react";
-import { Link as ReachLink } from "react-router-dom";
-import { FiChevronRight } from "react-icons/fi";
-import Markdown from "./Markdown";
+} from '@chakra-ui/react';
+import { Link as ReachLink } from 'react-router-dom';
+import { FiChevronRight } from 'react-icons/fi';
+import Markdown from './Markdown';
 
 export const BlogAuthor = (props) => {
   return (
@@ -27,10 +27,10 @@ export const BlogAuthor = (props) => {
         {new Date(props.date).toLocaleDateString(
           {},
           {
-            timeZone: "UTC",
-            month: "long",
-            day: "2-digit",
-            year: "numeric",
+            timeZone: 'UTC',
+            month: 'long',
+            day: '2-digit',
+            year: 'numeric',
           }
         )}
       </Text>
@@ -40,30 +40,30 @@ export const BlogAuthor = (props) => {
 
 const BlogPost = ({ blog }) => {
   return (
-    <Container maxW={"5xl"} py={12}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} rounded={"md"}>
+    <Container maxW={'5xl'} py={12}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} rounded={'md'}>
         <Flex>
           {blog && (
             <Image
-              rounded={"md"}
-              alt={"feature image"}
-              width={"100%"}
+              rounded={'md'}
+              alt={'feature image'}
+              width={'100%'}
               src={blog.image.url}
-              objectFit={"cover"}
+              objectFit={'cover'}
             />
           )}
         </Flex>
 
-        <Stack justify={"center"} pr={10}>
-          <HStack spacing={2}>
+        <Stack justify={'center'} pr={10}>
+          <HStack spacing={2} flexWrap="wrap">
             {blog.Tags &&
-              blog.Tags.split(",").map((tag) => {
+              blog.Tags.split(',').map((tag) => {
                 return (
                   <Tag
-                    size={"md"}
+                    size={'md'}
                     variant="solid"
-                    color={"green.400"}
-                    backgroundColor={"green.50"}
+                    color={'green.400'}
+                    backgroundColor={'green.50'}
                     key={tag}
                   >
                     {tag}
@@ -86,26 +86,26 @@ const BlogPost = ({ blog }) => {
         <Markdown content={blog.content} />
       </Box>
 
-      <Flex justify={"center"}>
-        <Link as={ReachLink} to="/" style={{ textDecoration: "none" }}>
+      <Flex justify={'center'}>
+        <Link as={ReachLink} to="/" style={{ textDecoration: 'none' }}>
           <Button
-            bg={"green.400"}
-            rounded={"full"}
-            color={"white"}
-            _hover={{ bg: "green.500" }}
+            bg={'green.400'}
+            rounded={'full'}
+            color={'white'}
+            _hover={{ bg: 'green.500' }}
           >
             Home
           </Button>
         </Link>
-        <Link as={ReachLink} to="/blogs" style={{ textDecoration: "none" }}>
+        <Link as={ReachLink} to="/blogs" style={{ textDecoration: 'none' }}>
           <Button
-            bg={"white"}
-            rounded={"full"}
-            variant={"ghost"}
-            colorScheme={"green"}
+            bg={'white'}
+            rounded={'full'}
+            variant={'ghost'}
+            colorScheme={'green'}
             ml={2}
           >
-            All Blogs <FiChevronRight style={{ marginTop: "2px" }} />
+            All Blogs <FiChevronRight style={{ marginTop: '2px' }} />
           </Button>
         </Link>
       </Flex>
