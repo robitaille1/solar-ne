@@ -42,7 +42,7 @@ export default function SplitWithImage() {
             on taking your first step toward energy independence!
           </Text>
         </Stack>
-        <Flex background={"black"} overflow={"hidden"}>
+        <Flex background={'black'} overflow={'hidden'} borderRadius="10px">
           <Image
             rounded={"md"}
             alt={"feature image"}
