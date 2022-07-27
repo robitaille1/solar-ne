@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
-import BlogPost from "../components/BlogPost/BlogPost";
-import PageLayout from "../containers/PageLayout/PageLayout";
+import BlogPost from "../components/Redesign/BlogPost2";
+import PageLayout from "../components/Redesign/PageLayout2";
 import { useParams } from "react-router-dom";
+import {
+  Container,
+  Box,
+  HStack,
+  SimpleGrid,
+  Stack,
+  Divider,
+  Skeleton,
+} from "@chakra-ui/react";
 
 const BlogPage = () => {
   const [blog, setBlog] = useState();
@@ -17,18 +26,41 @@ const BlogPage = () => {
       });
   }, [blogSlug]);
 
-  let showBlog = <div>Loading</div>;
+  let showBlog = (
+    <Container maxW={"5xl"} py={12}>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} rounded={"md"}>
+        <Skeleton height={320} width={"100%"} />
+
+        <Stack justify={"center"} pr={10}>
+          <HStack spacing={2}>
+            <Skeleton width={"100%"} height={"24px"} />
+          </HStack>
+
+          <Stack>
+            <Skeleton width={"100%"} height={"100px"} />
+            <Skeleton width={"100%"} height={"24px"} />
+          </Stack>
+        </Stack>
+      </SimpleGrid>
+
+      <Divider my={10} />
+
+      <Box pb={10}>
+        <Skeleton width={"100%"} height={"100px"} />
+        <Skeleton width={"100%"} height={"100px"} />
+        <Skeleton width={"100%"} height={"100px"} />
+      </Box>
+    </Container>
+  );
 
   if (blog) {
-    showBlog = <BlogPost blog={blog} />;
+    showBlog = <BlogPost blog={blog[0]} />;
   }
 
   return (
-    <main>
-      <PageLayout>
-        <div>{showBlog}</div>
-      </PageLayout>
-    </main>
+    <PageLayout>
+      <div>{showBlog}</div>
+    </PageLayout>
   );
 };
 

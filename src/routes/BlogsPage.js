@@ -1,66 +1,35 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { SolarContext } from "../context/SolarContext";
-import { Link } from "react-router-dom";
-import PageLayout from "../containers/PageLayout/PageLayout";
-import BlogItem from "../components/BlogSection/BlogItem/BlogItem";
-import styled from "styled-components";
+import Nav from "../components/Redesign/Nav2";
+import Footer from "../components/Redesign/Footer2";
+import Reviews from "../components/Redesign/Reviews";
+import { Box } from "@chakra-ui/react";
+import BlogList from "../components/Redesign/BlogList";
+import Banner from "../components/Redesign/Banner";
 
 const BlogsPage = () => {
-  const { blogs } = useContext(SolarContext);
+  const { blogs, blogsPage, fetchBlogsPage } = useContext(SolarContext);
 
-  let showBlogs = <div>Loading</div>;
+  useEffect(() => {
+    fetchBlogsPage();
+  }, [fetchBlogsPage]);
 
-  if (blogs) {
-    let display = [];
-    for (let key in blogs) {
-      display.unshift(blogs[key]);
-    }
-
-    showBlogs = (
-      <BlogsContainer>
-        {display.map((blog) => (
-          <BlogItem key={blog.id} blog={blog} />
-        ))}
-      </BlogsContainer>
-    );
-  }
   return (
-    <main>
-      <PageLayout>
-        <h2>Blogs</h2>
-        {showBlogs}
-        <Link to="/">Home</Link>
-      </PageLayout>
-    </main>
+    <Box>
+      <Nav />
+      <Banner
+        title="Blogs by SPNE"
+        image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
+      />
+      <Box>
+        <Box>
+          <BlogList content={blogsPage} blogs={blogs} />
+        </Box>
+      </Box>
+      <Reviews />
+      <Footer />
+    </Box>
   );
 };
 
 export default BlogsPage;
-
-const BlogsContainer = styled.section`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  padding-bottom: 30px;
-
-  div {
-    box-shadow: unset;
-    background-color: white;
-  }
-
-  h3 {
-    padding: unset;
-    font-size: 0.9rem;
-  }
-
-  a {
-    background: linear-gradient(89.57deg, #3b8f28, #265e19);
-    padding: 12px 20px;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: 14px;
-    text-decoration: none;
-  }
-`;

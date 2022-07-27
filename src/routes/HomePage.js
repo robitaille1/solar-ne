@@ -1,23 +1,23 @@
 import React from "react";
-import Nav from "../components/Nav/Nav";
-// import Banner from "../components/Banner/Banner";
-import Jumbotron from "../components/Jumbotron/Jumbotron";
-import MainHeader from "../components/MainHeader/MainHeader";
-import WhatWeDo from "../components/WhatWeDo/WhatWeDo";
-import ContactForm from "../components/ContactForm/ContactForm";
-import BlogSection from "../components/BlogSection/BlogSection";
-import Footer from "../components/Footer/Footer";
+import WithSubnavigation from "../components/Redesign/Nav2";
+import WithBackgroundImage from "../components/Redesign/Hero2";
+import SimpleThreeColumns from "../components/Redesign/Features2";
+import StatsGridWithImage from "../components/Redesign/About2";
+import ContactFormWithSocialButtons from "../components/Redesign/Contact2";
+import WithSpeechBubbles from "../components/Redesign/Reviews";
+import LargeWithNewsletter from "../components/Redesign/Footer2";
+import Blogs from "../components/Redesign/Blogs2";
 
 const homePage = (props) => (
   <main>
-    <Nav path={props.match.path} />
-    {/* <Banner /> */}
-    <Jumbotron />
-    <MainHeader />
-    <WhatWeDo />
-    <ContactForm />
-    <BlogSection />
-    <Footer />
+    <WithSubnavigation />
+    <WithBackgroundImage />
+    <StatsGridWithImage />
+    <SimpleThreeColumns />
+    <ContactFormWithSocialButtons title="Get in Touch" />
+    <WithSpeechBubbles />
+    <Blogs />
+    <LargeWithNewsletter />
   </main>
 );
 

@@ -1,42 +1,18 @@
 import React from "react";
-import logo from "../../assets/logo.png";
-import Img from "../utils/Img";
-import ReactMarkdown from "react-markdown";
-import styled from "styled-components";
+import { Container, Box } from "@chakra-ui/react";
+import Banner from "../Redesign/Banner";
+import SplitWithImage from "../Redesign/AboutModule";
 
-const aboutSection = (props) => (
-  <>
-    <Content>
-      <h2>About Us</h2>
-      <Img alt="SPNE Logo" src={logo} />
-      <ReactMarkdown source={props.content} />
-      <p>
-        If you would like to get in touch please fill out the form below, or
-        drop us a line at{" "}
-        <a
-          onClick={() => Event("EMAIL", "Email address clicked", "ABOUT_PAGE")}
-          href="mailto:contact@solarpowerne.com"
-        >
-          contact@solarpowerne.com
-        </a>{" "}
-        or{" "}
-        <a
-          onClick={() => Event("PHONE", "Phone number clicked", "ABOUT_PAGE")}
-          style={{ marginRight: "10px" }}
-          href="tel:207-387-0037"
-        >
-          207-387-0037
-        </a>
-        .
-      </p>
-    </Content>
-  </>
+const AboutSection = ({ content, content2 }) => (
+  <Box>
+    <Banner
+      title="About Us"
+      image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
+    />
+    <Container padding={10} maxW={"5xl"}>
+      <SplitWithImage content={content} content2={content2} />
+    </Container>
+  </Box>
 );
 
-export default aboutSection;
-
-const Content = styled.div`
-  img {
-    width: 50%;
-  }
-`;
+export default AboutSection;

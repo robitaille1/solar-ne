@@ -1,13 +1,33 @@
 import React from "react";
-import Img from "../utils/Img";
-import ReactMarkdown from "react-markdown";
+import Banner from "../Redesign/Banner";
+import { Container, Box, Skeleton, Stack } from "@chakra-ui/react";
+import ContactCTA from "../Redesign/ContactCTA";
+import Markdown from "../Redesign/Markdown";
 
-const investorsSection = (props) => (
-  <>
-    <h2>Investors</h2>
-    <ReactMarkdown source={props.content} />
-    <Img src="https://res.cloudinary.com/robitaille/image/upload/v1603768005/photo-1454165804606-c3d57bc86b40_qfvjv0.webp" />
-  </>
+const investorsSection = ({ content }) => (
+  <Box>
+    <Banner
+      title="Investors"
+      image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
+    />
+    <Container maxW={"5xl"} py={12} color={"gray.500"}>
+      {content ? (
+        <Markdown content={content} />
+      ) : (
+        <Stack>
+          <Skeleton height="30px" />
+          <Skeleton height="30px" />
+          <Skeleton height="30px" />
+          <Skeleton height="30px" />
+        </Stack>
+      )}
+    </Container>
+    <ContactCTA
+      title="Join the Equitable Energy Initiative"
+      description="We provide $0-Down solar design, procurement and installation services to Non-Profits while educating our communities about the importance of clean energy."
+      image="https://res.cloudinary.com/robitaille/image/upload/v1644602497/photo-1628010055450-21f2a0863767_vetogh.avif"
+    />
+  </Box>
 );
 
 export default investorsSection;

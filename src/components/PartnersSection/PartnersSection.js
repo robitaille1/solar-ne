@@ -1,6 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import PartnersCard from "./PartnersCard";
+import PartnersCard from "../Redesign/PartnersCard2";
+import Banner from "../Redesign/Banner";
+import { Box, Heading, Stack, Grid, Skeleton, Flex } from "@chakra-ui/react";
 
 const partnersSection = (props) => {
   let partners = [];
@@ -8,40 +9,45 @@ const partnersSection = (props) => {
     partners.unshift(props.partners[key]);
   }
   return (
-    <>
-      <h2>Our partners include...</h2>
-      <Partners>
-        {partners.map((p) => (
-          <PartnersCard key={p.id} partner={p} />
-        ))}
-      </Partners>
-    </>
+    <Box>
+      <Banner
+        title="Partners"
+        image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
+      />
+      <Stack padding={10} align={"center"}>
+        <Heading>Our partners include...</Heading>
+      </Stack>
+      {partners.length ? (
+        <Grid
+          alignItems={"start"}
+          templateColumns={{ sm: "1fr", md: "1fr 1fr 1fr" }}
+          spacing={8}
+          maxW={"6xl"}
+          m={"0 auto"}
+        >
+          {partners.map((p) => (
+            <PartnersCard key={p.id} partner={p} />
+          ))}
+        </Grid>
+      ) : (
+        <Grid
+          alignItems={"start"}
+          templateColumns={{ sm: "1fr", md: "1fr 1fr 1fr" }}
+          spacing={8}
+        >
+          <Flex p={30} w="full" alignItems="center" justifyContent="center">
+            <Skeleton rounded="lg" width={"100%"} height={400} />
+          </Flex>
+          <Flex p={30} w="full" alignItems="center" justifyContent="center">
+            <Skeleton rounded="lg" width={"100%"} height={400} />
+          </Flex>
+          <Flex p={30} w="full" alignItems="center" justifyContent="center">
+            <Skeleton rounded="lg" width={"100%"} height={400} />
+          </Flex>
+        </Grid>
+      )}
+    </Box>
   );
 };
 
 export default partnersSection;
-
-const Partners = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-
-  grid-row-gap: 1rem;
-
-  @media (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem;
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  img {
-    padding: 20px;
-    margin: auto;
-    width: 100%;
-  }
-`;

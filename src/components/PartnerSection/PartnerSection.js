@@ -1,94 +1,57 @@
 import React from "react";
-import styled from "styled-components";
-import Img from "../utils/Img";
-import ReactMarkdown from "react-markdown";
-import ReactGA from "react-ga";
+import Markdown from "../Redesign/Markdown";
+import {
+  Container,
+  Box,
+  Heading,
+  Divider,
+  Link,
+  Button,
+  Flex,
+} from "@chakra-ui/react";
+import { Link as ReachLink } from "react-router-dom";
+import { FiChevronRight } from "react-icons/fi";
 
-const partnerSection = (props) => {
-  console.log(props.partner[0]);
+const partnerSection = ({ partner }) => {
   return (
-    <Content>
-      <h2>{props.partner[0].PartnerName}</h2>
-      <Img
-        alt={props.partner[0].PartnerImage[0].alternativeText}
-        src={props.partner[0].PartnerImage[0].formats.medium.url}
-      />
-      <PartnerContent>
-        <ReactMarkdown source={props.partner[0].PartnerDescription} />
-      </PartnerContent>
+    <Container maxW={"5xl"} py={12}>
+      <Box textAlign={"center"}>
+        <Heading>{partner && partner[0].PartnerName}</Heading>
+        <Divider mt={10} />
+      </Box>
 
-      <Contact>
-        <p>Interested in how we partner with {props.partner[0].PartnerName}?</p>
-        <p>
-          Contact us today!{" "}
-          <ContactLink
-            style={{ marginRight: "10px" }}
-            href="tel:207-387-0037"
-            onClick={ReactGA.event({
-              category: "PHONE",
-              action: "Phone number clicked",
-              label: "WORK_PAGE",
-            })}
+      <Box py={10}>
+        <Markdown content={partner && partner[0].PartnerDescription} />
+        <Flex justify={"center"} mt={10}>
+          <Link as={ReachLink} to="/" style={{ textDecoration: "none" }}>
+            <Button
+              bg={"green.400"}
+              rounded={"full"}
+              color={"white"}
+              _hover={{ bg: "green.500" }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link
+            as={ReachLink}
+            to="/partners"
+            style={{ textDecoration: "none" }}
           >
-            207-387-0037
-          </ContactLink>
-          <ContactLink
-            href="mailto:contact@solarpowerne.com"
-            onClick={ReactGA.event({
-              category: "EMAIL",
-              action: "Email address clicked",
-              label: "WORK_PAGE",
-            })}
-          >
-            contact@solarpowerne.com
-          </ContactLink>
-        </p>
-      </Contact>
-    </Content>
+            <Button
+              bg={"white"}
+              rounded={"full"}
+              variant={"ghost"}
+              colorScheme={"green"}
+              ml={2}
+            >
+              All Partners <FiChevronRight style={{ marginTop: "2px" }} />
+            </Button>
+          </Link>
+        </Flex>
+      </Box>
+    </Container>
   );
 };
 
 export default partnerSection;
-
-const Content = styled.div`
-  img {
-    width: 50%;
-  }
-`;
-
-const ContactLink = styled.a`
-  display: block;
-  word-break: normal;
-  color: #ece485 !important;
-  @media (min-width: 499px) {
-    display: inline;
-  }
-`;
-
-const Contact = styled.div`
-  background: #3b8f28;
-  margin-top: 3rem;
-  padding: 3rem 2rem;
-  p {
-    color: white;
-    margin: 0;
-    text-align: center;
-  }
-`;
-
-const PartnerContent = styled.div`
-  padding-bottom: 20px;
-
-  img {
-    max-width: 100%;
-  }
-
-  p {
-    display: inline-block;
-    text-align: center;
-    img {
-      justify-self: center;
-      width: 50%;
-    }
-  }
-`;
