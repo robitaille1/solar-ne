@@ -1,9 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import styled from "styled-components";
-import { Route, Switch } from "react-router-dom";
-import { GlobalStyles } from "./global";
-import { OpenContext } from "./context/OpenContext";
-import { SolarContext } from "./context/SolarContext";
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { Route, Switch } from 'react-router-dom';
+import { GlobalStyles } from './global';
+import { OpenContext } from './context/OpenContext';
 import {
   AboutPage,
   HomePage,
@@ -19,18 +18,13 @@ import {
   NotFound,
   ContactPage,
   TestimonialsPage,
-} from "./routes";
-import ReactGA from "react-ga";
+} from './routes';
+import ReactGA from 'react-ga';
 
 const App = () => {
   const [open] = useContext(OpenContext);
-  const { fetchData } = useContext(SolarContext);
 
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
-  ReactGA.initialize("UA-181331175-1");
+  ReactGA.initialize('UA-181331175-1');
   return (
     <AppMain>
       <GlobalStyles open={open} />
@@ -44,11 +38,18 @@ const App = () => {
         <Route path="/our-work" component={OurWorkPage} />
 
         <Route path="/blogs/:blogSlug" component={BlogPage} />
-        <Route path="/partners/:partnerSlug" component={PartnerPage} />
+        <Route
+          path="/partners/:partnerSlug"
+          component={PartnerPage}
+        />
         <Route exact path="/partners" component={PartnersPage} />
         <Route exact path="/blogs" component={BlogsPage} />
         <Route exact path="/contact" component={ContactPage} />
-        <Route exact path="/testimonials" component={TestimonialsPage} />
+        <Route
+          exact
+          path="/testimonials"
+          component={TestimonialsPage}
+        />
         <Route component={NotFound} />
       </Switch>
     </AppMain>

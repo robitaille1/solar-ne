@@ -1,18 +1,11 @@
-import React, { useContext, useEffect } from "react";
-import PageLayout from "../components/Redesign/PageLayout2";
-import CareersSection from "../components/CareersSection/CareersSection";
-import { SolarContext } from "../context/SolarContext";
+import React from 'react';
+import PageLayout from '../components/Redesign/PageLayout2';
+import CareersSection from '../components/CareersSection/CareersSection';
 
 const CareersPage = () => {
-  const { fetchCareersPage, careersPage } = useContext(SolarContext);
-
-  useEffect(() => {
-    fetchCareersPage();
-  }, [fetchCareersPage]);
-
   return (
     <PageLayout>
-      <CareersSection content={careersPage.Content} />
+      <CareersSection />
     </PageLayout>
   );
 };

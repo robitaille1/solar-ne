@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
-import { SolarContext } from "../../context/SolarContext";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import oldFlag from "../../assets/flags/oldflag.gif";
-import newFlag from "../../assets/flags/newflag.png";
-import logo from "../../assets/logo.png";
-import Lazyload from "react-lazyload";
-import ReactGA from "react-ga";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import oldFlag from '../../assets/flags/oldflag.gif';
+import newFlag from '../../assets/flags/newflag.png';
+import logo from '../../assets/logo.png';
+import Lazyload from 'react-lazyload';
+import ReactGA from 'react-ga';
 
 const Footer = () => {
-  const { homepage } = useContext(SolarContext);
   const date = new Date();
   return (
     <Footer1>
@@ -18,55 +16,55 @@ const Footer = () => {
           <h3>Info</h3>
           <Link
             to={`/about`}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
             onClick={ReactGA.event({
-              category: "MENU-LINK",
-              action: "About footer link clicked",
-              label: "FOOTER",
+              category: 'MENU-LINK',
+              action: 'About footer link clicked',
+              label: 'FOOTER',
             })}
           >
             <p>About Us</p>
           </Link>
           <Link
             to={`/investors`}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
             onClick={ReactGA.event({
-              category: "MENU-LINK",
-              action: "Investors footer link clicked",
-              label: "FOOTER",
+              category: 'MENU-LINK',
+              action: 'Investors footer link clicked',
+              label: 'FOOTER',
             })}
           >
             <p>Investors</p>
           </Link>
           <Link
             to={`/partners`}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
             onClick={ReactGA.event({
-              category: "MENU-LINK",
-              action: "Partners footer link clicked",
-              label: "FOOTER",
+              category: 'MENU-LINK',
+              action: 'Partners footer link clicked',
+              label: 'FOOTER',
             })}
           >
             <p>Partners</p>
           </Link>
           <Link
             to={`/careers`}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
             onClick={ReactGA.event({
-              category: "MENU-LINK",
-              action: "Careers footer link clicked",
-              label: "FOOTER",
+              category: 'MENU-LINK',
+              action: 'Careers footer link clicked',
+              label: 'FOOTER',
             })}
           >
             <p>Careers</p>
           </Link>
           <Link
             to={`/resources`}
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
             onClick={ReactGA.event({
-              category: "MENU-LINK",
-              action: "Resources footer link clicked",
-              label: "FOOTER",
+              category: 'MENU-LINK',
+              action: 'Resources footer link clicked',
+              label: 'FOOTER',
             })}
           >
             <p>Resources</p>
@@ -80,9 +78,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             alt="facebook"
             onClick={ReactGA.event({
-              category: "FOOTER-LINK",
-              action: "Facebook footer link clicked",
-              label: "FOOTER-SOCIAL",
+              category: 'FOOTER-LINK',
+              action: 'Facebook footer link clicked',
+              label: 'FOOTER-SOCIAL',
             })}
           >
             <i className="fab fa-facebook" />
@@ -93,9 +91,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             alt="instagram"
             onClick={ReactGA.event({
-              category: "FOOTER-LINK",
-              action: "Instagram footer link clicked",
-              label: "FOOTER-SOCIAL",
+              category: 'FOOTER-LINK',
+              action: 'Instagram footer link clicked',
+              label: 'FOOTER-SOCIAL',
             })}
           >
             <i className="fab fa-instagram" />
@@ -106,9 +104,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             alt="pinterest"
             onClick={ReactGA.event({
-              category: "FOOTER-LINK",
-              action: "Pinterest footer link clicked",
-              label: "FOOTER-SOCIAL",
+              category: 'FOOTER-LINK',
+              action: 'Pinterest footer link clicked',
+              label: 'FOOTER-SOCIAL',
             })}
           >
             <i className="fab fa-pinterest" />
@@ -119,9 +117,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             alt="yelp"
             onClick={ReactGA.event({
-              category: "FOOTER-LINK",
-              action: "Yelp footer link clicked",
-              label: "FOOTER-SOCIAL",
+              category: 'FOOTER-LINK',
+              action: 'Yelp footer link clicked',
+              label: 'FOOTER-SOCIAL',
             })}
           >
             <i className="fab fa-yelp" />
@@ -132,32 +130,37 @@ const Footer = () => {
             rel="noopener noreferrer"
             alt="Solar Reviews"
             onClick={ReactGA.event({
-              category: "FOOTER-LINK",
-              action: "Solar reviews footer link clicked",
-              label: "FOOTER-SOCIAL",
+              category: 'FOOTER-LINK',
+              action: 'Solar reviews footer link clicked',
+              label: 'FOOTER-SOCIAL',
             })}
           >
             <i className="far fa-sun"></i>
           </a>
         </SecondDiv>
         <Statement>
-          <p>{homepage.footerText}</p>
+          <p>
+            Solar Power New England provides residential, and small
+            commercial solar photovoltaic design, procurement and
+            installation services for Southern Maine. Contact us today
+            for more information!
+          </p>
           <a
-            style={{ marginRight: "10px" }}
+            style={{ marginRight: '10px' }}
             href="tel:207-387-0037"
             onClick={ReactGA.event({
-              category: "PHONE",
-              action: "Phone number clicked",
-              label: "FOOTER",
+              category: 'PHONE',
+              action: 'Phone number clicked',
+              label: 'FOOTER',
             })}
           >
             207-387-0037
           </a>
           <EmailLink
             onClick={ReactGA.event({
-              category: "EMAIL",
-              action: "Email address clicked",
-              label: "FOOTER",
+              category: 'EMAIL',
+              action: 'Email address clicked',
+              label: 'FOOTER',
             })}
             href="mailto:contact@solarpowerne.com"
           >
@@ -183,7 +186,7 @@ const Footer = () => {
               src="//a.impactradius-go.com/display-ad/1695-68132"
               border="0"
               alt="lightstream"
-              style={{ maxWidth: "100%" }}
+              style={{ maxWidth: '100%' }}
               height="auto"
             />
           </a>
@@ -192,14 +195,18 @@ const Footer = () => {
             height="0"
             width="0"
             src="https://lightstream.gr4q.net/i/2437142/68132/1695"
-            style={{ position: "absolute", visibility: "hidden" }}
+            style={{ position: 'absolute', visibility: 'hidden' }}
             border="0"
           />
         </Statement>
       </LinksDiv>
       <Lazyload>
         <FlagDiv>
-          <StateFlag draggable="false" src={oldFlag} alt="old flag of Maine" />
+          <StateFlag
+            draggable="false"
+            src={oldFlag}
+            alt="old flag of Maine"
+          />
           <Logo
             draggable="false"
             src={logo}
@@ -215,10 +222,10 @@ const Footer = () => {
       <Copyright>
         <h5>Solar Power New England © {date.getFullYear()} </h5>
         <p>
-          Made with{" "}
+          Made with{' '}
           <span role="img" aria-label="lobster">
             &#x1F99E;
-          </span>{" "}
+          </span>{' '}
           from Maine
         </p>
         <a

@@ -1,5 +1,5 @@
-import React from "react";
-import Banner from "../Redesign/Banner";
+import React from 'react';
+import Banner from '../Redesign/Banner';
 import {
   Box,
   Button,
@@ -16,19 +16,17 @@ import {
   VStack,
   Container,
   Text,
-  Skeleton,
-} from "@chakra-ui/react";
-import { BsPerson } from "react-icons/bs";
-import { MdOutlineEmail, MdPhoneIphone } from "react-icons/md";
-import ReactGA from "react-ga";
-import Markdown from "../Redesign/Markdown";
+} from '@chakra-ui/react';
+import { BsPerson } from 'react-icons/bs';
+import { MdOutlineEmail, MdPhoneIphone } from 'react-icons/md';
+import ReactGA from 'react-ga';
 
-const CareersSection = ({ content, title }) => {
+const CareersSection = () => {
   const formSubmit = (e) => {
     ReactGA.event({
-      category: "FORM",
-      action: "Contact form submitted",
-      label: "HOME_PAGE",
+      category: 'FORM',
+      action: 'Contact form submitted',
+      label: 'HOME_PAGE',
     });
   };
   return (
@@ -38,24 +36,27 @@ const CareersSection = ({ content, title }) => {
         image="url(https://res.cloudinary.com/robitaille/image/upload/v1642701443/summer_vc4x1a_xojb5o.jpg)"
       />
 
-      <Container maxW={"5xl"} py={12}>
+      <Container maxW={'5xl'} py={12}>
         <Heading mb={5}>Join the team!</Heading>
-        <Text color={"gray.500"} fontSize={"lg"}>
-          {content ? (
-            <Markdown content={content} />
-          ) : (
-            <Stack>
-              <Skeleton height="30px" />
-              <Skeleton height="30px" />
-              <Skeleton height="30px" />
-              <Skeleton height="30px" />
-            </Stack>
-          )}
-        </Text>
+        <VStack alignItems="start" gap={4}>
+          <Text color={'gray.500'} fontSize={'lg'}>
+            Would you like to work in a fast-paced start up?
+          </Text>
+          <Text color={'gray.500'} fontSize={'lg'}>
+            Perhaps you’re interested in working in the solar or
+            renewable energy field to make the world a better place?
+          </Text>
+          <Text color={'gray.500'} fontSize={'lg'}>
+            If you’re interested, please submit your resumé, contact
+            information and a brief description of yourself and why
+            you want to work for us below! We look forward to hearing
+            from you!
+          </Text>
+        </VStack>
       </Container>
 
       <Flex
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg={useColorModeValue('gray.100', 'gray.900')}
         align="center"
         justify="center"
         id="contact"
@@ -64,44 +65,38 @@ const CareersSection = ({ content, title }) => {
           borderRadius="lg"
           m={{ base: 5, md: 5, lg: 5 }}
           p={{ base: 5, lg: 10 }}
-          width={"100%"}
+          width={'100%'}
         >
           <Box>
             <VStack spacing={{ base: 4, md: 8, lg: 10 }}>
-              <Heading
-                fontSize={{
-                  base: "4xl",
-                  md: "5xl",
-                }}
-              >
-                {title}
-              </Heading>
-
               <Stack
                 spacing={{ base: 4, md: 8, lg: 20 }}
-                direction={{ base: "column", md: "row" }}
+                direction={{ base: 'column', md: 'row' }}
                 width={{
-                  base: "100%",
-                  sm: "100%",
-                  md: "75%",
-                  lg: "65%",
+                  base: '100%',
+                  sm: '100%',
+                  md: '75%',
+                  lg: '65%',
                 }}
-                maxW={"700px"}
+                maxW={'700px'}
               >
                 <Box
-                  bg={useColorModeValue("white", "gray.700")}
+                  bg={useColorModeValue('white', 'gray.700')}
                   borderRadius="lg"
                   p={8}
-                  color={useColorModeValue("gray.700", "whiteAlpha.900")}
+                  color={useColorModeValue(
+                    'gray.700',
+                    'whiteAlpha.900'
+                  )}
                   shadow="base"
-                  width={"100%"}
+                  width={'100%'}
                 >
                   <VStack spacing={5}>
                     <form
                       action="https://formsubmit.co/contact@solarpowerne.com"
                       method="POST"
                       onSubmit={() => formSubmit()}
-                      style={{ width: "100%" }}
+                      style={{ width: '100%' }}
                     >
                       <FormControl mt={5} isRequired>
                         <FormLabel>Name</FormLabel>
@@ -120,7 +115,9 @@ const CareersSection = ({ content, title }) => {
                         <FormLabel>Email</FormLabel>
 
                         <InputGroup>
-                          <InputLeftElement children={<MdOutlineEmail />} />
+                          <InputLeftElement
+                            children={<MdOutlineEmail />}
+                          />
                           <Input
                             type="email"
                             name="email"
@@ -133,7 +130,9 @@ const CareersSection = ({ content, title }) => {
                         <FormLabel>Phone</FormLabel>
 
                         <InputGroup>
-                          <InputLeftElement children={<MdPhoneIphone />} />
+                          <InputLeftElement
+                            children={<MdPhoneIphone />}
+                          />
                           <Input
                             type="tel"
                             name="phone"
@@ -157,7 +156,9 @@ const CareersSection = ({ content, title }) => {
                         <FormLabel>Phone</FormLabel>
 
                         <InputGroup>
-                          <InputLeftElement children={<MdPhoneIphone />} />
+                          <InputLeftElement
+                            children={<MdPhoneIphone />}
+                          />
                           <Input
                             type="tel"
                             name="phone"
@@ -167,11 +168,13 @@ const CareersSection = ({ content, title }) => {
                       </FormControl>
 
                       <FormControl mt={5}>
-                        <FormLabel>Attach Resume (PDF Format)</FormLabel>
+                        <FormLabel>
+                          Attach Resume (PDF Format)
+                        </FormLabel>
 
                         <Input
                           paddingLeft={0}
-                          border={"none"}
+                          border={'none'}
                           type="file"
                           name="resume"
                           accept="application/pdf"
@@ -184,7 +187,7 @@ const CareersSection = ({ content, title }) => {
                         bg="green.400"
                         color="white"
                         _hover={{
-                          bg: "green.500",
+                          bg: 'green.500',
                         }}
                         isFullWidth
                         type="submit"

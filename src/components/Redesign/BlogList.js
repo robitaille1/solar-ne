@@ -15,6 +15,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
+import { blogs } from '../../constants/blogs';
 
 const BlogTags = (props) => {
   return (
@@ -39,7 +40,12 @@ const BlogTags = (props) => {
 
 export const BlogAuthor = (props) => {
   return (
-    <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
+    <HStack
+      marginTop="2"
+      spacing="2"
+      display="flex"
+      alignItems="center"
+    >
       <Text fontWeight="medium">{props.name}</Text>
       <Text>—</Text>
       <Text>
@@ -57,7 +63,7 @@ export const BlogAuthor = (props) => {
   );
 };
 
-const BlogList = ({ blogs, content }) => {
+const BlogList = () => {
   const sortedBlogs =
     blogs &&
     blogs.sort(function (a, b) {
@@ -84,7 +90,10 @@ const BlogList = ({ blogs, content }) => {
             marginLeft={{ base: '0', sm: '5%' }}
             marginTop="5%"
           >
-            <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
+            <Link
+              textDecoration="none"
+              _hover={{ textDecoration: 'none' }}
+            >
               <Image
                 width={'100%'}
                 borderRadius="lg"
@@ -94,7 +103,12 @@ const BlogList = ({ blogs, content }) => {
               />
             </Link>
           </Box>
-          <Box zIndex="1" width="100%" position="absolute" height="100%">
+          <Box
+            zIndex="1"
+            width="100%"
+            position="absolute"
+            height="100%"
+          >
             <Box
               bgGradient={useColorModeValue(
                 'radial(green.600 1px, transparent 1px)',
@@ -122,12 +136,23 @@ const BlogList = ({ blogs, content }) => {
           >
             <BlogTags
               tags={
-                blogs && sortedBlogs[0].Tags && sortedBlogs[0].Tags.split(',')
+                blogs &&
+                sortedBlogs[0].Tags &&
+                sortedBlogs[0].Tags.split(',')
               }
             />
-            <Heading marginTop="1">{blogs && sortedBlogs[0].title}</Heading>
-            <Text as="p" marginTop="2" color={'gray.500'} fontSize="lg">
-              {blogs && sortedBlogs[0].Excerpt && sortedBlogs[0].Excerpt}
+            <Heading marginTop="1">
+              {blogs && sortedBlogs[0].title}
+            </Heading>
+            <Text
+              as="p"
+              marginTop="2"
+              color={'gray.500'}
+              fontSize="lg"
+            >
+              {blogs &&
+                sortedBlogs[0].Excerpt &&
+                sortedBlogs[0].Excerpt}
             </Text>
             <BlogAuthor
               name="Andy"
@@ -144,7 +169,12 @@ const BlogList = ({ blogs, content }) => {
         {blogs &&
           sortedBlogs.slice(1).map((blog) => (
             <WrapItem
-              width={{ base: '100%', sm: '100%', md: '45%', lg: '30%' }}
+              width={{
+                base: '100%',
+                sm: '100%',
+                md: '45%',
+                lg: '30%',
+              }}
             >
               <Link
                 as={ReachLink}
@@ -183,7 +213,12 @@ const BlogList = ({ blogs, content }) => {
                       {blog.title}
                     </Link>
                   </Heading>
-                  <Text as="p" fontSize="md" marginTop="2" color={'gray.500'}>
+                  <Text
+                    as="p"
+                    fontSize="md"
+                    marginTop="2"
+                    color={'gray.500'}
+                  >
                     {blog.Excerpt && blog.Excerpt}
                   </Text>
                   <BlogAuthor name="Andy" date={blog.published_at} />
@@ -192,14 +227,13 @@ const BlogList = ({ blogs, content }) => {
             </WrapItem>
           ))}
       </Wrap>
-      {content.BlogsDescription && (
-        <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-          <Heading as="h2">What we write about</Heading>
-          <Text as="p" fontSize="lg">
-            {content.BlogsDescription}
-          </Text>
-        </VStack>
-      )}
+      <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
+        <Heading as="h2">What we write about</Heading>
+        <Text as="p" fontSize="lg">
+          We want to keep you up to date on all happenings in the
+          solar industry!
+        </Text>
+      </VStack>
     </Container>
   );
 };

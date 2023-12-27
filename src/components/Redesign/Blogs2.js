@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   Box,
   Heading,
@@ -11,15 +11,16 @@ import {
   Button,
 } from '@chakra-ui/react';
 import Blog from './Blog2';
-import { SolarContext } from '../../context/SolarContext';
 import { Link as ReachLink } from 'react-router-dom';
 import { FiChevronRight } from 'react-icons/fi';
+import { blogs } from '../../constants/blogs';
 
 export default function Blogs() {
-  const { blogs } = useContext(SolarContext);
   const sortedBlogs =
     blogs &&
-    blogs.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+    blogs.sort(
+      (a, b) => new Date(b.published_at) - new Date(a.published_at)
+    );
   return (
     <Box bg={useColorModeValue('green.400', 'green.600')}>
       <Container

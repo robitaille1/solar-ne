@@ -1,18 +1,11 @@
-import React, { useContext, useEffect } from "react";
-import PageLayout from "../components/Redesign/PageLayout2";
-import PartnersSection from "../components/PartnersSection/PartnersSection";
-import { SolarContext } from "../context/SolarContext";
+import React from 'react';
+import PageLayout from '../components/Redesign/PageLayout2';
+import PartnersSection from '../components/PartnersSection/PartnersSection';
 
 const PartnersPage = () => {
-  const { fetchPartners, partners } = useContext(SolarContext);
-
-  useEffect(() => {
-    fetchPartners();
-  }, [fetchPartners]);
-
   return (
     <PageLayout>
-      <PartnersSection partners={partners} />
+      <PartnersSection />
     </PageLayout>
   );
 };
