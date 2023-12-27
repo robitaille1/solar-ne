@@ -1,12 +1,10 @@
-import React, { useContext } from "react";
-import { SolarContext } from "../../context/SolarContext";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import BlogItem from "./BlogItem/BlogItem";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import BlogItem from './BlogItem/BlogItem';
+import { blogs } from '../../constants/blogs';
 
 const BlogSection = () => {
-  const { blogs } = useContext(SolarContext);
-
   let showBlogs = <div>Loading</div>;
 
   if (blogs) {
@@ -16,7 +14,7 @@ const BlogSection = () => {
     }
 
     showBlogs = (
-      <section style={{ marginBottom: "30px" }}>
+      <section style={{ marginBottom: '30px' }}>
         {display.slice(0, 3).map((blog) => (
           <BlogItem key={blog.id} blog={blog} />
         ))}
@@ -30,7 +28,7 @@ const BlogSection = () => {
         <h2>Recent Blog Posts</h2>
         {showBlogs}
       </Content>
-      <Link style={{ color: "white", marginTop: "10px" }} to="/blogs">
+      <Link style={{ color: 'white', marginTop: '10px' }} to="/blogs">
         All Blogs
       </Link>
     </Wrapper>

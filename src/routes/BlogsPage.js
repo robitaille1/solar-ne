@@ -1,19 +1,12 @@
-import React, { useContext, useEffect } from "react";
-import { SolarContext } from "../context/SolarContext";
-import Nav from "../components/Redesign/Nav2";
-import Footer from "../components/Redesign/Footer2";
-import Reviews from "../components/Redesign/Reviews";
-import { Box } from "@chakra-ui/react";
-import BlogList from "../components/Redesign/BlogList";
-import Banner from "../components/Redesign/Banner";
+import React from 'react';
+import Nav from '../components/Redesign/Nav2';
+import Footer from '../components/Redesign/Footer2';
+import Reviews from '../components/Redesign/Reviews';
+import { Box } from '@chakra-ui/react';
+import BlogList from '../components/Redesign/BlogList';
+import Banner from '../components/Redesign/Banner';
 
 const BlogsPage = () => {
-  const { blogs, blogsPage, fetchBlogsPage } = useContext(SolarContext);
-
-  useEffect(() => {
-    fetchBlogsPage();
-  }, [fetchBlogsPage]);
-
   return (
     <Box>
       <Nav />
@@ -23,7 +16,7 @@ const BlogsPage = () => {
       />
       <Box>
         <Box>
-          <BlogList content={blogsPage} blogs={blogs} />
+          <BlogList />
         </Box>
       </Box>
       <Reviews />
